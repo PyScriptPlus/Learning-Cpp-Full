@@ -1,0 +1,6 @@
+﻿  overflow.cpp
+  signed.cpp
+C:\Users\nzdd\Desktop\tester1C\tester1C\signed.cpp(7,23): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\nzdd\Desktop\tester1C\tester1C\signed.cpp(8,19): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+signed.obj : error LNK2005: main already defined in overflow.obj
+C:\Users\nzdd\Desktop\tester1C\x64\Release\DataType.exe : fatal error LNK1169: one or more multiply defined symbols found

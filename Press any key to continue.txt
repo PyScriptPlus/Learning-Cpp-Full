@@ -1,0 +1,10 @@
+
+Press any key to continue:
+
+#include <iostream>
+
+int main() {
+
+    system("pause");
+
+}

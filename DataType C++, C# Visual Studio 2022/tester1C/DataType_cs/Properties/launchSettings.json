@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DataType_cs": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
