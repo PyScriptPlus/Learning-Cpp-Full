@@ -1559,14 +1559,66 @@ int main() {
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
+// Mabhas: Constexpr keyword
+
+// Yek Keyword darim be name Constexpr yad gerftanesh zarar nemikoni!!!
+
+// Zamani ke Constant Variable tarif mikonim mesal:
+// const int x = 4;
+// Compiler dar posht parde rahgiri mikone aya in:
+// Compile-Time Constant hast ya
+// Run-Time Constant hast
+
+// Hadaf az in chiye? Malome dige Compile-Time behine mishe
+// Ye ja hayi hast dar C++ bayad Compile-Time Constant bashe na Run-Time chera?
+// Goftim chon Compile-Time dast compiler dar behine sazi baz mikone 
+
+// Khob vaghti ma miaym const int x = 5; tarif mikonim
+// In ham mitune Compil-Time bashe ham Run-Time
+// Goftim dige bastegi be Initialization on darad 
+// Khob ye Keyword hast ke ham tazmin mikonad sabet hast mesl const
+// Ham tazmin mikonad ke in Compile-Time hast 
+// Vali Deghat dashte bash dar Initialization tanha mitune Constant Expression gharar begire
+// Be joz in error mide chon dige tazmin mikone Compile-Time hast
+// Mesal:
+/*
+#include <iostream>
+
+int main() {
+
+    constexpr int i = 5;
+    constexpr double x = 6.5;
+    constexpr int y = i; // i khodesh Constexpr hast moshkeli pish nemiad
+    constexpr int z = y + i; // Javab in alan 10 hast jaygozin shode mouse negah dari mituni bebini
 
 
 
+    // int age;
+    // std::cin >> age;
+    //constexpr int salam = age; // Error mide 
+}
+*/
 
+/*
+#include <iostream>
 
+int five() {
 
+    return 5;
 
+}
 
+int main() {
+    
+
+    constexpr int salam = five(); // Error mide 
+    // Chon ta Function five seda zade nashe meghdar malom nis
+    // Khob key seda zade mishe dar Run-Time
+
+}
+*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
 
 
 
