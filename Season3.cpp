@@ -1548,7 +1548,16 @@ int main() {
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
+// Mabhas: Compile-Time Constant
 
+// Compile-Time Constant zamani hast ke meghdaresh dar zaman Compile Moshakhas bashe mesl:
+// "Hello" / 1 / 5 va .....
+// Khob Constant Variable ha chetor: Ham mitune Compile-Time Constant bashe ham na
+// Constant Variable dar sorati mitune Compile-Time Constant bashe ke Initialization (Meghdar)
+// Yek Constant Expression bashe
+// Hameye Literal ha Compile-Time Constant hastand
+
+/*--------------------------------------------------------------------------------------------------------------------*/
 
 
 
