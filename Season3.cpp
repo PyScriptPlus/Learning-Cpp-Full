@@ -1504,9 +1504,49 @@ int main() {
 // Vaghti Ejra mikonim dige nemiad 15 + 3 hesab kone hamon adad 18 sari neshon mide
 // In adad 18 az ghabl da faz Compile hesab shode
 
+// Ye mafhomi darim: Constant Expression
+// In Expression midunim dige daraye Literal va amalgarha 
+// 3 + 5 Yek Expression hast
 
+// Constant chiye?
+// Bala toye code tarif kardim dige 15 + 3 ke meghdar on dar Compile-Time
+// Moshakhas mishe Yani ghabl az RunTime meghdar on moshkhas ast ke migim Compile-Time
 
+// Ye so'al x + 4 yek Constant Expression hast?
+// Ham bale ham kheyr 
+// Age ghablan gofte bashim x = 5;
+// Bale x malome dige javabesh dar Compile-Time moshkhas mishe
 
+/*
+#include <iostream>
+
+int main() {
+
+    int x = 6;
+    std::cout << 10 + x;
+    // In 16 jaygozin ke 10 + x karde
+    return 0;
+
+}
+*/
+
+// Vali agar x bedim dar std::cin karbar vared kone
+// Constant Expression hesab nemishe chera?
+// Malome chon adad x dar Run-Time moshakhas mishe
+
+// Compile-Time amalkard Sorat behtari dare 
+// Chon dige CPU niyaz nist talaf nemidunam 3 + 6 she
+
+// std::cout khodesh yek Expression hast
+// Hala in Constant Expression hast?
+// Kheyr chon chap ya hamon ouput in dar Run-Time moshkhas mishe
+
+// Compile-Time behtar hast ya Run-Time? 
+// Agar momken dashte bashe rahi bashe Compile-Time 100%
+
+// Baraye dark behtar in mabhas Daftar negah kon 1 dor
+
+/*--------------------------------------------------------------------------------------------------------------------*/
 
 
 
