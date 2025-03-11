@@ -1,4 +1,4 @@
-# C and C++ Learning
+# C and C++ and C# Learning
 
 This project contains both C and C++ and C# code.
 
