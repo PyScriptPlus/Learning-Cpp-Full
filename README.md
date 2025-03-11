@@ -10,12 +10,12 @@ This project demonstrates the usage of C, C++, and C# languages in a single proj
 - C++
 - C#
 
-![C](https://img.shields.io/badge/Lang-C-blue.svg)
-![C](https://img.shields.io/badge/Lang-C-purple.svg)
+![C](https://img.shields.io/badge/Language-C-blue.svg)
+![C](https://img.shields.io/badge/Language-C-purple.svg)
 <br>
-![C++](https://img.shields.io/badge/Lang-C%2B%2B-blue.svg)
-![C++](https://img.shields.io/badge/Lang-C%2B%2B-purple.svg)
+![C++](https://img.shields.io/badge/Language-C%2B%2B-blue.svg)
+![C++](https://img.shields.io/badge/Language-C%2B%2B-purple.svg)
 <br>
-![C#](https://img.shields.io/badge/Lang-C%23-blue.svg)
+![C#](https://img.shields.io/badge/Language-C%23-blue.svg)
 ![C#](https://img.shields.io/badge/Language-C%23-purple.svg)
 
