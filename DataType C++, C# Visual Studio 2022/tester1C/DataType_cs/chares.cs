@@ -8,7 +8,7 @@ namespace DataType_cs
 {
     internal class chares
     {
-        static void Main(string[] ch)
+        static void char_projec(string[] ch)
         {
 
 
