@@ -1,6 +1,6 @@
 # C and C++ and C# Learning
 
-This project contains both C and C++ and C# code.
+This project includes all three C, C++, and C# codes.
 
 ## Description
 This project demonstrates the usage of C, C++, and C# languages in a single project. Some parts of the project are written in C, others in C++, and several components are implemented using C#.
