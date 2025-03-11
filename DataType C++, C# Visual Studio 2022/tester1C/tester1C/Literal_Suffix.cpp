@@ -67,6 +67,11 @@ int main() {
 
 	std::cout << utf8_encode << '\n';
 
+	//--------------------------------------------------------------------//
+
+	// Boolean:
+	// Suffix nadarad!!!!
+
 
 	return 0; // In khodesh ye Literal hast roye 0 negah dari mibini int hast
 
