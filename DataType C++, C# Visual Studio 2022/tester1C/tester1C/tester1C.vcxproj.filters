@@ -63,6 +63,9 @@
     <ClCompile Include="Literal_Suffix.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Numeral_System.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h">
