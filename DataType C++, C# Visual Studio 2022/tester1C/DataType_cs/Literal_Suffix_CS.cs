@@ -8,7 +8,7 @@ namespace DataType_cs
 {
     class Literal_Suffix_CS
     {
-        static void Main(string[] arg)
+        static void Suffix_Literal(string[] arg)
         {
             // Integer:
             // Mesl C++ mirim jolo dige tozihat nemidam toye on yeki Project hast
