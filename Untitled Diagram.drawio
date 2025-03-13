@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36" version="26.0.10">
+  <diagram name="Page-1" id="q3VehpWkWp-C3FLWzLce">
+    <mxGraphModel dx="1114" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-39" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.bendArrow;dy=15;dx=38;notch=0;arrowHead=55;rounded=1;flipH=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="310" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-1" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;bit&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-6" value="1" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="720" y="50" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-7" value="2" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="560" y="50" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-8" value="4" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="410" y="50" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-9" value="8" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="240" y="50" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-10" value="16" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="50" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-11" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;bit&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-12" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;bit&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-13" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;bit&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-14" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;bit&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-15" value="&lt;font style=&quot;font-size: 23px;&quot;&gt;0&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="190" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-16" value="&lt;font style=&quot;font-size: 23px;&quot;&gt;0&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="580" y="190" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-17" value="&lt;font style=&quot;font-size: 23px;&quot;&gt;0&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="190" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-18" value="&lt;font style=&quot;font-size: 23px;&quot;&gt;1&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="260" y="190" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-19" value="&lt;font style=&quot;font-size: 23px;&quot;&gt;1&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="740" y="190" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-23" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="40" y="420" width="280" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-22" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="tJ0PLBf46RjauLWCrMxc-23">
+          <mxGeometry width="280" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-21" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;خوب این 0 1 هارو به بیت های خودشون ضر میکنیم&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="tJ0PLBf46RjauLWCrMxc-23">
+          <mxGeometry y="10" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-25" value="&lt;font style=&quot;font-size: 23px;&quot;&gt;1&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="740" y="250" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-26" value="&lt;font style=&quot;font-size: 23px;&quot;&gt;0&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="580" y="250" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-27" value="&lt;font style=&quot;font-size: 23px;&quot;&gt;0&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="250" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-28" value="8" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="240" y="245" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-29" value="&lt;font style=&quot;font-size: 23px;&quot;&gt;0&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="250" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-32" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;خوب بعد به ضرب کردن حالا مثلا بقیه 0 هستن یدونه 8 و 1 مونده باهم جمع میکنیم که حاصل میشه&amp;nbsp; Decimal 9&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#999999;strokeWidth=1;fillColor=#FFFFFF;fontColor=#6C767D;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=10;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="560" y="390" width="170" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-33" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;" vertex="1" parent="1">
+          <mxGeometry x="375" y="435" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-35" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;0 + 8 + 0 + 0 + 1 = 9 Decimal&lt;/font&gt;" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iTextInput;strokeColor=#444444;buttonText=;fontSize=8;whiteSpace=wrap;align=left;" vertex="1" parent="1">
+          <mxGeometry x="320" y="310" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="tJ0PLBf46RjauLWCrMxc-40" value="&lt;span style=&quot;font-size: 21px;&quot;&gt;&amp;nbsp;بیت&lt;/span&gt;&lt;span style=&quot;font-size: 21px;&quot;&gt;16&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 21px;&quot;&gt;&amp;nbsp;آخرش نیست&amp;nbsp;&lt;br&gt;&amp;nbsp;برابر&lt;/span&gt;&lt;span style=&quot;font-size: 21px;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot;font-size: 21px;&quot;&gt;&amp;nbsp;کنی&amp;nbsp;&lt;br&gt;32 هست&lt;br&gt;64 و&lt;/span&gt;" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iTextInput;strokeColor=#444444;buttonText=;fontSize=8;whiteSpace=wrap;align=left;" vertex="1" parent="1">
+          <mxGeometry x="20" y="305" width="180" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
