@@ -1620,16 +1620,109 @@ int main() {
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
+// Mabhas: Literals
+
+// Tarif Literal: Literal ha maghadir bi nami hastand ke be sorat mostaghim
+// Dar codemun azashon estefade mikonim
+
+// Mesal:
+// return 0; hamin 0 return yek Literal hast int literal
+// bool lite = true; hamin true yek literal hast ghabel taghir nistand
+// std::cout << 3.16; hamin 3.16 yek literal hast inam ghabel taghir nist
+// Literals: 
+// integer value ==> 6 / -7 / 0 va ... --> int
+// boolean ==> true / false --> bool
+// floating point ==> 1.2 / -5.12 va ... --> double
+// character ==> 'a' / '\n' / '&' va .. --> char
+// c-style string ==> "MamaD" --> const char[4]
+// In string vali char ba arraye dar nazar gerfte mishe
 
 
 
+// Khob Literal ha ham mesl Variable ye Type daran
+// Esmeshun Suffix hast
+// Suffix yani che? 
+// Yani ye passvandi ke be Literal ezafe koni ta noe daghigh taresh ro be compiler begi
+
+// Mesal vaghti minevisim 42 in compiler int dar nazar gerfte mishe mesal ma ba ye passvandi
+// Mitunim begim in long int hast ya ....
+// Mesal:
+
+/*
+#include <iostream>
+int main() {
+
+    // Integer Literal: 
+
+    // Dar suffix ha bozorg kochak farghi nemikone vali bozorg behtar khanayi dare
+    std::cout << "Int: " << 52 << '\n'; // Mouse rosh negah dari minevise ( int )
+    std::cout << "Long: " << 56L << '\n'; // Ba ezafe kardan L jeloye adad hala negahdari
+    // Minevise Long hameye passvand haro posht sar ham minevisam
+    std::cout << "Long Long: " << 56LL << '\n'; 
+    std::cout << "Unsigned: " << 54U << '\n'; // Inam Unsigned hast
+    // Hala mitunim tarkib ham konim:
+    std::cout << "Unsigned Long: " << 54UL << '\n';
+    std::cout << "Unsigned Long Long: " << 54ULL << '\n';
+
+    //--------------------------------------------------------------------------//
+
+    // Floating-point Literal: 
+
+    std::cout << "Double: " << 3.1 << '\n'; // Defaultesh ine
+    std::cout << "Float: " << 2.6f << '\n'; // Ba ezafe kardan f joloye adad mishe float
+    std::cout << "Long Double: " << 3.5L << '\n'; // Ba ezafe kardan L be adad ashari mishe long double
+     
+    //--------------------------------------------------------------------------//
+
+    // Character: 
+    // Male string neveshtam vali ba char toye daftar ono inja neminevisam 
+    // Dar mabhas string male khode string migam
+    // Deghat dashte bash suffix ha posht تک کدیشن hastand !!!!!
+    std::cout << "Char: " << 'a' << '\n';
+    std::cout << "char16_t: " << u'a' << '\n';
+    std::cout << "char32_t: " << U'a' << '\n';
+    std::cout << "wchar_t: " << L'a' << '\n';
+    
+    // Yek eshare am konam baraye string char suffix ha xD:
+    const char* chr = "Salam"; // Mesl suffix haye bala mitunim baraye inam bezarim
+    // Tosiye nemikonam ino chon khod string ye suffix makhsos dare
+    // Vali man codesho minevisam
+    const char16_t* chr1 = u"Salam"; 
+    // doruste type daghigh minevisam vali suffix eshon nazarim error mide
+    const char32_t* chr2 = U"Salam";
+    const wchar_t* chr3 = L"Salam";
+    std::cout << "Char-string: " << chr << '\n';
+    std::cout << "Char16_t-string: " << chr1 << '\n';
+    std::cout << "Char32_t-string: " << chr2 << '\n';
+    std::cout << "wchar_t-string: " << chr3 << '\n';
+
+    // Yeki am hast male UTF8 == UTF-8 encoded
+    // In shayad be dard bekhore
+    const char* utf_8 = u8"Salam";
+    std::cout << "UTF-8: " << utf_8 << '\n';
+
+    // in char* az zaban C be ers reside chon dar zaban C string nadarim
+    // char* yani darim az esharegar ha estefade mikonim
+    // Ke reshte ra be sorat arraye dar char negah midare
+
+    // Ye seri tozihat ham dar daftar hast negah koni behtare
+
+    // 2 Model ham mitunim double benevisim: 
+    // 1- Ashari
+    // 2- Scientific Notation
+    // Ye yad avari az Scientific Notation:
+    // Mesal in: 200.35
+    double size = 2.0035e2;
+    std::cout << "Scientific Notation: " << size << '\n';
 
 
+    return 0;
+}
+*/
 
+/*--------------------------------------------------------------------------------------------------------------------*/
 
-
-
-
+// Mabhas: Magic Number: 
 
 
 
