@@ -72,6 +72,9 @@
     <ClCompile Include="string_part2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="string_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h">
