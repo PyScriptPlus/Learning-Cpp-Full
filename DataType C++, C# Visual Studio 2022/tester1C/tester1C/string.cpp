@@ -21,15 +21,15 @@ int main() {
 	// Ye rahi dare Yejurayi tabdil konim be int ke betonim on adad:
 	// (+) (-) (/) (*) zarb taghsim va .. konim be ye adad int
 	
-	/* 
-	Rah hal :
+	
+	//Rah hal :
 	std::string strNumber = "12";
-	int number = std::stio(strNumber); // C++11 be baad omade to in nemishe
-	*/
+	int number = std::stoi(strNumber); // C++11 be baad omade alan kar kard xD
+	int number2 = 3 + number;
+	std::cout << "Conversion string to int: " << number2 << '\n';
 
 	// Ye mesal bezanim Esm va Sen az karbar begirim har 2 tash ba string
-
-
+	std::cout << '\n';
 	std::cout << "Enter your age: ";
 	int age;
 	std::cin >> age;
