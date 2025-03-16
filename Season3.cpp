@@ -1724,6 +1724,43 @@ int main() {
 
 // Mabhas: Magic Number: 
 
+// Magic Number chist? 
+// Yek Literal yek adadi dar code ma hast ke معناش vazeh nist 
+// Va Emkan dar on adad na'mlom dar ayande taghir kone 
+// Mesal:
+/*
+int main() {
+
+    // constexpr int jamHogugh = saatKari * 5000;
+    // Khob in code ba deghat negah kon
+    // جمع حقوق میخواد به دست بیاره 
+    // ساعت کاری ضرب کرد به یه عدد نامعلوم
+    // To in adad chera ha chiye hast ke in 5000 chiye chera aslan * shode be in adad 5000
+    // Be in adad 5000 migam Magic Number !!!!!
+
+    // Chera Magic Number khob nist?
+    // Khanayi code payin miare ---> Taraf nemidune in adad az koja omade
+    // Negahdari code sakht mishe ---> Age khasti ye zamani on adad tagghir bedi bayad begardi beyn in hame code
+    // Afzayesh ehtemal Error ---> Momkene yeja eshtebah adad taghir bedi ya kolan adad yadet rafte eshtebah neveshti
+
+    // Rah hal?
+    // int ezafeKari = 5000; // Alan harki negah kone mifahme in adad male ezafe kari hast
+    // constexpr int jamHogugh = saatKari * ezafeKari;
+    // Alan vazeh tare 
+
+    // Hamishe adad hato intori benevis
+
+    // Kholase az Magic Number: Yani adadi ke toye code omade malome nist
+    // Daghighan chiye va chera ha dar onja vojud dare
+    // Behtare hamishe ye esm معنی dar barash tarif konim !!!!!
+
+}
+*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Kheyli moheme!!!!
+// Mabhas: Numeral Systems
 
 
 
