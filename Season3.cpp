@@ -1762,17 +1762,295 @@ int main() {
 // Kheyli moheme!!!!
 // Mabhas: Numeral Systems
 
+// Ma dar zaban C++ 4 ta Numeral System darim:
+// 1- Decimal ==> Mabnaye 10
+// 2- Binary ==> Mabnaye 2
+// 3- Octal ==> Mabnaye 8
+// 4- Hexadecimal ==> Mabnaye 16
+
+//--------------------------------------------------//
+
+// Decimal | Mabnaye 10:
+// Ma dar zendegi ruzane khodemun ham az Decimal estefade mikonim hamon ده دهی hast
+
+// Adad haye Decimal 10 ragham hast be sorat zir:
+// 0 / 1 / 2 / 3 / 4 / 5 / 6 / 7 / 8 / 9
+// khod 0 ham hesab mishe, mishe 10 ragham
+// baad mire be 2 raghami 
+// 10 / 11 / 12 / 13 / 14 / 15 / 16 / 17 / 18 / 19 
+// ta 99 baad mire be 3 raghami 
+// 100 ....... 999 va hamintor adad haye sade dige khodemun estefade mikonim
+
+// Default zaban C++ ham hamin Decimal hast
+/*
+#include <iostream>
+
+int main(){
+
+    int decimal1 = 5;
+    int decimal2 = 15;
+    std::cout << "In Number is Decimal: " << decimal1 << '\n';
+    std::cout << "In Number is Decimal: " << decimal2 << '\n';
+
+    return 0;
+}
+*/
+
+//--------------------------------------------------//
+
+// Binary | Mabnaye 2:
+// Ke be in Binary دودویی ham migan
+
+// Binary kolan 2 ragham dare va adad haye momken in:
+// 0 / 1 
+// Dar in Season khondim
+// Ba in binary mitunim adad Decimal benevisim goftim
+
+// 1000 = 8
+// 1010 = 10
+// 0011 = 3
+// 1111 = 15
+
+// Mesal codi: 
+/*
+#include <iostream>
+
+int main() {
+    
+    // Baraye neveshtan Binary dar C++ ebteda ( 0 ) baad ( b ) mizarim bozorg kochak farghi nadare
+    // Baad on b mitunim adad mored nazar binary to benevisi
+    int bin1 = 0b1000;
+    int bin2 = 0b1011;
+    int bin3 = 0b0000;
+    int bin4 = 0b1111;
+
+    std::cout << "In Number is Binary: " << bin1 << '\n';
+    std::cout << "In Number is Binary: " << bin2 << '\n';
+    std::cout << "In Number is Binary: " << bin3 << '\n';
+    std::cout << "In Number is Binary: " << bin4 << '\n';
+
+    return 0;
+}
+*/
+
+//--------------------------------------------------//
+
+// Octal | Mabnaye 8:
+
+// Khob Octal mabnaye 8 hast pas inam 8 ragham adad ast
+// Octal ==> 0 / 1 / 2 / 3 / 4 / 5 / 6 / 7
+// Ba khod 0 mishe 8 ragham
+// Khob bagiye adad chi shod?
+// Mirim az 2 raghami shoru mikonim
+// 10 / 11 / 12 / 13 / 14 / 15 / 16 / 17
+// 20 / 21 / 22 / 23 / 24 / 25 / 26 / 27
+// Khob alan 8 9 nadarim pass 18 19 ham nadarim
+// Alan man 8 decimal dar Octal chi mishe
+// Hamon 10 Octal mishe 8 decimal 
+// 11 == 9
+// 12 == 10
+
+// Mesal codi fahmudan Octal be Compiler: 
+
+/*
+#include <iostream>
+
+int main(){
+    // Inam faghat ebteda yek 0 mizari baad adadeto minevisi
+    int octal1 = 010;
+    int octal2 = 017;
+    int octal3 = 020;
+    int octal4 = 012;
+
+    std::cout << "In Number is Octal: " << octal1 << '\n';
+    std::cout << "In Number is Octal: " << octal2 << '\n';
+    std::cout << "In Number is Octal: " << octal3 << '\n';
+    std::cout << "In Number is Octal: " << octal4 << '\n';
+    return 0;
+}
+*/
 
 
+// Hala ye adad bozorg tar bedan mesl 725 Octal began tabdil kon be decimal
+// Dar C++ rahate ke jolo tar migam ye code khasi dare 
+// Vali hala mikhaym mesal roye daftar ba kaghaz khodkar bedast biarim
+// 7 2 5 az samt rast yani az 5 shoru kon az 0 bezar boro ta adad akhar ona tavaneshon hastan
+// 2 1 0
+// 0 yani be tavan 0 
+// 1 ham hamintor 2 am injuri male 
+// 2 male 7
+// 1 male 2 
+// 0 male 5
+// Bayad zarb beshan be Mabnaye khodesh yani 8 chon octal mabnaye 8 hast
+
+/*
+#include <iostream>
+#include <cmath>
+
+int main(){
+
+    // Mabnaye in octal ke 8 hast be tavan on mishe ke bala goftam hamon 2 baad zarb mishe be khod 7
+    int adad1 = pow(8 , 2) * 7; 
+    // Bagiye ham hamintor
+    int adad2 = pow(8 , 1) * 2;
+    int adad3 = pow(8 , 0) * 5;
+    std::cout << "Adade1: " << adad1 << '\n';
+    std::cout << "Adade2: " << adad2 << '\n';
+    std::cout << "Adade3: " << adad3 << '\n';
+    // Baad hamashon baham jam mikonim on adad aslie be dast miad
+    int jam = adad1 + adad2 + adad3;
+    std::cout << "Jameshon Decimal: " << jam << '\n'; // 469 mishe Decimal
+    // Tabdil kardim Octal convert to Decimal 
+
+    return 0;
+}
+*/
+
+//--------------------------------------------------//
+
+// Hexadecimal | Mabnaye 16:
+
+// Khob dar Hexadecimal ham 16 ragham darim be sorat zir:
+// 0 / 1 / 2 / 3 / 4 / 5 / 6 / 7 / 8 / 9 
+// A / B / C / D / E / F
+// A == 10
+// B == 11 
+// C == 12
+// D == 13
+// E == 14
+// F == 15
+// Chon khod 0 ham hesab mishe ta 15 hast
+// Hexadecimal ham injuri dige baad 9 bayad injuri benevisi A B ....
+
+// Mesal codi: 
+/*
+#include <iostream>
+
+int main() {
+    // Inam be sorat zir hast ebteda ( 0 ) baad ( x ) mizarim
+    // Baad adad mored nazar Hexadecimal ro minevisim
+    int hexa1 = 0xF;
+    int hexa2 = 0x2B;
+    int hexa3 = 0xFA;
+    int hexa4 = 0x10; // In 10 mishe 16 be dast ovardanesh
+    // Toye C++ ye code dare toye daftar migam chejurie 2 tasham migam
+    std::cout << "In Number is Hexadecimal: " << hexa1 << '\n';
+    std::cout << "In Number is Hexadecimal: " << hexa2 << '\n';
+    std::cout << "In Number is Hexadecimal: " << hexa3 << '\n';
+    std::cout << "In Number is Hexadecimal: " << hexa4 << '\n';
+
+    return 0;
+}
+*/
+// Hexa kheyli be dard mikhore miduni chera:
+// bejaye inke biad benevisi ( 1111 ) dar Binary ke mishe 15 bia faghat ye ( F ) gharar bede
 
 
+// Khob alan mikham mesal D3AF be dast biaram
+// Khob mesl Octal vali zarb be mabnaye khod Hexadecimal ke 16 
+// D 3 A F payinesh tavan hasho az samt rast az 0 bezar boro
+// 3 2 1 0
+/*
+#include <iostream>
+#include <cmath>
+int main() {
+
+    int adad1 = pow(16 , 3) * 13; // 13 hamon D
+    int adad2 = pow(16 , 2) * 3;
+    int adad3 = pow(16 , 1) * 10; // 10 hamon A
+    int adad4 = pow(16 , 0) * 15; // 15 ham hamon F
+    // Deghat dashte bash man khodam be in moshkel khordam 
+    // Avval khodesho benevis baad tavan
+    // Yani (Mabna , tavan) tartib moheme be moshkel mikhore adad
+
+    std::cout << "Adad avval: " << adad1 << '\n';
+    std::cout << "Adad dovvom: " << adad2 << '\n';
+    std::cout << "Adad sevom: " << adad3 << '\n';
+    std::cout << "Adad chaharom: " << adad4 << '\n';
+
+    int jam = adad1 + adad2 + adad3 + adad4;
+    std::cout << "Hexadecimal convert to Decimal: " << jam << '\n';
+
+    return 0;
+}
+*/
+
+// Khob ta alan toye daftar bod ina 
+// Toye zaban C++ mitunim hamin kar konim be sorat kheyli rahat
+// Be joz Binary chon on fargh mikone akhar migam 
+// Ma goftim Default C++ Decimal hast 
+// cout ham hamintor defaultesh decimal hast adad haro decimal chap mikone
+// Hala Mikham Decimal bedam be sorat octal ya hexadecimal az cout daryaft konam
+// Mesal:
+
+/*
+#include <iostream>
+
+int main() {
+
+    // Defaultesh hamin Decimal Mesal:
+
+    std::cout << "Default Decimal: " << 25 << '\n'; 
+    
+    // Decimal to Octal:
+    std::cout << std::oct;
+    // std::cout << std::oct << 12 ; // Injuri am mishe 
+    // Payinesh dige harchi chap koni Octal mide behet 
+    std::cout << "Octal: " << 8 << '\n'; // 8 decimal mishe 10 octal
+    // dige harchi baadesh chap koni Octal behet tahvil mide behet migam chikar koni
+    // Bargarde be halat avval Defaultesh hamon Decimal
+    // Chand ta mesal bezanim vase octal
+    std::cout << "Octal: " << 9 << '\n';
+    std::cout << "Octal: " << 11 << '\n';
+
+    // Baraye hexadecimal ham hamintor
+
+    std::cout << std::hex;
+    std::cout << "Hexadecimal: " << 10 << '\n'; // Bayad A chap kone
+    std::cout << "Hexadecimal: " << 15 << '\n'; // F
+    std::cout << "Hexadecimal: " << 16 << '\n'; // Bayad 10 chap kone 
 
 
+    // Hala harchi chap koni hexa neshon mide mikham bargarde halat defaultesh
+    std::cout << std::dec; // Dige harchi chap koni decimal mishe defaulteshe
+    std::cout << "Default: " << 5 << '\n';
+
+    return 0;
+}
+*/
+
+// Khob dar cout mabnaye 8 va 16 chap kardim mond 2 binary ke goftam fargh dare
+/*
+#include <iostream>
+// In Library hatman bayad bashe 
+#include <bitset>
+
+int main() {
+
+    // std::bitset<Tedad bit ke mikhay> Identifier = Value;
+    // Mesal: 
+    std::bitset<4> hexa = 0xA;
+    std::bitset<4> octal = 010;
+    std::bitset<8> decimal = 18;
+    // Khod binary mitunim tosh benevisim
+    std::bitset<4> binary = 0b1001; // dige chapesh nemikonam
+
+    std::cout << "Binary convert to Hexadecimal: " << hexa << '\n'; 
+    std::cout << "Binary convert to Octal: " << octal << '\n';
+    std::cout << "Binary convert to Decimal: " << decimal << '\n';
 
 
+    // Mitunim mostaghim ham benevisim:
+    std::cout << "Binary convert to Decimal: " << std::bitset<4>(9) << '\n'; 
+    // vaa ...
 
+    return 0;
+}
+*/
 
+/*--------------------------------------------------------------------------------------------------------------------*/
 
+// Mabhas: String
 
 
 
