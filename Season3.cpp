@@ -2052,14 +2052,147 @@ int main() {
 
 // Mabhas: String
 
+// Avvalin barname ma yadet bashe:
+// std::cout << "Hello, World!";
+// In Hello world chiye yek tavali az character ha ast
+// Ke dar barname nevisi be in tavali az character ha migan ( string )
+
+// Format string دابل کدیشن hast " " ke mishe tosh text nevesht ya hata Number ham mishe nevesht
+// Vali Number daron on دابل کدیشن arzesh adadi nadare "5" + 5 nemishe manzuram ine
+// Chizi ke beyn on دابل کدیشن gharar migire migan C-Style string 
+
+// String dar DataType ha az noe Compound ha hast
+// dige ghati kardam ba Fundamental ha begam chon rahate :)
+
+// 2 Halat type darim baraye string kar kardan bahashon rahate
+// 1- std::string ke dar C++98 be baad omad
+// 2- std::string_view ham dar C++17 be baad omad in fargh dare migam jolo tar chiye daghighan
+
+// Mesal:
+/*
+#include <iostream>
+#include <string> // Hatman bezar ino vaghti az string ha estefade mikoni
+
+int main() {
+
+    std::string identifier = "Hello";
+    identifier = "Mamad23";
+
+    // In adad ke mibini arzesh adadi nadare
+    // Vali ye rah dare ke khodam peyda kardam 
+    // Search kardam ye rahi barash hast tabdil she be int
+    // Mesal:
+
+    std::string numberString = "5";
+    int number = std::stoi(numberString);
+    std::cout << "Natije: " << number + 5;
+
+    return 0;
+}
+*/
+
+// Khob ye mesal bezanim ke az karbar esm va sen migire az 2 ta az noe string 
+// Vali nokte dare !!!
+/*
+#include <iostream>
+#include <string>
+
+int main() {
+
+    std::cout << "Enter your name: ";
+    std::string fName;
+    std::cin >> fName;
+
+    std::cout << "Enter your age: ";
+    std::string age;
+    std::cin >> age;
+
+    std::cout << "Your name is: " << fName << "\nYour age is: " << age << '\n';
+
+    // Nokte chiye mesal vaghti dari esmeto vared mikoni mizani Enter baad sen okeye
+    // Hala age beyn esmet fasele bashe mesl Mohammad Hossein in barname chikar mikone
+    // hamin ( >> Extraction Operator ) ta jayi edame mide ke be White Space barkhord kone
+    // Khob ye chizi hast to in vasat vaghti shoma esmeto vared Mamad mikoni Enter 
+    // Mizani posht sahne injuri mishe Mamad\n ye khat miad payin cin avvali payan miyabad
+    // Ya khod White space bezari enter bezani miad 
+    // Hamon Mohammad Hossein chikar mikone
+    // Mohammad baraye esm neshon mide
+    // Hossein baraye sen
+    // std::cin >> in ( >> ) ye operator hast dige Extraction Operator 
+    
+    //Rah hal code payini
+
+    return 0;
+}
+*/
+
+// Rah hal chiye in Extraction Operator in White space ya harchi nadide begire ba std::ws? 
+// Estefade az ( getline ) in Library #include <string> hatman barash ejbarie
+// Mesal:
+/*
+#include <iostream>
+#include <string>
+
+int main() {
+
+    std::cout << "Enter your name: ";
+    std::string fName;
+    std::getline(std::cin >> std::ws , fName); // Nahve neshtan getline injurie:
+    // std::getline(std::cin, Identifier);
+    // Payin std::ws tozih midam
+    std::cout << "Enter your age: ";
+    std::string age;
+    std::cin >> age;
+
+    std::cout << "Your name is: " << fName << "\nYour age is: " << age << '\n';
+
+    // Fix :)
+    return 0;
+}
+*/
+
+// Khob code bala ye std::ws neveshtan on chiye?
+// In std::ws miad be cin mige dar ebteda har:
+// Fasele / Tab \t / Khat jadid \n / 
+// Didi nadide begir
+// Ye mesal bezanm kamel deghat kon bebin che etefagh miofte:
+/*
+#include <iostream>
+#include <string>
+
+int main() {
 
 
+    std::cout << "Enter your age: ";
+    int age;
+    std::cin >> age;
 
+    std::cout << "Enter your name: ";
+    std::string fName;
+    //----------//
+    // std::getline(std::cin , fName);
+    // Bebin alan age bezani nesak 18 Enter koni miad name is: khali neshon mide hichi neshon nemide
+    // Yani chi yani vay nemise man in string fname ro vared konam esmamo 
+    // 18 mizanm Enter 
+    // Posht sahne injurie 18\n in \n baraye name mire dige vay nemise man bezanm name ro
+    // Chon \n baraye fName hast 
+    // Tozih dadam dige std::ws age bezarim inaro nadide begire
+    //----------//
+    std::getline(std::cin >> std::ws , fName); // Alan in javab mide
+    std::cout << "Your age is: " << age << "\nYour name is: " << fName << '\n';
+    
+    return 0;
 
+}
+*/
 
+// std::ws faghat mogheyi lazem mishe va azash estefade kon ke dar code az 
+// std::getline estefade kardi
+// age nabod niyaz nist 
 
+/*--------------------------------------------------------------------------------------------------------------------*/
 
-
+// Mabhas: String Part2
 
 
 
