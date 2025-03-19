@@ -2315,13 +2315,115 @@ int main() {
 
 // Mabhas: string_view
 
+// std::string x = "Hello";
+// std::cout << x;
+// Zamani ke in Variable x ro ba C-style string meghdar dahi mikonim in meghdar dar
+// Makani az Hafeze RAM ke in Variable takhsis yafte Copy mishe
+
+// Nokte: Bar khalaf Fundamental type ha std::string meghdar dahi avvalie ya taghir meghdar
+// سریع نیست و بهینه هم نیست
+// Vali Fundamental type ha سریع hastand
+
+// Rah hal chiye???? 
+// Estefade az string_view ke dar C++17 be baad omad khod C++17 ham mishe estefade kard
+// In string_view copy ijad nemikone 
+// string_view: ye namayesh (View) az ye reshte ast na khod reshte on faghat be dade haye mojud
+// ye eshare gar mide bedon in ke Copy az reshte besaze 
+// In string_view ye dastrasi ReadOnly ijad mikone 
+// ReadOnly esmesh roshe yani faghat mituni bekhoni nemituni taghir bedi
+// سریع hast chon hich copy anjam nemide 
+
+// Nahve estefade az string_view // jahayi ke Readonly mikhaym va baraye Parameter takid mishe 
+/*
+#include <iostream>
+#include <string_view>
+// Hatman Library sho include kon
+
+int main() {
+
+    std::string_view name = "MamaD";
+    std::cout << name << '\n';
+    // In dige hich copy ijad nemikone va behine ham hast 
+    // Soraat ham awlie
+    return 0;
+}
+*/
+
+// Khob dar string_view mishe constexpt ham tarif kard
+// Mesal:
+/*
+#include <iostream>
+#include <string_view>
+
+int main() {
+
+    constexpr std::string_view name = "ALi";
+    // In dar CompileTime hast 
+
+    return 0;
+}
+*/
 
 
+// Khob ye vaghtayi hast neveshtim std::string
+// Bedon pak kardan mitunim tabdil Implicit anjam bedim be string_view
+// Mesal:
+/*
+#include <iostream>
+#include <string_view>
+#include <string>
+
+int main() {
+
+    std::string opens = "Open";
+    std::string_view closed = opens;
+    std::cout << opens << '\n'; // In dota farghi nadare chon ina faghat chap mikonan
+    std::cout << closed << '\n'; // In dota farghi nadare chon ina faghat chap mikonan
+    // Har kodom chap koni okeye copy dige dar kar nist chon avval tabdil shode tamom shode
+
+    return 0;
+}
+*/
+
+// Hala mishe string_view ham Conversion anjam dad be string
+// Bali vali Implicit nemishe bayad Explicit bashe error nade
+// Mesal:
+/*
+#include <iostream>
+#include <string>
+#include <string_view>
+
+int main() {
+
+    std::string_view hello = "Hi";
+
+    // std::string salam = static_cast<std::string>(hello);
+    // std::cout << salam;
+
+    // OR
+
+    std::cout << static_cast<std::string>(hello);
+
+    return 0;
+}
+*/
+
+// Mored akhar:
+// Suffic string_view monde bali string_view ham Suffix dare
+// Hamon Literal Type
+
+#include <iostream>
+
+int main(){
+
+    using namespace std::literals;
+    std::cout << "Hello"s << '\n'; // Suffic ==> std::string
+    std::cout << "End Season 4"sv << '\n'; // Suffic ==> std::string_view
+    // Ba gharar dadan sv joloye reshte ba hatman bayad hamon
+    // using namespace std::literals; ham bashe
+
+    return 0;
+}
 
 
-
-
-
-
-
-
+// End Project Season 4 .........................
