@@ -2194,16 +2194,126 @@ int main() {
 
 // Mabhas: String Part2
 
+// Shayad bazi vaghta lazem bashe chizi ke toye string neveshtim mesal MamaD 
+// Tedad character hasho befahmim ba ye Member Function:
+// Mesal:
+/*
+#include <iostream>
+#include <string>
+
+int main() {
+
+    std::string name = "MamaD";
+    std::cout << "Tedad character: " << name.length() << '\n';
+
+    // Age bekhahim in Member fucntion length() ro dakhel yek Variable int berizim
+    // Ehtemal khata ya warnin hast avval tabdil mikonim baad Explicit
+    int tedad = static_cast<int>(name.length());
+    std::cout << "Tedad character: " << tedad << '\n';
+    return 0;
+}
+*/
+// Ta alan chenin functioni nadide budim length();
+// Ehtemal midadim injuri bashe length(name); ke kamelan eshtebahe
+// Be injur function ha migan Member Function ke dar ayande hatman yad migirim
+// Baraye ( Object oriented Programming ) lazem ishe!! mafahim paye ( OOP ) hast
 
 
+// Mesl in length() az standard C++20 be baad ye chizi mesl in omad ke mitunim az onam
+// Baraye bedast ovardan tedad character estefade konim
+// Mesal: 
+/*
+#include <iostream>
+#include <string>
 
+int main() {
 
+    std::string fName = "Mohammad";
+    std::cout << "Tedad character: " << std::ssize(fName);
+    // Chon in C++17 hast ba in command mituni khoruji begiri
+    // g++ -std=c++20 main.cpp -o Test.exe or .out
+    // OR
+    // clang++ -std=c++20 main.cpp -o Test.exe or .out
+    return 0;
+}
+*/
 
+// Ye nokte: zamani ke yek std::string ro meghdar dahi mikonim mesal:
+// std::string = "ALi"; 
+// Zamani ke ino minevisim yek copy gerfte mishe az in
+// Tozih midam jolo tar W8
 
+// Khob hala ma yek Function darim ke Parameter esh std::string dare
+// Baraye dadan Argument behesh ya hamon meghdar dahi kardan in 
+// Yek copy dige sakhte mishe mesal:
+/*
+#include <iostream>
+#include <string>
+void print(std::string x){
 
+    std::cout << x << '\n';
 
+    return;
+}
 
+int main() {
 
+    std::string name = "Mamad";
+    print(name);
+
+    return 0;
+}
+*/
+
+// Code balayi eftezahe chera? chon in copy ha hazine bardar hast
+// Behine nist 
+
+// In jomle yadet bashe:
+// Hichvaght (std::string ro Pass By Value) nakonid!!!!!!!!!
+// Vaghti yek تابع tarif mikonim say nakon شیء std::string ro be sorat copy
+// Be تابع befresti
+// Moshkelat: 
+// 1-Masraf RAM bishtar 
+// 2-Soraat barname payin miad (Be khater amaliyat Copy)
+
+// Khob age majbur budim Pass By Value konim chetor?
+// Mabhas baadi string_view estefade mikonim ke migam mabhas baadi
+
+// Khob goftim har Literal yek type dare mesl Varibale
+// Dar mabhas Literals man char goftam vali Suffix String monde
+
+// In payini male: 
+// "Hello world" C-Style string
+
+// Vali khod std::string yek Suffix dare
+// Baraye estefade az on:
+/*
+#include <iostream>
+#include <string>
+
+int main() {
+
+    using namespace std::literals;
+
+    std::cout << "Hello"s; // std::string Literal
+    // Khob inja suffix jeloye reshte mizarim
+    // Baraye estefade az in bayad on bala ke neveshtam using namesapce std::literals;
+    // Lazem hast 
+
+    return 0;
+}
+*/
+
+// Az in using namespace std::literals ham khiyalet rahat babat
+// Estefadash hich Collision beyn code ha vojud nemiyare
+
+// Khob dar std::string nemishe constexpr tarif kard
+//constexpr std::string name = "Ali"; // Error
+// Inam ye rah hal dare Mabhas baadi std::string_view mishe ke migam
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: string_view
 
 
 
