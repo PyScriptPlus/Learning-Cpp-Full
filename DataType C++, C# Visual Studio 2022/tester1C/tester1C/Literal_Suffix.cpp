@@ -59,8 +59,12 @@ int main() {
 	const char* str = "Hello"; // String hast ta'job nakon
 	// Goftim dige string hamon char hast ke mitunim char ba arraye
 	// Va Esharegar ha ye reshte benevisim
+
+	/*
+	// In 2 ta code moshkel za hastan
 	const char16_t* str2byte = u"Hello"; // In ( u ) nazarim error mide
 	const char32_t* str4byte = U"Hello"; // In ( U ) nazarim error mide
+	*/
 	const wchar_t* str2_4byte = L"Hello"; // In ( L ) nazarim error mide
 	// In wchar dar bazi memari ha 2Byte va dar bazi 4 Byte hast !!!!
 
