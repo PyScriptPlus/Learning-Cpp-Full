@@ -1,4 +1,4 @@
-// Full Suffix in C++
+﻿// Full Suffix in C++
 // Suffix hamon Type haye Literal hast
 // Literal ha:
 // Integer ---> 2 / -1 / 0 va..... ---> int
@@ -38,12 +38,22 @@ int main() {
 
 	//--------------------------------------------------------------------//
 
-	// Char & string Literals:
-	std::cout << "Char" << 'A' << '\n'; // Default char
-	std::cout << "Char_16bit: " << u'a' << '\n'; // char16_t mouse rosh negah dari minevise
-	std::cout << "Char_32bit: " << U'a' << '\n'; // char32_t mouse rosh negah dari minevise
-	std::cout << "Char 2byte: " << L's' << '\n'; // wchar_t mouse rosh negah dari minevise
+	/* 
+	Nokte hatman bayad wchar_t haro ba :
+	std::wcout chap konim !!!!!
+	std::wcout << "Char 2byte: " << L's' << '\n';
+	*/
 
+	// Char & string Literals:
+
+	char16_t char2byte = u'a';
+	char32_t char4byte = U'a';
+
+	std::cout << "Char" << 'A' << '\n'; // Default char
+	std::cout << "Char_16bit: " << static_cast<int>(char2byte) << '\n'; // char16_t mouse rosh negah dari minevise
+	std::cout << "Char_32bit: " << static_cast<int>(char4byte) << '\n'; // char32_t mouse rosh negah dari minevise
+	std::wcout << "Char 2byte: " << L's' << '\n'; // wchar_t mouse rosh negah dari minevise
+	
 	// Kami ino takhasosi tar benevisim
 	// Ba esharegar ha 
 	const char* str = "Hello"; // String hast ta'job nakon
@@ -54,18 +64,30 @@ int main() {
 	const wchar_t* str2_4byte = L"Hello"; // In ( L ) nazarim error mide
 	// In wchar dar bazi memari ha 2Byte va dar bazi 4 Byte hast !!!!
 
+	
 	// In wcout ayande yad migirim
-	std::wcout << str << '\n';
-	std::wcout << u"2byte string:" << str2byte << '\n'; // Ehtemal dare dorust chap nakone
-	std::wcout << U"4byte string" << str4byte << '\n';  // Ehtemal dare dorust chap nakone
+	std::cout << str << '\n';
+	/*
+	std::cout << u"2byte string: " << str2byte << '\n'; // Ehtemal dare dorust chap nakone
+	std::cout << U"4byte string: " << str4byte << '\n';  // Ehtemal dare dorust chap nakone
+	In 2 ta code bala ro khodam Comment kardam moshkel za hastand vel kon !!!
+	In code ha dar standard C++ haye ghadimi kar mikonand
+	*/
 	std::wcout << L"Wide string: " << str2_4byte << '\n'; 
+		
 
 
-
+	// Code haye payini pichide ba be dard ziad nemikhore yadesh nagiri khubeh gij mikone!!!:
 	// Yedone am darim UTF-8 encode
-	const char* utf8_encode = u8"Hello_UTF-8"; // Inam male UTF-8 hast
-
-	std::cout << utf8_encode << '\n';
+	std::u8string_view utf8_encode = u8"Hello_UTF-8"; // Inam male UTF-8 hast
+	std::string_view normal_view(reinterpret_cast<const char*>(utf8_encode.data()), utf8_encode.size());
+	std::cout << normal_view << '\n';
+	/*
+	const char* utf8_encode = u8"Hello_UTF-8";
+	in code dar C++ haye ghadimi kar mikone jadid tarinesh bala neveshtam ba string_view
+	*/ 
+	// Sade tarinesh
+	std::cout << reinterpret_cast<const char*>(u8"Salam") << '\n';
 
 	//--------------------------------------------------------------------//
 
