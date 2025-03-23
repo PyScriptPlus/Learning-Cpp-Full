@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <math.h>
+#include <conio.h>
 void unsigned_func();
 void signed_func();
 
