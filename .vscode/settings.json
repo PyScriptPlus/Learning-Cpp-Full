@@ -53,6 +53,7 @@
         "xtr1common": "cpp",
         "xutility": "cpp",
         "bits10_3.h": "c",
-        "print": "cpp"
+        "print": "cpp",
+        "stdio.h": "c"
     }
 }
