@@ -1,5 +1,5 @@
 #include <iostream>
-#include <iomanip>
+#include <iomanip> // Baraye std::fix hast in library
 
 int main() {
 	// 400.395
