@@ -5,13 +5,14 @@
 // Shayad dar math.h khast std:: bezarim ta kar kone momken hast
 int main() {
 
+	//Unsigned:
 	// Pow tavan hast pow(adad , be tavan);
 	int signedednegetive = pow(-2, 8 - 1);
 	int signededplus = pow(2 , 8 - 1) - 1;
 	std::cout << signedednegetive << "\t" << signededplus << "\n";
 
 	//*********************************************
-
+	// Signed:
 	std::cout << pow(2 , 16) - 1 << "\n";
 
 	//**********************************************
