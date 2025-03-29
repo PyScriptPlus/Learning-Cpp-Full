@@ -1,5 +1,7 @@
 #include <iostream>
-#include <iomanip> // Baraye std::fix va std::scientific hast in library
+#include <iomanip> 
+// Baraye std::fix va std::scientific hast in library
+// Baraye std::setprecision(Value deghat)
 
 int main() {
 	// 400.395
