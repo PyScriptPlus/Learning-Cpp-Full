@@ -129,6 +129,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Arithmetic_Assignment_Operators.cpp" />
+    <ClCompile Include="Binary_Arithmetic_Operators.cpp" />
     <ClCompile Include="boolean.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -190,6 +192,7 @@
     <ClCompile Include="test_project.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Unary_Arithmetic_Operators.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h" />
