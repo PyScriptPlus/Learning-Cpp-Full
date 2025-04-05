@@ -87,6 +87,12 @@
     <ClCompile Include="Arithmetic_Assignment_Operators.cpp">
       <Filter>Source Files\Season 5</Filter>
     </ClCompile>
+    <ClCompile Include="Modulus.cpp">
+      <Filter>Source Files\Season 5</Filter>
+    </ClCompile>
+    <ClCompile Include="Exponent.cpp">
+      <Filter>Source Files\Season 5</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h">
