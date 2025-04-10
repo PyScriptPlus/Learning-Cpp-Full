@@ -93,6 +93,9 @@
     <ClCompile Include="Exponent.cpp">
       <Filter>Source Files\Season 5</Filter>
     </ClCompile>
+    <ClCompile Include="Increment_Decrement.cpp">
+      <Filter>Source Files\Season 5</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h">
