@@ -278,6 +278,112 @@ int main() {
 
 // Mabhas: Modulus OR (Remainder)
 
+// Dar in jalase mikhaym bepardazim be baghimande taghsim sahih ke dar zaban barnamenevisi
+// Modulus OR (Remainder) ham behesh migan namadesham --> %
+
+// Miyad ye taghsim sahih beyn 2 ta adad anjam mide baghimande taghsim be onvane khoruji 
+// Barmigardune
+
+// Mesal: 
+// 10 % 2 = 0
+// 10 % 4 = 2
+// 6 % 4 = 2 
+// 6 % 6 = 0
+// 0 % 0 = Warning: division by zero
+
+// Hala taghsim sahih chejuri daftar behtar hast bebini vali inam bebin
+// Mesal:
+// 10 % 2:
+// 10 / 2 = 5 * 2 = 10 && 10 - 10 = 0
+// OR
+// 10 % 4:
+// 10 / 4 = 2 * 4 = 8 && 10 - 8 = 2
+
+// Mishe edame dad vali bayad taghsim sahih bashe va edame bedim mikeshe be اعشاری
+
+// Nokte: Hamishe adadi ke mikhaym taghsim konim be 4 3 ina samt chap ghrar migire 
+// x % 5;
+
+// Hala age adad samt chap kochik tar az samt rast bashe mesal:
+// 5 % 7 = khod adad miad nemishe taghsim sahih kard javab mishe 5
+
+// Ye karbord khobi ke dare in Modulus ghesmat bakhsh paziri ha hast
+// Bakhsh pazir ha chejurie yani age baghimande 0 bashe in 2 adad be ham bakhsh pazir hastand
+// Mesal:
+// 15 % 5 = 0 // 15 bar 5 bakhsh pazir hast
+// Bejoz 0 dige bakhsh pazir nistand
+
+// Khob ye rahi hast befahmim baghi mande adad % 5 beyne che adadi mitune bashe
+// Mesal: x % 5 // az 0 shoru mishe ta yeki kamtar az khod adad 0 , 1 , 2 , 3 , 4
+// x % 3 // 0 , 1 , 2
+
+// Khob hala bakhsh paziri yad gerftim va fahmidim baghi mande adad felan beyn che adadi hast
+// Ba inayi ke fahmidim mitunim tashkhis adad joz va fard benevisim
+// chejurie 
+// 0 mishe Zoj 1 mishe Fard 
+// Hala baghimande adad % 2 beyn adad 0 , 1 hast dige :D
+// Hala age felan adad bar 2 bakhshpazir bod Zoj age nabod fard :) EZZ
+
+// Mini Project check even and odd:
+// even = hamon zoj
+// odd = hamon fard
+/*
+#include <iostream>
+
+int main(){
+
+    std::cout << "Enter your Number: ";
+    int x;
+    std::cin >> x;
+    if (x % 2 == 0)
+    {
+        std::cout << x << " The number is even" << '\n';
+    }
+    else
+    {
+        std::cout << x << " The number is odd" << '\n';
+    }
+  
+
+    return 0;
+}
+*/
+
+// Ma goftim adad avvali ke mikhaym taghsim she hamon x % 5
+// Bayad samt chap gharar begire
+// Hala khoruji in ha chi mishe:
+// -5 % -3 
+// 5 % -3
+// -5 % 3
+// Coding:
+/*
+#include <iostream>
+
+int main() {
+
+    std::cout << "Modulus: " << -5 % -3  << '\n'; // -2
+    std::cout << "Modulus: " << 5 % -3  << '\n'; // 2
+    std::cout << "Modulus: " << -5 % 3  << '\n'; // -2
+
+    // Hamishe samt chap moheme samt rast manfi bashe che mosbat bashe
+    // Baraye khoruji farghi nemikone
+
+    return 0; 
+}
+*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: POW (توان)
+
+
+
+
+
+
+
+
+
 
 
 
