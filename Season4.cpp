@@ -376,19 +376,37 @@ int main() {
 
 // Mabhas: POW (توان)
 
+// Dar zaban C++ va zaban C va ye seri zaban haye dige mesl C#, JAVA va ....
+// Tavan injuri nadarand 2 ^ 3 // 2 be tavan 3 age bekhaym dar zaban C++ code sho benevisim
+// Ye Library dare ( math )
+// Dar zaban C #include <math.h>
+// Dar zaban C++ #include <cmath>
+// Mesal bezanim:
+
+#include <iostream>
+#include <cmath>
+
+int main() {
+
+    // Neveshtan std ya naneveshtan farghi nemikone
+    // Vali behtar ast benevisim
+    std::cout << "2 ^ 3: " << std::pow(2 , 3) << '\n';
+    std::cout << "2 ^ 3: " << pow(2 , 3) << '\n'; 
+    
+    // In pow mitunim berizim ye Variable az type double
+    // Ta deghat bala tari dar adad bala dashte bashe
+    double tavan = std::pow(2 , 11);
+
+    // Ashari ham mishe nevesht:
+    double tavan2 = std::pow(2.5 , 3); // Tavan dar double 100% neveshte shavad
+
+    std::cout << "2 ^ 11: " << tavan << '\n';
+    std::cout << "2.5 ^ 3: " << tavan2 << '\n';
 
 
+    return 0;
+}
 
+/*--------------------------------------------------------------------------------------------------------------------*/
 
-
-
-
-
-
-
-
-
-
-
-
-
+// Mabhas: Increment & Decrement
