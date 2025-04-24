@@ -382,7 +382,7 @@ int main() {
 // Dar zaban C #include <math.h>
 // Dar zaban C++ #include <cmath>
 // Mesal bezanim:
-
+/*
 #include <iostream>
 #include <cmath>
 
@@ -406,7 +406,74 @@ int main() {
 
     return 0;
 }
-
+*/
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Increment & Decrement
+
+// Ye zamani hast lazem mishe yek vahed yani adad 1 ra be ye Variable ezafe konim 
+// Ya azash yek Vahed kam konim
+// Baraye in kar omadan ye Operator tarif kardan 
+
+// Esm in Operator ke 1 Vahed ezafe mikone --> Increment 
+// Yani ye Variable darim meghdarash 5 hast ba estefade az in Operator mishe 6
+
+// Esm in Operator ke 1 Vahed kam mikone --> Decrement
+// Yani ye Variable darim meghdarash 10 hast ba estefade az in Operator mishe 9
+
+// Namadeshon ya hamon Symbol in Operator ha:
+// Increment --> ++
+// Decrement --> --
+// Ke ina 2 halat daran
+// Prefix Increment Operator --> ++x
+// Postfix Increment Operator --> x++
+// Prefix Decrement Operator --> --x
+// Postfix Decrement Operator --> x--
+
+// Khob in Prefix va Postfix taghriban ye kari ro anjam midan
+// Vali ye fargh khasi darad 
+
+// Prefix ++x , --x : Avval meghdar taghir mide baad estefade mikone
+// Postfix x++ , x-- : Avval estefade mikone baad meghdar ro taghir mide
+
+// Ye mesal ye kamelan ja biofte:
+
+#include <iostream>
+
+int main() {
+
+    // Postfix: 
+
+    // Inja x meghdar avvalie ke 5 hast mige y
+    // Baad adad ro ziad mikone
+    int x = 5;
+    int y = x++;
+    std::cout << "Postfix: " << x << " va " << y << '\n';
+
+    int xneg = 3;
+    int yneg = xneg--;
+    std::cout << "Postfix: " << xneg << " va " << yneg << '\n';
+
+
+    // Prefix: in behtar hast be jaye khodesh tosiye mishe
+
+    // Inja xper avval meghdar ziad mikone baad mide be yper
+    int xper = 45;
+    int yper = ++xper;
+    std::cout << "Prefix: " << xper << " va " << yper << '\n';
+
+    
+    int xpn = 3;
+    int ypn = --xpn;
+    std::cout << "Prefix: " << xpn << " va " << ypn << '\n';
+
+
+    int num = 56;
+    std::cout << "Behtare Prefix: " << ++num << '\n';
+
+    return 0;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Comma Operator
