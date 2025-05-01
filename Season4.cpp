@@ -437,7 +437,7 @@ int main() {
 // Postfix x++ , x-- : Avval estefade mikone baad meghdar ro taghir mide
 
 // Ye mesal ye kamelan ja biofte:
-
+/*
 #include <iostream>
 
 int main() {
@@ -473,7 +473,75 @@ int main() {
 
     return 0;
 }
-
+*/
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Comma Operator
+
+// Khob dar zaban C++ ye Operator be name Comma darim ke estefade azash kheyli rahate
+
+// Operator Comma be in sorat amal mikone ke 
+// Yek Ebarat samt chap darim ye Ebarat samt rast
+// Ke Ebarat samt chap mohasebe mishe baad Ebarat samt rast mohasebe mishe 
+// Va Ebarat samt rast be onvan natije barmigardone
+// Ebarat samt chap hich tasiri roye natije nadare !!!!
+// Manzur az mohasebe mishan yani ejra mishe
+
+// (Ebarat1 , Ebarat2)  Output --> Ebarat2
+
+// Nokte: Operator Comma dar zaban C++ payin tarin olaviyat ro darad
+// In ke olaviyat payin ro darad emkan in hast ba Natayej ajibi ro be ro kone 
+// Mesal mizanam jolo tar
+
+// Ye mesal sade bezanim az in Comma Operator:
+/*
+#include <iostream>
+
+int main() {
+
+    int x = 5;
+    int y = 3;
+    std::cout << "Comma Operator: " << (x , y) << '\n'; // Output --> y
+    std::cout << "Comma Operator: " << (++x , ++y) << '\n'; 
+
+    return 0;
+}
+*/
+// Khob bala goftam Comma Operator olaviyat payin tari dare nesbat be bagiye Operator ha
+// Baad goftam ehtemal dare ba Natayej mokhtalefi maro ghafel gir kone
+
+// Code bala man x , y andakhtam toye parantez (x , y)
+// Age parantez nemindakhtam chi mishe
+// Mesal:
+
+// z = x , y; // Output --> x 
+// Chera x ? mage nagoftim Ebarat samt rast Output barmigardune
+// Baraye inke Olaviyat Comma payin tar az = hast 
+// Baad = mostaghim x ro Output barmigardone nemirese be y
+
+// Mesal codi ham bezanam: 
+
+#include <iostream>
+
+int main() {
+
+    int x = 55;
+    int y = 44;
+    std::cout << "Comma Operator" << x , y << '\n'; // Output --> x 
+    // Chera x? bazam migam chon Olaviyat Comma payin tar hast olaviyat << bala tar az Comma hast
+    // Rah hal chiye? Estefade az Parantez chon balatarin Olaviyat ro dare
+
+    return 0;
+}
+
+// Nokte akhar: 
+// Avval in ke in Comma Operator faghat dar zaban C va C++ vojud darad
+// Nokte dovvomi ke vojud darad in Comma Operator ke alan goftam ba ina fargh dare mesal:
+// Yadete Paramter function minevshtim toye Declaration Comma mizashtim hello(int , int);
+// Ba ina fargh dare ya masalan int x = 5, y = 3; ba ina kolan fargh dare !!!!
+
+// Dar ayande migam in Operator Comma koja estefade konim :)
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Ternary Operator, Conditional Operator
