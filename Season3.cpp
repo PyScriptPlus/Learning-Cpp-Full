@@ -488,7 +488,7 @@ std::uint16_t salam();
 
 int main(){
 
-    // std::cout << pow(2 , 16) - 1;
+    // std::cout << pow(2 , 16) - 1;  Output --> 65535
     // 65535
     std::cout << salam();
     return 0;
