@@ -1522,7 +1522,10 @@ int main() {
 
 int main() {
 
-    int x = 6;
+    // int x = 6 --> Injuri eshtebahe chon ehtemal dare dar tul barname in adad taghir kone
+    // Baraye hamin payin const neveshtam ke in hatman Compile-Time hast chon dige sabet hast taghir nemikone
+    // Age const nabashe dar Run-Time adad taghir kone chi :)
+    const int x = 6;
     std::cout << 10 + x;
     // In 16 jaygozin ke 10 + x karde
     return 0;
