@@ -1,0 +1,12 @@
+#ifndef LIMIT_CPP
+#define LIMIT_CPP
+
+#define SMAX_INT 2147483647
+#define NSMAX_INT -2147483648
+#define UMAX_INT 4294967295
+#define UMAX_SHORT 655356
+#define SMAX_SHORT 32767
+#define NSMAX_SHORT -32768
+
+
+#endif
