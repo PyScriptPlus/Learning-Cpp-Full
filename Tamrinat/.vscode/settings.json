@@ -63,6 +63,7 @@
         "ciso646": "cpp",
         "climits": "cpp",
         "stdbool.h": "c",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "mutex": "cpp"
     }
 }
