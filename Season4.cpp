@@ -520,7 +520,7 @@ int main() {
 // Baad = mostaghim x ro Output barmigardone nemirese be y
 
 // Mesal codi ham bezanam: 
-
+/*
 #include <iostream>
 
 int main() {
@@ -533,7 +533,7 @@ int main() {
 
     return 0;
 }
-
+*/
 // Nokte akhar: 
 // Avval in ke in Comma Operator faghat dar zaban C va C++ vojud darad
 // Nokte dovvomi ke vojud darad in Comma Operator ke alan goftam ba ina fargh dare mesal:
@@ -545,3 +545,225 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Ternary Operator, Conditional Operator
+
+// Dar zaban C++ yek Operator darim be name: Condition Operator
+// Aksaran ham migan Ternary Operator
+
+// In Ternary Operator 3 ta Operand dare
+
+// Tanha Ternary hast ke dar zaban C++ vojud darad!
+// Yani dar zaban C++ faghat hamin :? Operator hast ke 3tayi hesab mishe
+// Baghiye Operator ha 1 ta Operand dare mesl Unary 3 ta Operator +, -, !
+// Ya yeki am hast 2 ta Operand dare mesl Binary Operator ham ziad dare
+// Pas tanha Ternary mitune 3tayi hesab she 
+
+// Banabar in toye zaban C++ faghat hamin ?: hast ke 3 ta Operand dare
+// Behesh migan Ternary Operator
+
+// In Ternary-Operator chist?
+// Kotah shode if hast va kheyli am behtare jolo tar mibinim
+// Dar jaye khodesh va zaman khodesh behtare !!
+
+// Syntax: 
+// (Condition) ? Expression1 : Expression2;
+// Expression1 = True , Expression2 = False
+// Khob in Syntax chejuri kar mikone agar Condition ma true bashe
+// Expression1 ejra mishe agar else msihe false bashe Expression2 kar mikone
+
+// Mesal sade:
+/*
+#include <iostream>
+
+int main() {
+
+    int x = 5;
+    int y = 2;
+    int i = (x > y) ? 100 : 200;
+    std::cout << i << '\n';
+
+    return 0;
+}
+*/
+// In code bala hamine:
+/*
+if(Condition)
+{
+    // Expression1
+}
+else
+{
+    // Expression2
+}
+*/
+
+
+// Mitunim az in Ternary Operator estefade khob konim
+// Biaym bahash MAX , MIN benevisim
+// Kochik va bozorg tarin adad namayesh bede
+/*
+#define MAX(x , y) ((x > y) ? x : y)
+#include <iostream>
+
+// Code kami ajib gharib neveshtam xD vali khob okeye
+namespace mohasebe{
+
+    int x;
+    int y;
+
+    int max()
+    {
+        return (x > y) ? x : y;
+    }
+    int min()
+    {
+       return (x < y) ? x : y;
+    }
+    // int MAX = (x > y) ? x : y;
+    // int MIN = (x < y) ? x : y;
+
+}
+
+int main() {
+
+    std::cout << "Enter your Number 1: ";
+    std::cin >> mohasebe::x;
+    std::cout << "Enter your Number 2: ";
+    std::cin >> mohasebe::y;
+    std::cout << "Big Number: " << mohasebe::max() << '\n';
+    std::cout << "Small Number: " << mohasebe::min() << '\n';
+
+    return 0;
+}
+*/
+
+// Hala ye seri kar ha mishe toye Ternary anjam dad ke toye if-else nemishe
+// Mesal: meghdar dahi kardan meghdar avvali yek Variable sabet ya Variable mamoli
+// Bekhaym ba Ternary mishe vali if-else nemishe
+/*
+#include <iostream>
+// Mesal:
+int main() {
+
+    // In code ba if-else nemishe
+    constexpr bool isCold = true;
+    constexpr int status = (isCold) ? 1 : 0;
+    std::cout << status << '\n';
+    
+    // Bia test konim chera?
+    constexpr bool isHot = false;
+    if (isHot)
+    {
+        constexpr int statusWeather = 1;
+    }
+    else
+    {
+        constexpr int statusWeather = 0;
+    }
+    // std::cout << statusWeather << '\n';
+    // Peyda nemikone statusWeather chon dar mahdode if-else tarif shode
+    // Eftezahe injuri 
+
+    
+    // Hala begi shayad injuri mishe
+    // Vali kehyr:
+    // In if(isHot) dar RunTime moshakhas mishe vali ma constexpr tarif kardim
+    // Khob 2 ta am constexpr tarif kardim vali ta Run nashe moshkhas nemishe 
+    // Kodum bayad ejra she
+    // Khob vali constexpr CompileTime bayad moshkhas she vali inja dar RunTime malom mishe
+    // Pas eshtebahe
+    
+    // Ye mesal dige am in code payini bezanm
+    // In code ejra mishe vali aslan behine va dorust nist chera?
+    // Goftim in if (isHot) dar RunTime ejra mishe
+    // Vali on Variable ha CompileTime
+    // Hala vaghti ejra shod in isHot true bod
+    // Block avvali barresi mishe baad ejra mishe
+    // Hala baz Block dovvomi barresi mishe vali ejra nemishe belataklif mimune
+    if (isHot)
+    {
+        constexpr int statusWeather = 1;
+        std::cout << statusWeather << '\n';
+    }
+    else
+    {
+        constexpr int statusWeather = 0;
+        std::cout << statusWeather << '\n';
+    }
+    
+    // Khob 2 ta Rah hal dare:
+    // Rah hal 1:
+    int x;
+    if (isHot)
+    {
+        x = 1;
+    }
+    else
+    {
+        x = 0;
+    }
+    std::cout << x << '\n';
+
+    // Khob dar ravash bala faghat Variable sade mishe 
+    // const ya hamon sabet nemishe
+    // Ye rah hal ham baraye sabet peyda kardam 
+    // Vali dar C++17 be bala kar mikone
+    // Rah hal 2:
+    // In code alan dige RunTime nist 
+    // Va mesal isHot ke alan false hast Block avvali dige belataklif nist
+    // Behine ham hast
+    // Alan faghat Block dovvomi barresi mishe va ejra
+    if constexpr (isHot)
+    {
+        constexpr int status1 = 1;
+        std::cout << status1 << '\n';
+    }
+    else
+    {
+        constexpr int status2 = 0;
+        std::cout << status2 << '\n';
+    }
+    // Hala in if constexpr dige midune kodum bayad barresi she va ejra
+    // Chon if ham CompileTime kardim va dar C++17 be baad ghabel ejra hast in
+
+    return 0;
+}
+*/
+
+// Ye mored ham begam:
+// Chera az alamak Question ( ? ) estefade mikonim
+// Kar bordesh chiye
+// Aalamat ( ? ) dar inja mesl Aya dar farsi ma hast
+// Aya in shart doruste?
+// Agar bale true ejra mishe hamon Expression ghabl ( : )
+// Agar kheyr false ejra mishe hamon Expression baad ( : )
+
+// Kholase: In alamat ( ? ) moshakhas mikone kodum Expression ejra she
+// Va aya shart doruste ya kheyr
+
+
+// Nokte akhar
+// Code zir bebin:
+/*
+#include <iostream>
+
+int main() {
+
+    std::cout << (5 > 2) ? "Salam" : "Bye"; // << '\n' inam nemishe jolosh gozasht error mide
+    // Chera adad 1 mide output xD
+
+    // 1 Yani true age false bod 0 midad
+    // Chera pas "Salam" chap nakard
+    // Ye nokte ke hast Olaviyat << bishtar az ?: hast
+    // Hala bendazim parantez dorust mishe:
+    std::cout << ((5 > 2) ? "\nSalam" : "\nBye") << '\n';
+
+    return 0;
+}
+*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Relational Operators
+
+
+
