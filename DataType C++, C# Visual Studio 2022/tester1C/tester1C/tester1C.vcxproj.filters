@@ -102,6 +102,12 @@
     <ClCompile Include="Ternary_Operator.cpp">
       <Filter>Source Files\Season 5</Filter>
     </ClCompile>
+    <ClCompile Include="Relational_Operator.cpp">
+      <Filter>Source Files\Season 5</Filter>
+    </ClCompile>
+    <ClCompile Include="Relational_Operator2.cpp">
+      <Filter>Source Files\Season 5</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h">
