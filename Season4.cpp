@@ -612,14 +612,14 @@ namespace mohasebe{
 
     int max()
     {
-        return (x > y) ? x : y;
+        return ((x > y) ? x : y);
     }
     int min()
     {
-       return (x < y) ? x : y;
+       return ((x < y) ? x : y);
     }
-    // int MAX = (x > y) ? x : y;
-    // int MIN = (x < y) ? x : y;
+    // int MAX = ((x > y) ? x : y);
+    // int MIN = ((x < y) ? x : y);
 
 }
 
