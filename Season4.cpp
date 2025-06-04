@@ -765,5 +765,154 @@ int main() {
 
 // Mabhas: Relational Operators
 
+// Dar in jalase be Relational Operator ha mipardazim ya hamon Operator haye moghayese
+// Relational Operator be ma in emkan mide ke 2 meghdar ro moghayese konim ke khoruji sham
+// Malome Boolean hast ya True ya False hast
+
+// Mesal 5 ba 5 barabar hast? True
+// Ya 10 bozorg tar az 202 hast? False
+
+// Dar zaban C++ 6 ta az in Operator haye moghayeseyi darim
+// Hameye in Operator haye zir khorujishon Boolean hast
+/*
+    Greather Than: >
+    Exam: x > y
+
+    Less Than: <
+    Exam: x < y
+
+    Greather Than OR Equal to: >=
+    Exam: x >= y
+
+    Less Than OR Equal to: <=
+    Exam: x <= y
+
+    Equal to: ==
+    Exam: x == y
+
+    NOT Equal to: !=
+    Exam: x != y
+*/
+
+// Mitunim az Operator haye Relational dar if, for and while estefade konim
+
+// Ye mesal felan ba if berim:
+/*
+#include <iostream>
+
+int main() {
+
+    int x = 21;
+    int y = 123;
+    if (x < y)
+    {
+        std::cout << "x is Less Than y" << '\n';
+    }
+    if (x > 2)
+    {
+        std::cout << "x is Greather Than 2" << '\n';
+    }
+    if (x == y)
+    {
+        std::cout << "x is Equal to y" << '\n';
+    }
+    else
+    {
+        std::cout << "x is NOT Equal to y" << '\n';
+    }
+    // In ( <= ) ya kochiktar az ya barabar bashe true mide
+    if (x <= y)
+    {
+        std::cout << "x is Less Than OR Equal to y" << '\n';
+    }
+    // In ( >= ) ya bozorgtar az ya barabar bashe true mide
+    if (x >= 21)
+    {
+        std::cout << "x is Greather Than OR Equal to 21" << '\n';
+    }
+    if (x != y)
+    {
+        std::cout << "x is NOT Equal to y" << '\n';
+    }
+
+    // Yek nokte baraye herfeyi ha:
+
+    bool gender;
+    std::cout << "Agar 1 bashe ( Male ) va 0 bashe ( Fmale ): ";
+    std::cin >> gender;
+    // Dige in code behtari nist:
+    // if (gender == true) // chon block avvali dige True hast
+    if (gender)
+    {
+        std::cout << "Gender is Male" << '\n';
+    }
+    // else if(gender == false) // Inam code khobi nist
+    // Payini behtarin has
+    else if(!gender)
+    {
+        std::cout << "Gender is Fmale" << '\n';
+    }
+    
+    // Mobtadi: (x == 7)
+    // Herfeyi: (x)
+
+    // Mobtadi: (x != 7) 
+    // Agar midunesti barabar nist pas injuri:
+    // Herfeyi: (!x)
+
+    return 0;
+}
+*/
 
 
+// Estefade az Relational Operator ha dar Floating-Point ha 
+// Baraye test hatman lazem hast
+// Ye mesal mizanm befahmi
+#include <iostream>
+#include <iomanip>
+
+int main() {
+
+    double num1 = 100.0 - 99.99; // Output --> 0.01
+    double num2 = 10.0 - 9.99;  // Output --> 0.01
+    std::cout << "num1: " << num1 << '\n';
+    std::cout << "num2: " << num2 << '\n';
+    // Har 2 ta yek khoruji midan
+    // Vali biaym ye test moghayeseyi konim :)
+    if (num1 == num2)
+    {
+        std::cout << "num1 is Equal to num2" << '\n';
+    }
+    else
+    {
+        std::cout << "num1 is NOT Equal to num2" << '\n';
+    }
+    // Khotuji false bod xD
+    // Chera? 
+    // Dar season haye ghabl gofte bodim 
+    // Ke dar adad ashari miad mesal hamin
+    // Nazdik tarin adad ro be 0.01 zakhire mikone khodesh nist
+    // Biaym baham bebinim ba estefade az std::setprecision()
+    std::cout << std::setprecision(18);
+    std::cout << "num1 aftar setprecision: " << num1 << '\n';
+    std::cout << "num2 aftar setprecision: " << num2 << '\n';
+    // Bale mibinim ke num1 bozorg tar az num2 hast xD
+    if (num1 > num2)
+    {
+        std::cout << "num1 is Greather Than num2" << '\n';
+    }
+    else
+    {
+        std::cout << "num1 is NOT Greather Than num2" << '\n';
+    }
+    // Pas hatman dar Floating-Point ha baraye test
+    // Dar project haye bozorg estefade kon!!!
+    // Makhsosan dar Project haye Havafaza kheyli moheme inaa!!!
+    
+
+    return 0;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Logical Operator
