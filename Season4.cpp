@@ -868,6 +868,7 @@ int main() {
 // Estefade az Relational Operator ha dar Floating-Point ha 
 // Baraye test hatman lazem hast
 // Ye mesal mizanm befahmi
+/*
 #include <iostream>
 #include <iomanip>
 
@@ -912,7 +913,197 @@ int main() {
 
     return 0;
 }
-
+*/
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Logical Operator
+
+// Dar jalase ghabl Relational_Operator yad gereftim ke be ma in emkan midad
+// Barresi konim aya shart bar gharar hast ya kheyr
+
+// Hala mikhaym chand ta shart be sorat hamzaman barresi konim ke bayad az
+// Logical Operator estefade konim
+
+// Dar zaban C++ ma 3ta Logical Operator darim
+// AND && --> x && y
+// OR || --> x || y
+// NOT ! --> !x
+
+// Avval berim soragh Logical OR in OR be ma mige:
+// x || y 
+// t || t --> t
+// t || f --> t
+// f || t --> t
+// f || f --> f
+
+// In OR ravandesh ine yeki True ya har 2 ta True bashe natije True hast
+// Va toye oni ke har 2 ta False hast output mishe False
+
+// Berim soragh Logical AND:
+// Inam mige har 2 ta True bashe Output mishe True
+// Agar dar yekish False bashe natije False mishe
+// Inam baz False ba False bashe natije False mishe
+// Mesal:
+// x && y
+// t && t --> t
+// t && f --> f
+// f && t --> f
+// f && f --> f
+
+// Ye mafhumi ast dar zaban C++ ke kheyli karbord va mohem
+// Baraye behine sazi project niyaz hast
+// Short circut evaluation
+// Ya hamon arzyabi madar kotah
+// Ma goftim age dar Logical AND har 2 ebarat true bashe natije True
+// Toye in x && y
+// Hala compiler barresi mikone mibine hasel avval true hast nemitune felan javab
+// Gh'ati bede ke hasel in 2 ta Operand true hast ya false bayad Operand Y ham barresi beshe
+// Ta natije bede
+
+// Vali toye mesal in x && y
+// Compiler mibine Operand avval hamon x false hast dige edame nemide 
+// Chon fargh nemikone y che True bashe che False
+// Natije in ebarat False hast 
+// In behine hesab mishe 
+
+// Agar dar zamani khodemun midunim hasel ebarat chejurie 
+// Mitunim dasti behine konim behtare !!!
+
+// Moshabeh hamin Short Circut Evaluation baraye OR ham darim
+// Mesal:
+// x || y
+// Age x true bashe Compiler dige y barresi nemikone hasel ebarat mishe True
+// Vali age x False bashe Compiler nemitune javab gh'ati bede hasel ebarat chiye?
+// In OR kamel bar aks AND hast mishe goft injurie
+// Agar dar har zaman momken bashe say kon behine amal koni
+
+// Ye mesal bezanim:
+/*
+#include <iostream>
+
+int main() {
+    
+    int x = 0;
+    // Code deghat koni ba 1 tir 2 neshon zadim
+    // Ham behine shod chon x ba 0 barabar hast
+    // Pas false dige edame nemide
+    // Chon age edame midad 10 / 0 mishod ke error goftim
+    // Hala ba 1 tir 2 neshon zadim:
+    // 1- Ham behine shod hamon avval false shod baste shod
+    // 2- Jologiri az taghsim bar 0 
+    // :)
+    if (x != 0 && 10 / x > 1)
+    {
+        
+    }
+    else
+    {
+        std::cout << "False" << '\n';
+    }
+
+
+
+return 0;
+}
+*/
+
+// Ma mitunim Operator haye AND, OR, NOT tarkibi ham estefade konim
+// Va Condition haye pichide benevisim faghat bayad be Olaviyat haye ina deghat konim
+// Ya az parantez estefade konim AND az OR olaviyat balatari darad
+
+// Mesal:
+// Value1 || Value2 && Value3 && Value4
+// Khob inja Value2 ba Value3 arzyabi mishe natije ba Value4 ba natije ba Value1 OR mishe
+
+// Hala mitunim Parantez bezarim baraye khanayi ya age khastim mesal avvalin ebarat felan bashe
+// Parantez mizarim avval on arz yabi beshe
+// Mesal:
+// (Value1 || Value2) && Value3
+// Inja avval Value1 ba Value2 arz yabi mishe baad natije ba Value3
+
+
+// Nokte dige: Ghanon: Demorgan's Laws
+// Kamelan karbord darad
+// Khob chiye? Ba estefade az Naghiz hamon ( ! , NOT ) mitunim yek ebarat tarkibi Logical
+// Ra baz nevisi konim 
+// Mesal:
+
+// !(A && B) --> !A || !B
+// !(A || B) --> !A && !B
+/*
+#include <iostream>
+
+int main() {
+
+    int x = 6;
+    int y = 3;
+    if (!(x || y > 2)) 
+    {
+        // x == false mishan 0
+        // y == false mishan 0
+        // || mishe &&
+        // Hala 2 kochik tar az 0 hast kheyr inam false
+    }
+    else
+    {
+        std::cout << ":)" << '\n';
+    }
+
+    // Ye mesal dige:
+    int i = 6, z = 3;
+    bool value = true;
+    if (i == z || !(3 == 1 && value && false))
+    {
+        std::cout << ":)" << '\n';
+    }
+    // Trace:
+    // !3 == 1 --> true
+    // !&& --> ||
+    // !value --> false
+    // !&& --> ||
+    // !false --> true
+    // Res = true:
+    // i == z --> false
+    // true || i == z --> true
+
+    return 0;
+}
+*/
+// Ye rah sade baraye peyda kardan javab dakhel parantez ke naghiz dare:
+// Mesal in:
+// !(3 == 1 && value && false)
+// 3 == 1 --> false hast && value mishe false hala && false baz mishe false
+// Javab mishe false hala naghiz bede be in false mishe true :D
+
+// Nokte akhar:
+// Dar zaban C++ in Logical Operator ke yad gerftim mitunim be jaye alamateshon
+// Horufeshon benevisim ba estefade az Library <ciso646>
+// Baraye zaban C am ine: <iso646.h>
+
+#include <iostream>
+#include <ciso646>
+//#include <iso646.h> // C library
+
+int main() {
+
+    // ! --> not
+    // && --> and
+    // || --> or
+
+    int x = 0;
+    int y = 1;
+    if (x or y)
+    {
+        std::cout << "True" << '\n';
+    }
+    if (not(x and y))
+    {
+        std::cout << "True" << '\n';
+    }
+    
+    return 0;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Bit Manipulation
