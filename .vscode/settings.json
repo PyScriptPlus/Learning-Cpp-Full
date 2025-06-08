@@ -54,6 +54,7 @@
         "xutility": "cpp",
         "bits10_3.h": "c",
         "print": "cpp",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "ciso646": "cpp"
     }
 }
