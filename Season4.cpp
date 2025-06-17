@@ -1144,3 +1144,109 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Bit Flag
+
+// Khob mesal ma ghablan be in: int foo = 5;
+// Migoftim ke in Variable foo meghdar 5 ro dare va ba posht parde on kari nadashtim ke 
+// Che 0 OR 1 hayi hast vali dar bahs Bit Manipulation kolan ba 0,1 ha sarkar darim 
+// Mesal migim Variable foo hamchin ( 0101 ) hayi dar posht sahne zakhire karde
+
+// Ye chizi ma ye Variable Boolean darim ke 1Byte az hafeze ro eshghal karde
+// bool x; 0000'0000 har kodom az in 0 va 1 hayi ke 
+// Mesal baraye 1 migan Roshan 
+// Baraye 0 migan Khamosh 
+// Be ina Bit Flag migim
+// Ya ma midunim ke Flag ma'ni parcham mide
+// 2 Halat dare ya (برافراشته است) --> Roshan ya (برافراشته نیست) --> Khamosh
+
+// Hala baraye tarif majmoeye az Bit Flag ha che kar bayad bekonim
+// Yani dar bahs Bit Manipulation az che Type Variable estefade konim
+// 1- unsigned integral
+// 2- bitset
+// 3- dynamic_bitset
+
+// unsigned inja bayad estefade she ghablan goftim estefade nakon 
+// Vali inja ezterari hast bayad estefade she
+// hala integral chiye? Goftim 1 bar on Type hayi ke dar posht sahne ye chiz dige zakhire mishan
+// Mesl Boolean ke True dar hafeze 1 zakhire mishe False ham 0
+// Ya khod int dar hafeze 0 OR 1 zakhire mishe 
+// Khod char mesal 'a' dar hafeze 97 zakhire mishe code haye ASCII
+
+// Mesal codi ba bitset felan bezanim
+// Ghablan sar kar ba bitset dashtim 
+// Library bitset bayad include beshe
+/*
+#include <iostream>
+#include <bitset>
+
+int main() {
+
+    // std::bitset<tedad bit mored nazar> Identifier;
+
+    std::bitset<4> mybit = 0b1010;
+
+    return 0;
+}
+*/
+
+// Ma 2 ta estelah darim:
+// 1- Bit Sequence 101011
+// 2- Bit Position 543210   
+// Bit Sequence hamon 0 ya 1 hayi hast posht sar ham ke dar bitset zakhire mikonim
+// Bit Position ham mogheyat on 0 ya 1 hayi hast ke ba on neshon midim va az samt 
+// Rast shoru mishe ba 0 ta samt chap
+// Mesal: Bit ba Position 3 ke 1 hast
+// Ya Bit ba Position 4 ke 0 hast
+
+// Khob in bitset<> 4ta Function asli dare
+// Ke har kodum az ina Bit Position daryaft mikonand
+// 1-test()
+// 2-set()
+// 3-reset()
+// 4-flip()
+
+// Toye code mesal mizanam motavajeh mishi:
+/*
+#include <iostream>
+#include <bitset>
+
+int main() {
+    
+    // Ba test() mitunim bebinim bit ba position felan 1 hast ya 0
+    // Barresi mikone
+    std::bitset<4> mybits = 0b1010;
+
+    std::cout << "Bit Position 1: " << mybits.test(1) << '\n';
+
+    // set() miad on biti ke 0 hast ro 1 mikone
+    mybits.set(0);
+    std::cout << "Bit Position 0: " << mybits.test(0) << '\n';
+
+    // reset() miad on biti ke 1 hast ro 0 mikone bar aks set()
+    mybits.reset(3);
+    std::cout << "Bit Position 3: " << mybits.test(3) << '\n';
+
+    // flip() miad on bit hayi ke 1 hast ro 0 mikone onayi ke 0 hast ro 1 mikone
+    mybits.flip(2);
+    std::cout << "Bit Position 2: " << mybits.test(2) << '\n';
+
+    mybits.flip(2);
+    std::cout << "Bit Position 2: " << mybits.test(2) << '\n';
+    
+
+    return 0;
+}
+*/
+// Ba dynamic_bitset ham mesal zadam vali to inja nashod toye project (tester1c) toye MSVC
+
+// Nokte ke hast:
+// Ino negah kon payin:
+// MSB  0101100010  LSB
+// Khob in MSB va LSB chiye?
+// LSB: Least Significant Bit
+// MSB: Most Significant Bit
+// LSB: Kam arzesh tarin bit hast va samt rast gharar darad
+// MSB: Por arzesh tarin bit hast ke samt chap gharar darad
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Bitwise Operators Part1:
