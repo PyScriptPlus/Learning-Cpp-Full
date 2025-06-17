@@ -1079,7 +1079,7 @@ int main() {
 // Dar zaban C++ in Logical Operator ke yad gerftim mitunim be jaye alamateshon
 // Horufeshon benevisim ba estefade az Library <ciso646>
 // Baraye zaban C am ine: <iso646.h>
-
+/*
 #include <iostream>
 #include <ciso646>
 //#include <iso646.h> // C library
@@ -1103,7 +1103,44 @@ int main() {
     
     return 0;
 }
-
+*/
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Bit Manipulation
+
+// Khob bahs Operator ha tamum shod az in be ba'ad faghat roye Bit Manipulation tamarkoz mikonim
+// Shayad ye seria began ziad mohem nist in bahs
+
+// Khob age mohem nist chera gozashtan?
+// Dalilesh in bod ke on zaman hayi ke in zaban be vojud omade barname nevisa bayad az manabe'
+// Sakht afzari be behine tarin shekl mohem estefade mikardand va migan dige alan niyazi nist
+// Vali hanozam ja dare ye seri barname ha behine shavad
+// Va yeki az dalayel ke omadim zaban C++ yad begirim hamin behine bodanesh va sor'atesh hast
+
+// Ma ghablan goftim dar memari haye modern kochek tarin vahed ( Byte ) hast
+// Eshtebah nagir kochek tarin vahed zakhire sazi ( Bit ) hast
+// Vali Kochek tarin sakhtar dahi dar hafeze Ram ( Byte ) dar nazar gerfte mishe
+
+// Mesal: migoftim felan Variable 4Byte hafeze ro eshghal mikone
+
+// Mabna ro Byte gharar dadand: Yani be jaye inke tak ( Bit ) kar beshe hame chiz bar asas
+// Group haye 8biti ke (8bit = 1Byte) mohasebe ya barresi mishe
+
+// Khob mesal Boolean dar nazar begirid
+// Ma midunim type Boolean tanha 2 meghdar mitune begire meghdar True = 1 ya False = 0
+// Pas baraye neshan dadan yek meghdar Boolean 1bit ham kefayat mikone
+// Chon dar 1bit mitunim 0 ya 1 zakhire konim
+// Vali az onja ke kochek tarin vahed sakhtari dar Ram Byte hast va Boolean 1Byte hamon 8bit hast
+// Khob inja alan 1Bit kefayat mikone pas 7 bit in Boolean vaghean be hadar (Waste) mishe
+// Alan moshkeli ijad nemikone vali dar Project haye bozorg in hadar rafte ha baham jam beshan
+// Milyard ha hadar raft darim va project ma ham mishe mesl Activision xD aslan behine nis
+
+// Dar moghiyat khodesh behine bodan baraye ma avvalin Olaviyat khahad dasht
+
+// Yek seri karbord ha vojud darad mesl: Bahs haye shabake, Bahs haye ramz negari,
+// Algorithm haye feshorde sazi, ke aslan niyaz hast ba hamchin bahs Bit Manipulation ashna shavim
+// Va yad begirim 
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Bit Flag
