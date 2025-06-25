@@ -6,6 +6,6 @@ int main() {
 
     register int x = 6;
     std::cout << x << '\n';
-
+    //..
     return 0;
 }
