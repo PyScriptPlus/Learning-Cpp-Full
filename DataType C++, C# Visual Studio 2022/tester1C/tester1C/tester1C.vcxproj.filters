@@ -126,6 +126,15 @@
     <ClCompile Include="Bitwise_Assignment_Operator.cpp">
       <Filter>Source Files\Season 5</Filter>
     </ClCompile>
+    <ClCompile Include="Create_Bit_Mask.cpp">
+      <Filter>Source Files\Season 5</Filter>
+    </ClCompile>
+    <ClCompile Include="Working_with_BitMask.cpp">
+      <Filter>Source Files\Season 5</Filter>
+    </ClCompile>
+    <ClCompile Include="Working_with_BitMask2.cpp">
+      <Filter>Source Files\Season 5</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h">
