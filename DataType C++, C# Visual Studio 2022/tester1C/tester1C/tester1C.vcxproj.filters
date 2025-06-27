@@ -135,6 +135,12 @@
     <ClCompile Include="Working_with_BitMask2.cpp">
       <Filter>Source Files\Season 5</Filter>
     </ClCompile>
+    <ClCompile Include="Naming_and_Optimization.cpp">
+      <Filter>Source Files\Season 5</Filter>
+    </ClCompile>
+    <ClCompile Include="Optimization.cpp">
+      <Filter>Source Files\Season 5</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h">
