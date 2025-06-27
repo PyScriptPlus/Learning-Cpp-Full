@@ -144,6 +144,9 @@
     <ClCompile Include="Bitmasking_Multiple_Bits.cpp">
       <Filter>Source Files\Season 5</Filter>
     </ClCompile>
+    <ClCompile Include="ColorBitmask.cpp">
+      <Filter>Source Files\Season 5</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h">
