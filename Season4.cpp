@@ -1250,3 +1250,77 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Bitwise Operators Part1:
+
+// Dar zaban C++ 6 ta Bitwise Operator darim:
+// Left Shift  <<   x << y
+// Right Shift >>   x >> y
+// Bitwise NOT ~    ~x
+// Bitwise AND &    x & y
+// Bitwise OR  |    x | y
+// Bitwise XOR ^    x ^ y
+
+// In AND va OR ba Logical OR va AND fargh dare on 2 ta dashtam ina 1 ki hastan Operatoreshon
+
+// Chand ta nokte: Ma baraye rahati ke mikhaym mesal bezanim az 4Bit estefade mikonim
+// Mamolan dar project haye bozorg az bit haye ziadi estefade mikonand
+// Mored ba'adi ineke in Bitwise Operator ha baraye maghadir Integral ya Bitset
+// Faghat e'mal mishan
+// Integral on hayi hastand ke toye posht sahne ye chiz dige zakhire mishan 
+// Mesl boolean ke True dar hafeze 1 zakhire mishe False ham 0
+// Ya char mesal 'a' 97 zakhire mishe
+// Ya khod adad ha int 10; dar hafeze 1010 zakhire mishe
+// Va agar khastim az Integral estefade konim hatman az noe unsigned bashe 
+// Agar unsigned nabashe ba Overflow movajeh mishim 
+
+// Berim soragh Operator Left shift:
+// Left Shift miad bit haro be samt chap hol mide ya hamon Shift mide
+// Left Operand << Right Operand
+// Left Operand on 01 hamon hast hamon meghdar bit ke mikhaym Shift she
+// Right Operand ham mikhaym mesal 1 done Shift shan hamashon ya 2 va ..
+// Position tayin mikonim dige
+// Mesal:
+// 0011 << 1  --> 0110
+// 0011 << 2 --> 1100
+// 0011 << 3 --> 1000
+// Dar in yeki az 1 ha oftad birun dige ja nashod baraye hamishe az beyn mire
+// Magar inke tedad bit ha ziad she
+
+// Hala Right Shift:
+// Right Shift ham miad bit haro be samt rast Shift mide ya hol mide
+// inam mesl Left hast 2 ta Operand daryaft mikone
+// Mesal:
+// 1100 >> 1 --> 0110
+// 1100 >> 2 --> 0011
+// 1100 >> 3 --> 0001
+
+// Mesal codi estefade dar bitset
+/*
+#include <iostream>
+#include <bitset>
+
+int main() {
+
+    std::bitset<4> mybit = 1100;
+    std::cout << (mybit >> 1) << '\n'; // 0110
+    std::cout << (mybit >> 2) << '\n'; // 0011
+    std::cout << (mybit >> 3) << '\n'; // 0001
+    // Ye nokte hast chera avval Shift dadim 0110 shod khob baadi mage nabayd 0001 mishod
+    // Javab injas ke ma faghat chap kardim inaro mostaghim roye ( mybit ) taghir nadadim
+    // In cout miad ye meghdar jadid tolid mikone chap mikone tamum
+    // Hala jalase haye baadi migam chejuri khod mybit ro taghir bedim
+
+    return 0;
+}
+*/
+
+// Berim soragh Bitwise NOT
+// Kheyli rahate miad bit hayi ke 0 hast ro 1 mide va onayi ke 1 hast ro 0 mikone
+// Mesal:
+// ~0110 --> 1001
+// Fagaht deghat dashte bash age tedad bit ziad bashe mesal uint8 ya 16 va ..
+// Age havaset nabashe hamaro 1 mikone va ye adad bozorg tolid mishe mesl:
+// ~0000'1010 --> 1111'0101
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Bitwise Operators Part2:
