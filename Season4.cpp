@@ -1324,3 +1324,89 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Bitwise Operators Part2:
+
+// Khob berim be soragh baghiye Bitwise Operators
+// Bitwise OR va AND kheyli moshabeh Logical hast hastand vali dar sath payin
+// Berim mesal bezanim avvali baraye Bitwise OR --> |
+
+// Meghdar avval:  0101
+// Meghdar dovvom: 1101
+        // Output: 1101
+
+// Agar yeki az bit ha 1 bashe Output ham 1 mishe mesl Logical hast rahate
+
+// Ye mesal tarkibi:
+// Meghdar avval:  0101
+// Meghdar dovvom: 0100
+// Meghdar sevvom: 0111
+        // Output: 0111
+
+// Berim soragh Bitwise AND --> &
+// Inam mesl Logical hats
+// Bayad har 2 tash 1 bashe ya age tedad bit ha ziad bod hamash bayad 1 bashe ta
+// Output beshe 1
+
+// Mesal:
+
+// Meghdar avval:  1101
+// Meghdar dovvom: 1011
+        // Output: 1001
+
+// Mesal tarkibi am bezanim:
+
+// Meghdar avval:  0101
+// Meghdar dovvom: 0100
+// Meghdar sevvom: 0111
+        // Output: 0100
+
+// Berim soragh akharin Bitwise Operator XOR ^ : Exclusive OR 
+// Injuri ke bayad tedad 1 ha fard bashe ta kar kone 
+// Mesl: 1, 3, 5, 7, 9
+
+// Mesal bezanim:
+// Meghdar avval:  1010
+// Meghdar dovvom: 0011
+        // Output: 1001
+
+// Mesal tarkibi: 
+// Meghdar avval:  0101
+// Meghdar dovvom: 0100
+// Meghdar sevvom: 0111
+        // Output: 0110
+
+// Ina Assignment ham daran
+// Bitwise Assignment Operator:
+// AND -->      x &= y
+// OR -->       x |= y
+// XOR -->      x ^= y
+// Left Shift:  x <<= 1
+// Right Shift: x >>= 1
+
+// Faghat Bitwise NOT nadare bayad injuri benevisi
+
+// NOT --> x = ~x;
+
+// Berim baraye har kodum ye mesal codi bezanim ba bitset
+
+#include <iostream>
+#include <bitset>
+
+int main() {
+
+    std::bitset<8> mybit = 0b0000'1010;
+    std::bitset<8> mybit2 = 0b0001'1100;
+    std::cout << "AND: " << (mybit & mybit2) << '\n';
+    std::cout << "OR: " << (mybit | mybit2) << '\n';
+    std::cout << "XOR: " << (mybit ^ mybit2) << '\n';
+    std::cout << "NOT: " << ~(mybit) << '\n';
+    std::cout << mybit << '\n' << mybit2 << '\n';
+    mybit >>= 1;
+    mybit2 <<= 2;
+    std::cout << mybit << '\n' << mybit2 << '\n';
+
+    return 0;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Bit Mask
