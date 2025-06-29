@@ -1387,7 +1387,7 @@ int main() {
 // NOT --> x = ~x;
 
 // Berim baraye har kodum ye mesal codi bezanim ba bitset
-
+/*
 #include <iostream>
 #include <bitset>
 
@@ -1406,7 +1406,123 @@ int main() {
 
     return 0;
 }
-
+*/
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Bit Mask
+
+// Jalase ghabl ba Bitwise Operator haro yad gerftim vali ye chizi ke hast
+// In Bitwise Operator ha vaghti mikhaym ye amaliyati anjam bedim
+// Hameye bit haro mored hadaf gharar mide
+// Hala mikhaym be jaye hameye bit ha on bit hayi ke faghat khodemun mikhaym mored hadaf gharar bedim
+// Bayad ba mafhum Bit Mask ashna shim
+// Bit Mask chikar mikone? Bit Mask miad va bit hayi ke nemikhaym توسط Bitwise Operator 
+// Taht ta'sir gharar begirand ro Block mikone
+// Pas ebteda bayad yad begirim Bit Mask dorust konim 
+// Miaym baraye har kodum az bit ha bit mask dorust mikonim 
+// Ya'ni yek bit mask baraye bit ba position 0 yedune baraye position 1 va ....
+// Ba'adesh baraye har biti ke khastim dast nakhore 0 gharar midim
+// Baraye bit ke mikhaym dast kari she 1 gharar midim
+
+// In sakht Bit Mask 3 ravesh dare:
+// Binary Literal C++14 ya be bala
+// Shift C++98 yani dar hameye standard ha poshtibani mishe
+// Mask C++98 yani dar hameye standard ha poshtibani mishe
+
+// Sakhtan Bit Mask ba ravesh Binary Literal:
+/*
+#include <iostream>
+#include <cstdint>
+
+int main() {
+
+    constexpr std::uint8_t mask0 = 0b0000'0001;
+    constexpr std::uint8_t mask1 = 0b0000'0010;
+    constexpr std::uint8_t mask2 = 0b0000'0100;
+    constexpr std::uint8_t mask3 = 0b0000'1000;
+    constexpr std::uint8_t mask4 = 0b0001'0000;
+    constexpr std::uint8_t mask5 = 0b0010'0000;
+    constexpr std::uint8_t mask6 = 0b0100'0000;
+    constexpr std::uint8_t mask7 = 0b1000'0000;
+    // Baraye har Bit Position mask sakhtim 
+    // Hala chera constexpr sakhtim?
+    // Yani dar zaman Compile ejra she Compile Time
+    // Chon ham behine mishe miad meghdar jaygozin mikone
+    // Jayi ke estefade kardim ya seda zadim
+    // Injuri behine mishe va inke sor'at balatari dare injuri
+    // Va sabet ham dar nazar gerfte mishe 
+    
+    // Hala chera 8biti? felan baraye yad giri neveshtim dar project haye vagheyi
+    // Har chegadr lazem bod mituni mask besazi 16, 32, 64
+
+    // Va chera unsigned hast? chon dar inja ba adad manfi kar nadarim
+    // Va agar signed bashe ehtemal Overflow aslan kheyli moshkelat dige
+
+    return 0;
+}
+*/
+
+// Berim soragh ravesh Hexadecimal: 
+/*
+#include <iostream>
+#include <cstdint>
+
+int main() {
+
+    constexpr std::uint8_t mask0 = 0x01;
+    constexpr std::uint8_t mask1 = 0x02;
+    constexpr std::uint8_t mask2 = 0x04;
+    constexpr std::uint8_t mask3 = 0x08;
+    constexpr std::uint8_t mask4 = 0x10;
+    constexpr std::uint8_t mask5 = 0x20;
+    constexpr std::uint8_t mask6 = 0x40;
+    constexpr std::uint8_t mask7 = 0x80;
+    // Chera 0x01 chera 0x08 va ... ?
+    // Khob baraye peyda kardan ina 2 ravesh dare
+    // Yeki in ke Decimal inaro peyda va (decimal x 2) koni
+    // Mesal 0x10 Decimal = 16 khob 16 * 2 = 32 Decimal
+    // Hala 32 Decimal be Hexa chi mishe? 0x20
+
+    // Ravesh ba'adi ke kheyli khubeh
+    // Agha har bit ro 4 ta hesab koni yani chi?
+    // Yani 0x01 
+    // in 0 ro 4 ta 0 hesab koni samt MSB chon samt rast 0000
+    // In 1 ro ham Binary chi mishe baz 4 ta hesab kon mishe 0001
+    // Kenar ham 0000'0001
+    // Ya yeki dige mesal 0x40
+    // 4 mishe 0100
+    // 0 ham kolan mishe 0000
+    // Kenar ham mishe 0100'0000
+    // On adad hayi ke hast bayad Binary sho benevisi hamin :)
+
+    return 0;
+}
+*/
+
+// Berim soragh ravesh Shift ke vaghean rahate:
+/*
+#include <iostream>
+#include <cstdint>
+
+int main() {
+
+    constexpr std::uint8_t mask0 = 1 << 0;
+    constexpr std::uint8_t mask1 = 1 << 1;
+    constexpr std::uint8_t mask2 = 1 << 2;
+    constexpr std::uint8_t mask3 = 1 << 3;
+    constexpr std::uint8_t mask4 = 1 << 4;
+    constexpr std::uint8_t mask5 = 1 << 5;
+    constexpr std::uint8_t mask6 = 1 << 6;
+    constexpr std::uint8_t mask7 = 1 << 7;
+
+    // Agha in mige 1 ro shift bede samt chap ba position felan
+    // 1 << position
+    // Kheyli rahate mesal migim 1 ro 5 ta shift bede samt chap
+
+    return 0;
+}
+*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Anjam amaliyat ba Bit Mask

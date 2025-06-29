@@ -55,6 +55,14 @@
         "bits10_3.h": "c",
         "print": "cpp",
         "stdio.h": "c",
-        "ciso646": "cpp"
+        "ciso646": "cpp",
+        "chrono": "cpp",
+        "forward_list": "cpp",
+        "mutex": "cpp",
+        "ratio": "cpp",
+        "sstream": "cpp",
+        "stop_token": "cpp",
+        "thread": "cpp",
+        "vector": "cpp"
     }
 }
