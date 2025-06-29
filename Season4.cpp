@@ -1526,3 +1526,139 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Anjam amaliyat ba Bit Mask
+
+// Hala ke yad gerftim ba 3 ravesh Bit Mask besazim 
+// Hala mikhaym yad begirim az in Bit Mask ha estefade konim
+// Ma 4 ta Function yad gerftim
+// test()
+// set()
+// reset()
+// flip()
+// Mikhaym in 4 ta function ro ba in Bit Mask va Bitwise Operator anjam bedim
+// Bebinim chejurie
+// Aslish ine ke chejuri khodet set() koni ya test() ina 
+// Function ke rahate hame baladan
+
+
+// test(): Bitwise AND
+// set(): Bitwise OR
+// reset(): Tarkib Bitwise AND va Bitwise NOT
+// flip(): Bitwise XOR
+
+// Hala berim soragh sakht Bit Mask ba raveshi ke dost dari balad hasti:
+#include <iostream>
+#include <cstdint>
+
+int main() {
+
+    constexpr std::uint8_t mask0 = 0x01;
+    constexpr std::uint8_t mask1 = 0x02;
+    constexpr std::uint8_t mask2 = 0x04;
+    constexpr std::uint8_t mask3 = 0x08;
+    constexpr std::uint8_t mask4 = 0x10;
+    constexpr std::uint8_t mask5 = 0x20;
+    constexpr std::uint8_t mask6 = 0x40;
+    constexpr std::uint8_t mask7 = 0x80;
+
+    std::uint8_t flags = 0x0A; // 0000'1010
+    // Berim soragh test() va trace ham mikonim chejurie
+    // Faghat inke toye uint8 neshon dada 0 ya 1 sar rast nist
+    // Ya tabdil mikonim be Boolean ba static_cast
+    // Ya Ternary Operator minevisim 
+    std::cout << "Check bit position 1: " << static_cast<bool>(flags & mask1) << '\n';
+    std::cout << "Check bit position 2: " << ((flags & mask2) ? "ON\n" : "OFF\n");
+    // Trace:
+    // Flags: 0000'1010 &
+    // Mask1: 0000'0010
+    // Output:0000'0010 --> ON 
+
+    // Flags: 0000'1010  &
+    // Mask2: 0000'0100  
+    //Output: 0000'0000 -->  Baraye hamin mishe OFF
+    // Ghavanin AND goftim dige
+
+    // set()
+    // in dige roye khod flags e'mal mikone ha meghdar jadid tolid nemikone
+    flags |= mask2;
+    // Mitunim chand ta am benevisim tarkibi
+    flags |= (mask6 | mask7);
+    std::cout << "Check bit position 2: " << ((flags & mask2) ? "ON\n" : "OFF\n");
+    std::cout << "Check bit position 6: " << ((flags & mask6) ? "ON\n" : "OFF\n");
+    std::cout << "Check bit position 7: " << ((flags & mask7) ? "ON\n" : "OFF\n");
+
+    // Trace:
+    // Flags: 0000'1010 OR
+    // mask2: 0000'0100
+    //Output: 0000'1110
+
+    // Tarkibi
+    // flags |= (mask6 | mask7);
+    // Avval toye parantez mohasebe mishe
+    // mask6: 0100'0000 OR
+    // mask7: 1000'0000
+    //Output: 1100'0000
+    
+    // flags: 0000'1110 chon output ghabli in dar omade dige mimune taghirat goftam bala meghdar jadid tolid nemikone
+    // hasel: 1100'0000
+    //Output: 1100'1110
+
+    //reset():
+    flags &= ~mask2;
+    // Tarkibi:
+    flags &= ~(mask6 | mask7);
+    std::cout << "Check bit position 2: " << ((flags & mask2) ? "ON\n" : "OFF\n");
+    std::cout << "Check bit position 6: " << ((flags & mask6) ? "ON\n" : "OFF\n");
+    std::cout << "Check bit position 7: " << ((flags & mask7) ? "ON\n" : "OFF\n");
+
+    // Trace:
+    // Flags: 1100'1110 AND
+   // ~mask2: 1111'1011  //Chon Bitwise NOT hast hameye 1 ha 0 va 0 ha ham 1
+   // Output: 1100'1010
+
+   // Tarkibi:
+   // Avval toye parantez ~(mask6 | mask7)
+   // Deghat kon avval dakhel parantez OR mikonim baad ~ mikonim javab ro
+    // mask6: 0100'0000  OR
+    // mask7: 1000'0000
+   // Output: 1100'0000
+   // Hala ~Output:
+  // ~Output: 0011'1111
+
+  // Hala ba flags:
+  // Flags: 1100'1010 AND
+  // Hasel: 0011'1111
+ // Output: 0000'1010
+
+
+    // Berim soragh ravesh ba'adi yani
+    // flip()
+    // Ke ba XOR hast
+    flags ^= mask0;
+    // Tarkibi:
+    flags ^= (mask1 | mask4);
+
+    std::cout << "Check bit position 0: " << ((flags & mask0) ? "ON\n" : "OFF\n");
+    std::cout << "Check bit position 1: " << ((flags & mask1) ? "ON\n" : "OFF\n");
+    std::cout << "Check bit position 3: " << ((flags & mask4) ? "ON\n" : "OFF\n");
+
+    // Trace: Ma midunim in XOR agar tedad 1 ha fard bashe output 1 mide be ma
+    // flags: 0000'1010
+    // mask0: 0000'0001
+   // Output: 0000'1011
+
+   // Hala tarkibi flags ^= (mask1 | mask4)
+   // Avval toye parantez:
+   // Mask1: 0000'0010  OR
+   // Mask4: 0001'0000
+  // Output: 0001'0010
+
+  // flags: 0000'1011  XOR
+  // Hasel: 0001'0010
+ // Output: 0001'1001
+
+    return 0;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Nam gozari Bit ha
