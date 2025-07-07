@@ -147,6 +147,18 @@
     <ClCompile Include="ColorBitmask.cpp">
       <Filter>Source Files\Season 5</Filter>
     </ClCompile>
+    <ClCompile Include="Numeral_Systems.cpp">
+      <Filter>Source Files\Season 5</Filter>
+    </ClCompile>
+    <ClCompile Include="Decimal_Convert_To_Binary.cpp">
+      <Filter>Source Files\Season 5</Filter>
+    </ClCompile>
+    <ClCompile Include="Adding_in_Binary.cpp">
+      <Filter>Source Files\Season 5</Filter>
+    </ClCompile>
+    <ClCompile Include="Negetive_Number.cpp">
+      <Filter>Source Files\Season 5</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h">
