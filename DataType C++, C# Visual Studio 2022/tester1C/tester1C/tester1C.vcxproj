@@ -223,7 +223,7 @@
     <ClCompile Include="Naming_and_Optimization.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Negetive_Number.cpp" />
+    <ClCompile Include="Negative_Number.cpp" />
     <ClCompile Include="Numeral_System.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

@@ -156,7 +156,7 @@
     <ClCompile Include="Adding_in_Binary.cpp">
       <Filter>Source Files\Season 5</Filter>
     </ClCompile>
-    <ClCompile Include="Negetive_Number.cpp">
+    <ClCompile Include="Negative_Number.cpp">
       <Filter>Source Files\Season 5</Filter>
     </ClCompile>
   </ItemGroup>
