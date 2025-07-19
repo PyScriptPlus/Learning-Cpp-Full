@@ -140,6 +140,31 @@ int main()
     std::cout << "Ending main()";
 } */
 
+// Lambda Function:
+#include <iostream>
+
+void print();
+
+int main() {
+
+    print();
+
+    return 0;
+}
+
+void print() {
+
+    // Lambda Function:
+    auto num = [] () {
+        int x = 5;
+        return x;
+    };
+
+    std::cout << "Lambda: " << num() << '\n';
+
+    return;
+}
+
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
