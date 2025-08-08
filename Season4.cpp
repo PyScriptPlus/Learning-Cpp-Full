@@ -1546,6 +1546,7 @@ int main() {
 // flip(): Bitwise XOR
 
 // Hala berim soragh sakht Bit Mask ba raveshi ke dost dari balad hasti:
+/*
 #include <iostream>
 #include <cstdint>
 
@@ -1658,7 +1659,217 @@ int main() {
 
     return 0;
 }
+*/
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Nam gozari Bit ha
+
+// Khob dar jalase ghabl omadim baraye yad giri esm Bit haro:
+// Mask0, Mask1, Mask2, Mask3 va flags ....
+// Mizashtim vali bayad bar asas hadafemun namgozari konim mesal:
+// Baraye Sensor mikhaym barname benevisim ba Bit Manipulation:
+// Mesal Sensor:
+/*
+#include <iostream>
+#include <cstdint>
+namespace SENSOR {
+    constexpr std::uint8_t SENSOR_Active = 0x01;
+    constexpr std::uint8_t SENSOR_Error = 0x02;
+    constexpr std::uint8_t SENSOR_OVRTEMP = 0x04;
+}
+// Injuri moshakhase bit 0 baraye Fa'al bodan Sensor
+// Ya Bit 1 Baraye Error hast ya 2 Baraye Damaye Bala
+std::uint8_t SENSOR_Status = 0b0000'1010;
+
+// Baraye test() gereftan mitunim az tabdil be Boolean ham estefade konim
+// Mesal:
+int main() {
+
+    std::cout << static_cast<bool>(SENSOR::SENSOR_Error & SENSOR_Status)
+                            << '\n';
+    std::cout << static_cast<bool>(SENSOR::SENSOR_Active & SENSOR_Status)
+                            << '\n';
+
+    return 0; 
+}
+*/
+
+// Khob ma kar ba Bit ha ro yad gerftim vali ta be alan
+// Behinegi nadidim
+
+// Ye mesal bezanim ke Behinegi kamel bebinim
+// Biaym 8 ta Vaziyat baraye mesal 2 nafar Dar nazar begirim
+// Mesal:
+/*
+#include <iostream>
+#include <cstdint>
+namespace Status {
+    // In 8 ta Vaziyat mishe baraye har chand nafar estefade kard
+    constexpr std::uint8_t Happy = 0x01;
+    constexpr std::uint8_t Hungry = 0x02;
+    constexpr std::uint8_t Sleeping = 0x04;
+    constexpr std::uint8_t Crying = 0x08;
+    constexpr std::uint8_t full = 0x10;
+    constexpr std::uint8_t tired = 0x20;
+    constexpr std::uint8_t angry = 0x40;
+    constexpr std::uint8_t excited = 0x80;
+}
+int main() {
+
+    std::uint8_t ali = 0b0000'0000;
+    ali |= Status::full;
+    std::uint8_t mamad = 0b0000'0000;
+    mamad ^= Status::Happy;
+    if (mamad & Status::Happy)
+    {
+        std::cout << "Mamad is Happy :)" << '\n';
+    }
+    else
+    {
+        std::cout << "Mamad is not Happy :(" << '\n';
+    }
+    
+
+    // Failed Code:
+    // Khob berim hamin mesal ro ba Boolean bezanim chon onam 8Bit 
+    // Hamon 1Byte hast:
+    bool Happy = false;
+    bool Hungry = true;
+    bool Sleeping = false;
+    bool Crying = true;
+    bool full = true;
+    bool tired = false;
+    bool angry = true;
+    bool excited = false;
+    // Khob to code moshkel hast shayad begi na mishe mesal:
+    bool reza;
+    if (reza == full); // In nemishe
+    // Chon alan faghat 0 darim ya 1 
+    // Toye Bit Manipulation 0 ta 7 darim
+    // Bala goftim reza == full 
+    // full true yani 1 ma true ziad darim kodum true xD? 
+    // Pas in code moshkel dare berim ravesh ba'adi
+
+    // Ravesh 2: 
+    // Rahesh faghat bayad baraye har kodom NameGozari konim
+    // Mesal:
+    bool Reza_Happy = false;
+    bool Reza_Hungry = true;
+    bool Reza_Sleeping = false;
+    bool Reza_Crying = true;
+    bool Reza_full = true;
+    bool Reza_tired = false;
+    bool Reza_angry = true;
+    bool Reza_excited = false;
+
+    bool Ali_Happy = false;
+    bool Ali_Hungry = true;
+    bool Ali_Sleeping = false;
+    bool Ali_Crying = true;
+    bool Ali_full = true;
+    bool Ali_tired = false;
+    bool Ali_angry = true;
+    bool Ali_excited = false;
+
+    // 16 ta 8 bit toye Boolean darim:
+    // 16 * 8 = 128Bit mishe 16Byte Yani code eftezah :|
+
+    // Hala Toye Bit Manipulation:
+    // 8 Ta vaziyat ke dar namespace Status gozashtam
+    // Ona CompileTime hastan constexpr neveshtam va sabet hast
+    // Chon CompileTime hast meghdaresh toye code jaygozin mishe
+    // Yani harvaght mesal full ro seda bezanim faghat meghdaresh jaygozin mishe 
+    // Hazine bar dar nist aslan
+    // Va ona hich Hafeze baraye khodeshon eshghal nemikonand
+    // Faghat ali va mamad faza eshghal mikonanad
+    // ali: 8bit
+    // mamad: 8bit
+    // Ke mishe 16Bit 
+
+    // Hala 16Bit koja 128 Bit koja :D
+
+    return 0;
+}
+*/
+//---------------------------------------------------------------------//
+#include <iostream>
+#include <cstdint>
+    // Berim ye mesal dige dar mored behinegi bezanim
+
+    // Farz kon ye function darim mesal 16 ta Parameter dare
+    // Boolean
+bool foo(bool opt1, bool opt2, bool opt3, bool opt4, bool opt5,
+    bool opt6, bool opt7, bool opt8, bool opt9, bool opt10,
+    bool opt11, bool opt12, bool opt13, bool opt14, bool opt15,
+    bool opt16) {
+        return opt1;
+}
+    // 16 * 8 = 128Bit = 16Byte :| aslan behine nist
+    // Va toye Argument dadan bayad bebinim kodum true kodum false
+    // Shayad eshtebahati rokh bede 
+
+    // Vali ba Bit Manipulation mitunim in karo behine va raht konim
+namespace Options {
+    constexpr std::uint16_t opt1 = 0x01;
+    constexpr std::uint16_t opt2 = 0x02;
+    constexpr std::uint16_t opt3 = 0x04;
+    constexpr std::uint16_t opt4 = 0x08;
+    constexpr std::uint16_t opt5 = 0x10;
+    constexpr std::uint16_t opt6 = 0x20;
+    constexpr std::uint16_t opt7 = 0x40;
+    constexpr std::uint16_t opt8 = 0x80;
+    constexpr std::uint16_t opt9 = 0x100;
+    constexpr std::uint16_t opt10 = 0x200;
+    constexpr std::uint16_t opt11 = 0x400;
+    constexpr std::uint16_t opt12 = 0x800;
+    constexpr std::uint16_t opt13 = 0x1000;
+    constexpr std::uint16_t opt14 = 0x2000;
+    constexpr std::uint16_t opt15 = 0x4000;
+    constexpr std::uint16_t opt16 = 0x8000;
+
+}    
+void fooo(std::uint16_t opts) {
+    std::cout << "Opt5: " << static_cast<bool>(opts & Options::opt5) << '\n';
+    std::cout << "Opt6: " << static_cast<bool>(opts & Options::opt6) << '\n';
+    std::cout << "Opt9: " << static_cast<bool>(opts & Options::opt9) << '\n';
+    std::cout << "Opt10: " << static_cast<bool>(opts & Options::opt10) << '\n';
+    std::cout << "Opt10: " << static_cast<bool>(opts & Options::opt14) << '\n';
+    return;
+}
+
+int main() {
+
+    // Boolean:
+    foo(true, false , true, true, true, false, true, false, false, false,
+        true, false, true, false, false, true);
+
+
+    // Mesal mikhaym opt haye 5 , 6 , 9 , 10 true bashan baghiye false
+    std::uint16_t opts = (Options::opt5 | Options::opt6 | Options::opt9 |
+        Options::opt10);
+    fooo(opts);
+    // Ina mostaghim toye Argument ham mishe nevesht mesal:
+    // fooo(Options::opt5 | Options::opt6 | Options::opt9 |
+    //     Options::opt1);
+
+
+    // Onayi ke toye namespace Options hastan goftam dige faghat meghdar
+    // Jaygozin mishe va faza eshghal nemikone
+    // Faghat onjayi ke parameter va Arguman dadim eshghal shode
+    // Yeki parameter 16Bit: void fooo(std::uint16_t opts)
+    // Va yeki am Arguman 16Bit: 
+    // va std::uint16_t opts = (Options::opt5 | Options::opt6 | Options::opt9 |
+    // Options::opt10);
+    // Ke jamesh mishe 32Bit: 4Byte
+    
+    // Hala Boolean shode 128Bit = 16Byte 
+    // Vali Bit Manipulation shode 32Bit = 4Byte
+    
+    // Ez Behinegi :D
+    return 0;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Estefade az BitMask baraye chand Bit
