@@ -16,6 +16,9 @@
     <Filter Include="Source Files\Season 5">
       <UniqueIdentifier>{60d237cd-02df-47c5-8279-2e7b1de23b0d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Season 6">
+      <UniqueIdentifier>{a2bbb4b3-6ca8-4c45-864f-2f482efef5c9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="signed.cpp">
@@ -158,6 +161,9 @@
     </ClCompile>
     <ClCompile Include="Negative_Number.cpp">
       <Filter>Source Files\Season 5</Filter>
+    </ClCompile>
+    <ClCompile Include="Compound_Statement.cpp">
+      <Filter>Source Files\Season 6</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

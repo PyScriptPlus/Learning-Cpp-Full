@@ -8,7 +8,7 @@ namespace DataType_cs
 {
     class Numeral_system_CS
     {
-        static void Main(string[] numeral)
+        static void Numeral_System(string[] numeral)
         {
             // Decimal : Mabnaye 10
             // Hamin adad hayi ke dar roz mare khodemun estefade mikonim
