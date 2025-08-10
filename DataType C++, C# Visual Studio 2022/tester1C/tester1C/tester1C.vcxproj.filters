@@ -19,6 +19,9 @@
     <Filter Include="Source Files\Season 6">
       <UniqueIdentifier>{a2bbb4b3-6ca8-4c45-864f-2f482efef5c9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Season 6\Collision_Name_Namespace">
+      <UniqueIdentifier>{a68a838d-f0b4-4b10-81c0-8b5064765722}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="signed.cpp">
@@ -164,6 +167,18 @@
     </ClCompile>
     <ClCompile Include="Compound_Statement.cpp">
       <Filter>Source Files\Season 6</Filter>
+    </ClCompile>
+    <ClCompile Include="namespace.cpp">
+      <Filter>Source Files\Season 6</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files\Season 6\Collision_Name_Namespace</Filter>
+    </ClCompile>
+    <ClCompile Include="foo.cpp">
+      <Filter>Source Files\Season 6\Collision_Name_Namespace</Filter>
+    </ClCompile>
+    <ClCompile Include="goo.cpp">
+      <Filter>Source Files\Season 6\Collision_Name_Namespace</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
