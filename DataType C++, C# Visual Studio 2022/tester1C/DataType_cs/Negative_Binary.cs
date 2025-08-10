@@ -15,7 +15,8 @@ namespace DataType_cs
             byte seven = 0b0000_0111;
             seven = (byte)~seven;
             sbyte sevenAdd = (sbyte)(seven + 0b0000_0001);
-            Console.WriteLine(sevenAdd); // -7 
+            Console.WriteLine(sevenAdd);
+            
 
         }
     }
