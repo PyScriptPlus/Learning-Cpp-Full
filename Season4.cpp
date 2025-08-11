@@ -1793,6 +1793,7 @@ int main() {
 }
 */
 //---------------------------------------------------------------------//
+/*
 #include <iostream>
 #include <cstdint>
     // Berim ye mesal dige dar mored behinegi bezanim
@@ -1869,7 +1870,57 @@ int main() {
     // Ez Behinegi :D
     return 0;
 }
-
+*/
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Estefade az BitMask baraye chand Bit
+
+// Khob ta alan bitmask hayi ke ma ta'rif mikardim
+// Faghat 1 bit ro target migereft mesal:
+// Mask0 faghat bit shomare 0 ro target migereft ya Mask1 faghat bit shomare 1 target migerefet
+
+// Vali ma mitunim ba yek Mask chand bit ro Target konim
+// Va karbord khobi dare in bahs jolo tar migam
+// Khob ma baraye sakht Mask 3 ta ravesh darim: 1-Binary Literal 2-Shift 3-Hexadecimal
+// Ba har 3 ravesh yad midam chejuri chand bit ro target konim 
+
+// Berim soragh ravesh avval yani: Binary Literal
+// Mikhaym az bit 0 ta 3 ro 1 konim toye 1 mask (Kheyli rahate)
+#include <cstdint>
+constexpr std::uint8_t maskBinaryLiteral = 0b0000'0111;
+// Kheyli rahate har kodom mikhay bayad 1 koni 
+
+// Berim soragh ravesh Hexadecimal ke kheyli rahate
+// Faghat bayad dar nazar begiri har Hexadecimal 4 ta bir dar nezar migire
+// Mesal: 0x1 --> 0001
+// 0x2 --> 0010
+// 0xA --> 1010
+// Bayad har adadi ke vared mishe be binary tabdil koni
+// Mesal: 
+constexpr std::uint8_t maskHexadecimal = 0xAF;
+// A = 10; 1010
+// F = 15; 1111
+// Mishe: 1010'1111
+// Az samt LSB minevisim
+
+// Mesal dige:
+constexpr std::uint8_t maskHexadecimal2 = 0x0C;
+// 0 = 0; 0000
+// C = 12; 1100
+// Mishe az samt LSB: 0000'1100
+
+// Mesal digee: 
+constexpr std::uint8_t maskHexadecimal3 = 0x33;
+// 3 = 3; 0011
+// 3 = 3; 0011
+// Mishe: 0011'0011
+// Test ham konim bebeinim vaghean injuri hast ya na:
+#include <iostream>
+int main() {
+    std::cout << ((maskHexadecimal3 == 0b0011'0011) ? "Doruste" : "Eshtebahe") << '\n';
+    // Ye taghir bedim bebin:
+    std::cout << ((maskHexadecimal3 == 0b0001'0010) ? "Doruste" : "Eshtebahe") << '\n';
+    return 0;
+}
+
+// Berim soragh ravesh Shift inam rahate:
