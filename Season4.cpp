@@ -2056,3 +2056,56 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: System haye adadi
+
+// Khob dar Season haye ghabl ba in Mabhas Numeral System ashna hastim
+// Vali mikhaym dar in bahs chizaye jadidi yad begirim ghablia nist
+// Jadid hastand
+// Chejuri mishe yek adad Decimal ro be Binary tabdil kard
+// Va Taklif manfi ya mosbat bodan A'shar dar form Binary chi mishe?
+// Gharar inaro be morur zaman yad begirim
+
+// Ma az bachegi onghadr ba mabnaye ده دهی kar kardim dige to zehnemun hast
+// Mesal adad: 7543 dar nazar begir
+// Ma midunim arzesh adad 3 ba arzesh adad 7 to in adad 7543 baham kamelan motafavet hast
+// Ya'ni 3 avval be ma'ni 3 vahed hast
+// 4 Ba'adi be ma'ni 40 Vahed
+// 5 be ma'ni 500 Vahed va 7 be ma'ni 7000 vahed ast
+
+// Ina ye formul darand ke ma بعید میدونیم azash estefade konim
+// Chon in mabnaye Dah dahi toye zemhneum ye jurayi Hack shode
+// 7 x 1000 + 5 x 100 + 4 x 10 + 3 x 1 = 7543
+// Dalil inke behesh migan dah dahi ya Decimal
+// Hamin ast chon Arzesh argham ba tavani az 10 be bala mire
+
+// Ye mesal dige: 2894
+// 2 x 10^3 + 8 x 10^2 + 9 x 10^1 + 4 x 10^0 = 2894
+// Mesl balayi hast farghi nadare ina
+
+// Hala adad Binary chiz ajibi nist dar on ham Arzesh argham
+// Ba tavani az2 be bala mire va argham in Mabna ham beyn 0 , 1 hast
+
+// Mabnaye 8 Hamon Octal ham hamintor 
+// Arzesh argham ba tavani az 8 be bala mire va argham mabnaye 8 ham 0 ta 7 hast
+
+// Mabnaye 16 Hamon Hexadecimal mesl ina
+// Arzesh agham ba tavani az 16 be bala mire va argham mabnaye 16 ham 0 ta 15 hast
+
+// Khob berim tabdil Binary be Decimal ba ravesh asli va osuli:
+// Mesal in adad: 0101110
+                //6543210
+// Har kodum ke ziresh neveshtam be tavan on zarb 2 mishe mesal:
+// (0 x 2^6) + (1 x 2^5) + (0 x 2^4) + (1 x 2^3) + (1 x 2^2) + (1 x 2^1) + (0 x 2^0)
+//    0      +   32      +    0      +    8      +    4      +    2      +    0  = 
+// Mishe = 46 Decimal
+
+// Behtare az adad 0 ta 15 be Binary sho hezf bashi payin neveshtam hezf kon:
+// 0000 = 0    :    0110 = 6    :    1100 = 12
+// 0001 = 1    :    0111 = 7    :    1101 = 13
+// 0010 = 2    :    1000 = 8    :    1110 = 14
+// 0011 = 3    :    1001 = 9    :    1111 = 15
+// 0100 = 4    :    1010 = 10
+// 0101 = 5    :    1011 = 11
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Tabdil Decimal be Binary
