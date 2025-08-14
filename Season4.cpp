@@ -2109,3 +2109,53 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Tabdil Decimal be Binary
+
+// Khob dar in jalase yad migirim chejuri yek Decimal be Binary tabdil konim
+
+// 2 Ta ravesh asli dare ke har 2 ta ro yad midam
+// Ravesh avval: Taghsim bar 2 taghsim sahih anjam mide va baghimande ro ba ( r )
+// Neshon midiam
+// Mesal: 148
+// 148 / 2 = 74 r0
+// 74 / 2  = 37 r0
+// 37 / 2  = 18 r1
+// 18 / 2  = 9  r0
+// 9 /  2  = 4  r1
+// 4 /  2  = 2  r0
+// 2 /  2  = 1  r0
+// 1 /  2  = 0  r1
+// Ino az payin be bala minevisim az samt chap baghimande hasho
+// be tartib minevisim
+// 10010100 --> 148
+
+
+
+// Berim soragh ravesh Dovvom:
+// Bozorg tarin tavan nam darad
+
+// Tavan 2 haro minevisim va on adad mored nazar ke mikhaym tabdil konim
+// Beyn on adad haye tavan 2 hamon 1 , 2 , 4 , 8 , 16 vaaa
+// Ye juri peyda mikonim ke bozorg tarin bashe beyn adad haye khodesh 
+// Va kocheck tar az bozorg tarin adad
+// Hamon 148 berim:
+// 1, 2, 4, 8, 16, 32, 64, 128, 256, 512
+// Khob in adad 148 bozorg tar az 128 hast va kochecktar az 256
+// Pas adad ma 128 shod va chera 256 na? chon 256 bozorg hast dige ono vel mikonim
+// Injuri minevisim va be aghab bar migardim deghat negah kon:
+// Age bozorg tar mosavi bod 1 midim va az ham dige kam mikonim
+// Age nabod 0 mizarim mirim ba'adi dige kam nemikonim be in sorat:
+// 148 >= 128 --> 1   148 - 128 = 20
+// 20 >= 64   --> 0
+// 20 >= 32   --> 0
+// 20 >= 16   --> 1   20 - 16 = 4
+// 4  >= 8    --> 0
+// 4  >= 4    --> 1   4 - 4 = 0
+// 0  >= 2    --> 0
+// 0  >= 1    --> 0
+
+// Inam az bala be payin az samt chap be tartib minevisim:
+// 10010100 --> 148
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Jam adad Binary
