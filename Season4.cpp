@@ -2159,3 +2159,53 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Jam adad Binary
+
+// Khob dar in jalase mikhaym jam' adad Binary ro yad begirim
+// In mabhas kheyli por karbord hast ke dar jalase haye ba'adi mibinim karbordesho
+// Mesal:
+// Mikhaym Binary haye 6 ba 7 ro jam konim avval Binary sho minevisim:
+// 6 = 0110
+// 7 = 0111
+
+// Bayad Digit be digit zir ham benevisim mesl Column
+// Dar jam adad Binary kolan 5 Halat darad ke minevisam ziresh
+// 0 + 0 = 0
+// 1 + 0 = 1
+// 0 + 1 = 1
+// 1 + 1 = 0 yedone 1 midim be sotun baghalish yani samt chap
+// 1 + 1 + 1 = 1 dar inam yedone 1 midim be sotun baghalish yani samt chap
+// Yani 1 ragham midim be Column samt chap
+
+// Mesal: 6 + 7
+//Inayi ke in zire ragham hayi ke dadi:
+//     11    
+// 6 = 0110
+// 7 = 0111
+//Out: 1101 --> 13 Decimal
+
+// Hala mikhaym 10 + 1 berim jolo
+// In 1 ragham ezafe kardan dar jalase haye ba'adi kheyli be dard mikhore
+
+// 10 = 1010
+// 1  = 0001
+//Out:  1011 --> 11 Decimal
+
+// Yeki dige 10 + 2
+// 10 = 1010
+// 2  = 0010
+//Out:  1100 --> 12 Decimal
+
+// Yeki dige sakht: 17 + 1
+// 17 = 10001
+// 1  = 00001
+//Out:  10010
+
+
+// Yeki dige adad bozorg: 179 + 1
+// 179 = 10110011
+//  1  = 00000001
+// Out:  10110100 --> 180
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Adad manfi
