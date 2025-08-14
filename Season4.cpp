@@ -2208,4 +2208,92 @@ int main() {
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
-// Mabhas: Adad manfi
+// Mabhas: Adad Manfi
+
+// Dar in jalase mikhaym adad Manfi ro dar Form Binary zakhire sazi konim
+
+// Adad manfi ba estefade az ravesh (Two's Complement)
+// فارسی شم میشه مکمل دو
+// Ba in ravesh adad manfi zakhire sazi mishand
+
+// Dar in ravesh ma miaym samt chap tarin Bit ro ya'ni samt MSB be onvan Bit alamat dar 
+// Nazar migirim 
+// Hala age Bit signed bod samt chap tarin bit ham 0 bod ya'ni 
+// On adad adadi mosbat hast
+// Agar Bit samt chap 1 bod ya'ni on adad adadi manfi hast
+// Mesal:
+// Signed: 0|00001010
+// Samt chap yani samt MSB 0 hast pas adad Mosbat hast
+// Be in rahati ha ham nist ha jolo tar kamel migam
+
+// Nokte: Vaghti migim bit Signed pas midunim ke nemishe tosh 0 ta 255 zakhire kard
+// Bayad hatman -128 ta 127 zakhire she pas ino ma midunim
+
+// Mesal alan ye Binary be ma dadan 
+// Ine: 1000101 --> 69
+// Alan az koja bedunim in alamat dar hast ya na?
+// Be type mored nazar negah mindazim agar Unsigned bod
+// Adad kolan mosbate lazem nist
+// Agar Signed bod miaym samt MSB negah mindazim chap tarin bit 1 hast pas manfi hast
+// In: 1000101 --> -69
+// Hala ino injuri biaym bedim be RAM hamon mosbat mide 69 
+// Pas chejurie? 3 ta marahel dare kheyli rahate bayad tey she
+
+// Ye adad rahat tar mesal 6 biaym bebarim be manfi:
+// Marhale avval:
+// Avval Binary shod minevisim: 0000'0110
+// Marhale dovvom:
+// Miaym ma'kos mikonim ~0000'0110
+// Ke mishe --> 1111'1001
+// Marhale sevvom:
+// Hala ma'kos shode inro 1 vahed behesh ezafe mikonim:
+//          1111'1001
+//          0000'0001
+// Signed:  1111'1010 --> -6
+
+// Mesal codi bezanam bebin chejuri mishe:
+#include <iostream>
+#include <cstdint>
+
+int main() {
+
+    std::int8_t numSix = 0b0000'0110; // 6
+    numSix = ~numSix; // 0b1111'1001
+    std::int8_t addOne = (numSix + 0b0000'0001); // 1111'1010
+    // Tabdil kardam khob chap she ma midunim 8bit moshkel dare toye chap ina !!!
+    std::cout << static_cast<int>(addOne) << '\n'; // -6
+
+    return 0;
+}
+
+
+// Khob ma yad gerftim dar in Season adad unsigned Binary ro be Decimal tabdil konim
+// Hala signed ha chejuri hastan manfi haro chejuri be Decimal tabdil konim?
+// Avval mibinim Type mored nazar signed hast ba'ad Samt MSB mibinim
+// Age 0 bod hamon tori tabdil mikonim mire yad dadam 
+// Age 1 bod samt MSB ghazie fargh mikone
+// Avval Ma'kos mikonim ba'ad 1 vahed ezafe mikonim ba'ad tabdil mikonim
+// Mesal: Signed: 1111'1010
+// ~1111'1010 --> 0000'0101
+// Hala 1 vahed: 
+//     0000'0101
+//     0000'0001
+//Out: 0000'0110
+
+// Hala javab shod in: 0000'0110 --> 6
+// Chon signed hast va 1 dasht pas migim --> -6
+// Javab akhar --> -6
+
+
+// Hala Compiler az koja mifahme in Signed hast ya unsigned ?
+// 1000 Bar goftam harvaght didi Type mesal: int
+// Age int bod ya'ni signed age uint bod ya'ni unsigned hast
+// Compiler negah be Type mikone va motavajeh mishe ke adad ro
+// Chetori bayad incode va decode bekone 
+// Ya'ni chejuri bayad incode kone bezare toye hafeze RAM 
+// Va chejuri bayad decode kone zamani ke az hafeze RAM mikhune va meghdaresh
+// Ro baraye ma neshon mide
+
+
+
+// End Project Season 5 .........................
