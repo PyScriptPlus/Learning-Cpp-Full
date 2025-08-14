@@ -1886,6 +1886,7 @@ int main() {
 
 // Berim soragh ravesh avval yani: Binary Literal
 // Mikhaym az bit 0 ta 3 ro 1 konim toye 1 mask (Kheyli rahate)
+/*
 #include <cstdint>
 constexpr std::uint8_t maskBinaryLiteral = 0b0000'0111;
 // Kheyli rahate har kodom mikhay bayad 1 koni 
@@ -1922,5 +1923,136 @@ int main() {
     std::cout << ((maskHexadecimal3 == 0b0001'0010) ? "Doruste" : "Eshtebahe") << '\n';
     return 0;
 }
-
+*/
 // Berim soragh ravesh Shift inam rahate:
+// In yek formul dare ke ba formulesh mirim jolo: 
+// Formul: ((1 << Length) -1) << Position
+// Khob in formul chejurie?
+// Mesal ma mikhaym 4 ta bit ro 1 konim az samt MSB
+// Miaym migim (1 << 4) Length mizari 4 in miad 1 ro 4 ta Hol mide samt MSB 
+// Mishe: 0001'0000
+// Hala in -1 chikar mikone mesal: ((1 << 4) -1)
+// Miad in 1 ro 0 Mikone poshtesh harchi 0 hast ro 1 mikone
+// Injuri mishe: 0000'1111
+// Hala Position migim 4 ta hol bede hamashon jolo mesal:
+// ((1 << 4) -1) << 4
+// Mishe: 1111'0000
+/*
+#include <cstdint>
+#include <iostream>
+// Anonymous Namespace
+namespace {
+    constexpr std::uint8_t maskShift = ((1 << 4) -1) << 4;
+}
+int main() {
+    
+    std::cout << ((maskShift == 0b1111'0000) ? "Doruste" : "Eshtebahe") << '\n';
+
+    return 0;
+}
+*/
+
+// Hala ba inayi ke yad gereftim biaym yek senario vagheyi bebinim
+// Namayeshgar haye emruzi mesl: Phone, TV, Monitor va ....
+// Az yek seri Pixel tashkil shode ast
+// Bastegi be ab'ad dare ziyad bozorg bashe ehtemalan Milion ha Pixel dare , Begzarim
+
+// Har Pixel az 3 ta Light Color tashkil shode
+// Light Red, Green, Blue
+// Hamon RGB ma'rof khodemun 
+// Mitunim ba tarkib in 3 Color color haye mokhtalefi besazim
+// In Color ha ro miyan 8bit dar nazar migiran 
+// R --> 8Bit, G --> 8Bit, B --> 8Bit
+// Bedon alamat hastand mishe 0 ta 255 nomayesh dad
+// Mesal:
+// Agar Red har che be 255 nazdik bashe yani be Color Red nazdik hast mishe did
+// Age 0 bashe in Color Red estefade nashode
+// Red: R:255/G:0/B:0
+// Green: R:0/G:255/B:0
+// Blue: R:0/G:0/B:255
+
+// Mesal baraye Color خاکستری
+// R:127/G:127/B:127
+
+// Hala be joz in 3 ta RGB
+// Yedone am ( A ) hast yani Alpha
+// Ke in Shafafiyat Color neshon mide
+// Age be 0 nazdik bashe yani on Color shafafe mesl shishe chizi dide nemishe
+// Age be 255 nazdik bashe yani ghabel did hast
+// Mesal: 127 nime Shafaf
+// Alpha ham 8Bit dar nazar migirand
+
+// Khob alan in 4ta ro kamel fahmidim: RGBA
+// Ke harkodum 8Bit hast
+// Vali dar in senario nemikham berizam toye 8bit mitunim berizim 32Bit miduni chera?
+// Chon 4 ta hast 4 * 8 = 32Bit
+// Mitunim in 32Bit baraye har kodum taghsim bandi konim mesal:
+// Red[31 , 24] Green[23 , 16] Blue[15 , 8] Alpha[7 , 0]
+
+// Berim code nevisi daghigh negah kon baraye har kodum Mask misazim:
+/*
+#include <cstdint>
+#include <iostream>
+
+namespace RGBA {
+    constexpr std::uint32_t redMask = 0xFF000000;
+    constexpr std::uint32_t greenMask = 0x00FF0000;
+    constexpr std::uint32_t blueMask = 0x0000FF00;
+    constexpr std::uint32_t alphaMask = 0x000000FF;
+    // Goftam in F ha chiye Hexa chejurie
+    // F = 15 --> 1111
+    // Mesal: redMask alan ine: 1111'1111'0000'0000'0000'0000'0000'0000
+                                // Red    // Green  // Blue   // Alpha
+}
+int main() {
+
+    std::cout << "Enter hexa 32bit Color: ";
+    std::uint32_t pixel;
+    std::cin >> std::hex;
+    std::cin >> pixel;
+    // Alan barey har kodum az in Color ha 8Bit variable misazim
+    // Va tabdil Explicit anjam midim be uint8_t 0-255
+    // Va har kodum bayad hol bedim be samt rast chon mesal
+    // [FF][00][00][8it] bayad hol bedim biad ta beshine 8bit 
+    // Age hol nadim 8Bit red ma mishe --> 0000'0000
+    // Va hatman vaghti Shift midi be samt rast ya chap Parantez bezar 
+    // Be khater Olaviyat Operator
+    // Ba Pixel & mikonim bebini karbar chi vared kard
+    // Mesal: Karbar zade : FF0000FF:
+    // Be binary mishe: 1111'1111'0000'0000'0000'0000'1111'1111
+    // Miad ba red AND mishe: 
+    // RedMask: 1111'1111'0000'0000'0000'0000'0000'0000
+    // Pixel:   1111'1111'0000'0000'0000'0000'1111'1111
+    // Out:     1111'1111'0000'0000'0000'0000'0000'0000
+    std::uint8_t red = static_cast<std::uint8_t>((pixel & RGBA::redMask) >> 24);
+    std::uint8_t green = static_cast<std::uint8_t>((pixel & RGBA::greenMask) >> 16);
+    std::uint8_t blue = static_cast<std::uint8_t>((pixel & RGBA::blueMask) >> 8);
+    // Alpha niyaz nist Shift bedi chon khodesh samt LSB gharar darad Maskesh
+    std::uint8_t alpha = static_cast<std::uint8_t>(pixel & RGBA::alphaMask);
+
+    // Hala miaym inaro chap konim 
+    // Tabdil mikonim be int dar chap kon goftim uint8 ehtemal dare raftar ajibi
+    // Mesl char ro bede
+    std::cout << "Decimal: " << '\n';
+    std::cout << "Red: " << static_cast<int>(red) << '\n';
+    std::cout << "Green: " << static_cast<int>(green) << '\n';
+    std::cout << "Blue: " << static_cast<int>(blue) << '\n';
+    std::cout << "Alpha: " << static_cast<int>(alpha) << '\n';
+
+    std::cout << "\nHexadecimal: \n";
+    std::cout << std::hex;
+    std::cout << "Red: " << static_cast<int>(red) << '\n';
+    std::cout << "Green: " << static_cast<int>(green) << '\n';
+    std::cout << "Blue: " << static_cast<int>(blue) << '\n';
+    std::cout << "Alpha: " << static_cast<int>(alpha) << '\n';
+
+    // Alan vaghti karbar vared mikone Coloresho be Hexa neshon mide:
+    // Red dare ya na mesal Green dare che meghdar
+
+    return 0;
+}
+*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: System haye adadi
