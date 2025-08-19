@@ -114,6 +114,7 @@ Ta sazmandehi code ha rahat she!!!
 // Mesal dar code balayi alaki Nesting Level rafte balad
 // Mishe be rahati Refactor kard
 // Mesal Refactor code balayi:
+/*
 #include <iostream>
 
 int main() {
@@ -131,7 +132,177 @@ int main() {
 
     return 0;
 }
+*/
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Namespace (Part 1)
+
+// Agar yadet bashe dar Season2 dar bare Collision Name ha sohbat kardim
+// Va rah halesho ham goftam bayad baraye jolo giri az Collision Name az Namespace estefade
+// Konim.
+
+// Yadavari: Collision Name zamani etefagh miofte ke 2 ta Identifier yeksan
+// Dar scope yeksani tarif beshan be in sorat Compiler gij mishe va error mide
+// Inam begam momken hast Error Linker ham rokh bede
+
+// Mesal Real: Man ba 1 nafar toye yek khone hastim
+// Be man mige Control bede be man man vaghti bar migardam
+// Mibinam 2 ta Control hast 1ki male TV yeki male Coller
+// Hala man gij misham mesl Compiler 
+// Bayad behesh Error bedam kodum Controll mikhay?
+
+
+// Har cheghadr barname ma bozorg bozorg tar mishe ehtemal Collision Name ham mire bala
+
+// Ye mesal bezanim kamel ja biofte:
+// Farz kon 2 ta file .cpp darim dar har file yek Function darim ba asami yeksan
+// Vali mantegheshon fargh dare
+// Yani Implementation shon fargh dare kar haye mokhtalef anjam midan:
+
+// Mesal:
+/*
+// foo.cpp:
+int doSomething(int x, int y)
+{
+    return x + y;
+}
+
+// goo.cpp:
+int doSomething(int x, int y)
+{
+    return x - y;
+}
+
+// main.cpp:
+#include <iostream>
+int doSomething(int x, int y); // Declare
+
+int main() 
+{
+    std::cout << doSomething(4, 3);
+
+    return 0;
+}
+*/
+// Command: g++ main.cpp foo.cpp goo.cpp -o file.exe
+// Nokte age bekhaym faghat main ba foo ro ejra konim moshkeli pish nemiyad
+// Vali ma mikhaym 3 tashon ejra konim main, foo, goo
+// Natije error mide: duplicate symbol'doSomething(int, int)'
+// Compiler gij mishe dar in halat
+
+// Khob 2 ta rah hal:
+// Rah hal avval:
+// Biaym esm yeki az Function haro taghir bedim
+// Vali dar project bozorg tar dard sar hast
+
+// Rah hal dovvom va monaseb:
+// Biaym az namespace ha estefade konim
+// Dalil in ke Standard Library omad be namespace std montaghel shod jolo giri az hamchin
+// Collision Name hayi bod
+
+// Syntax namespace:
+// namespace NamespaceIdentifier
+// {
+
+    // Content of namespace here
+
+// }
+
+// Be hamchin namespace hayi ke khodemun ijad mikonim migan
+// user-defined-namespace 
+// Esmesh roshe dige: namespace hayi ke tavasot user ijad shode
+
+// Nokte: In kalame namespace yek Keyword hast
+
+// Hala berim baraye har kodum namespace ijad konim
+// Faghat man dige to yek file hamaro ijad mikonam
+// Nemitunam project asli Season5.cpp 3 4 ta konam
+// Haminja minevisim ino mitunim dar file haye mokhtalef benevisim:
+/*
+#include <iostream>
+// Ghaede name gozari ham har jur dos dari vali behtare hamashon kochik benevisi
+// foo.cpp:
+namespace foo {
+
+    int doSomething(int x, int y) 
+    {
+        return x + y;
+    }
+}
+namespace goo {
+
+    int doSomething(int x, int y)
+    {
+        return x - y;
+    }
+
+}
+
+int doSomething(int x, int y){
+    return x * y;
+}
+
+int main() {
+
+    //std::cout << doSomething(4, 3) << '\n';
+    // Error mide baz chon ma yeki toye namespace foo va goo doSomething ro darim 
+    // In dare toye Global donbalesh migarde
+    // 2 ta Rah hal:
+    // 1- Estefade az Scope Resolution Operator
+    // 2- Estefade az using statements (Ino toye entehaye in Season migam)
+    // Berim soragh rah hal Scope Resolution Operator
+    // namespace::Identifier
+    // Samt chap Operator esm namespace samt rastesh ham esm Function ya harchi ke mikhay
+
+    // Mesal:
+    std::cout << foo::doSomething(4, 3) << '\n';
+    std::cout << goo::doSomething(4, 3) << '\n';
+    // Hala payini ro negah kon bedon namespace minevisim
+    std::cout << ::doSomething(4, 3) << '\n';
+    // In mire mostaghim toye Global donbalesh migarde
+    // Khob age Operator gharar nadam baz mire Global donbalesh migarde
+    std::cout << doSomething(4, 3) << '\n';
+
+    // Hal farghesh ine ke
+    // Age Operator gharar nadim avval toye namespace khodesh ke tarif shode donbalesh migarde
+    // Age peyda nakard mire bala bala age bazam peyda nakard mire Global
+
+    // Vali age Operator gharar bedim :: mostaghim mire Global donbalesh migarde
+
+    return 0;
+}
+*/
+// Ye mesal codi baraye Gharar dadan Operator :: va gharar nadadan hich chiz:
+#include <iostream>
+
+void print(){
+    std::cout << "World!" << '\n';
+    return;
+}
+namespace foo {
+    void print(){
+        std::cout << "Hello ";
+    }
+
+    namespace printAll
+    {
+        void printAll()
+        {
+            print(); // Miad toye foo ejra mikone
+            ::print(); // Mostaghim mire Global
+        }
+    }
+}
+
+int main() {
+
+    foo::printAll::printAll();
+
+    return 0;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Namespace (Part 2)
