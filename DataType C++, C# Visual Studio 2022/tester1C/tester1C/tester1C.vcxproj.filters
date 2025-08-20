@@ -22,6 +22,12 @@
     <Filter Include="Source Files\Season 6\Collision_Name_Namespace">
       <UniqueIdentifier>{a68a838d-f0b4-4b10-81c0-8b5064765722}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Season 6\Collision_Name_Namespace2">
+      <UniqueIdentifier>{c3750328-f759-4b60-95fd-f4b819d4d41f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Season 6\Collision_Name_Namespace3">
+      <UniqueIdentifier>{4e4f58db-8406-4706-8633-fbbc8d9bf382}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="signed.cpp">
@@ -180,10 +186,31 @@
     <ClCompile Include="goo.cpp">
       <Filter>Source Files\Season 6\Collision_Name_Namespace</Filter>
     </ClCompile>
+    <ClCompile Include="namespace2.cpp">
+      <Filter>Source Files\Season 6</Filter>
+    </ClCompile>
+    <ClCompile Include="mainn.cpp">
+      <Filter>Source Files\Season 6\Collision_Name_Namespace2</Filter>
+    </ClCompile>
+    <ClCompile Include="add.cpp">
+      <Filter>Source Files\Season 6\Collision_Name_Namespace3</Filter>
+    </ClCompile>
+    <ClCompile Include="mainnn.cpp">
+      <Filter>Source Files\Season 6\Collision_Name_Namespace3</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="circle.hpp">
+      <Filter>Source Files\Season 6\Collision_Name_Namespace2</Filter>
+    </ClInclude>
+    <ClInclude Include="growth.hpp">
+      <Filter>Source Files\Season 6\Collision_Name_Namespace2</Filter>
+    </ClInclude>
+    <ClInclude Include="add.hpp">
+      <Filter>Source Files\Season 6\Collision_Name_Namespace3</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
