@@ -198,6 +198,15 @@
     <ClCompile Include="mainnn.cpp">
       <Filter>Source Files\Season 6\Collision_Name_Namespace3</Filter>
     </ClCompile>
+    <ClCompile Include="Scope_VS_Duration.cpp">
+      <Filter>Source Files\Season 6</Filter>
+    </ClCompile>
+    <ClCompile Include="Local_Variable.cpp">
+      <Filter>Source Files\Season 6</Filter>
+    </ClCompile>
+    <ClCompile Include="Variables_Storage_Duration.cpp">
+      <Filter>Source Files\Season 6</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h">
