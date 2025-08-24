@@ -274,6 +274,7 @@ int main() {
 }
 */
 // Ye mesal codi baraye Gharar dadan Operator :: va gharar nadadan hich chiz:
+/*
 #include <iostream>
 
 void print(){
@@ -301,8 +302,117 @@ int main() {
 
     return 0;
 }
-
+*/
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Namespace (Part 2)
+
+// Khob ma majbur nistim mavaredi ke marbot be yek Namespace mishe ro hamasho
+// Biaym dar yekja ta'rif konim balke mitunim dar chandin file ya dar chandin
+// jaye yek file ta'rif konim
+
+// Mesal:
+/*
+#include <iostream>
+// 2 Ta namespace ba Identifier yeksan darim
+// Ba in code zir khastam begam
+// Majbur nistim harchi darim bayad berizim yek namespace moshakhas
+// Mitunim toye 1 namespace moshkhas harja dos darim Variable, Function va ..
+// Ta'rif konim barash!!!
+namespace basicMath {
+    int x = 50;
+}
+
+void ali() {
+    std::cout << basicMath::x << '\n';
+    return;
+}
+
+namespace basicMath {
+    double y = 43.0;
+}
+
+int main() {
+    ali();
+    std::cout << basicMath::y << '\n';
+
+    return 0;
+}
+*/
+
+// Yek mesal dige dar mored in dar Folder: namespace_Season6
+// Hast hatman onja ham negah kon ba Header File ha in karo anjam dadam
+// Ta kamel ja biofte ba mesal
+
+
+// Mored ba'adi: zamani ke miaym codemun be chand file .cpp mishkonim
+// Va toye on file hamon age namespace bashe majburim on namespace ro
+// Ham dar Source file va ham dar Header File ya jayi ke mikhaym 
+// Forward Declaration konim bayad on namespace ham bashe
+// Mesal in tozihat balayi dar Folder: namespace_Season6(P2)
+
+// Agar ma namespace ro dar Source File gharar nadim Linker nemitune 
+// Function ke ta'rif kardim be esm add() ro peyda kone
+// Chera nemitune peyda kone? Chon ta'rif add() mire toye Global Namespace
+// Va ba'es mishe Linker natune peyda kone
+// Va toye source Main.cpp goftim boro az namespace
+// basicMath::add() peydash kon va age nabashe nemitune peyda kone!!!
+
+// Hala age namespace dar Header File gharar nadim chi?
+// Nemitune on moghe khod namespace peyda kone
+// Declare function dar Global etefagh miofte
+
+// Pas: Namespace bayad ham dar source file bashe ham jayi ke mikhaym
+// Forward Declaration konim Header_File ya khod main
+
+
+// Mored ba'adi: Namespace ha mitunan to dar to bashan
+// Ya'ni dar yek namespace yek namespace dige mishe nevesht
+
+// Mesal:
+#include <iostream>
+
+namespace foo{
+    namespace goo{
+        int mines(int x, int y){
+            return x - y;
+        }
+    }
+}
+
+// Ba'ad Standard C++17 be ba'ad injuri ham mishe:
+namespace foo::goo{
+    int add(int x, int y){
+        return x + y;
+    }
+}
+// Ye tozihat hala age khastim dakhel foo ham chizi benevisim dar in ke nemishe
+// In faghat dakhel goo hast zir majmoye foo
+// Baraye foo mitunim ye namespace baz konim benevisim mesal:
+namespace foo{
+    int multiphication(int x, int y){
+        return x * y;
+    }
+}
+
+int main() {
+
+    std::cout << foo::goo::mines(4, 4) << '\n'; 
+    std::cout << foo::goo::add(4, 0) << '\n';
+    std::cout << foo::multiphication(2, 2) << '\n';
+    
+    // Baraye rahati mitunim yek Alias ta'rif konim
+    // Dige nanevisim foo::goo::Identfier in tolanie
+    // Mesal:
+
+    namespace active = foo::goo; // Injuri behtare
+    std::cout << active::add(99, 1) << '\n';
+
+
+    return 0;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Local Variable
