@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mohamad\\Desktop\\Learning_CSharp_Full\\Learning_CSharp_Full.csproj",
+      "projectUniqueName": "C:\\Users\\Mohamad\\Desktop\\Learning-Cpp-Full\\Learning_CSharp_Full\\Learning_CSharp_Full.csproj",
       "projectName": "Learning_CSharp_Full",
-      "projectPath": "C:\\Users\\Mohamad\\Desktop\\Learning_CSharp_Full\\Learning_CSharp_Full.csproj",
+      "projectPath": "C:\\Users\\Mohamad\\Desktop\\Learning-Cpp-Full\\Learning_CSharp_Full\\Learning_CSharp_Full.csproj",
       "packagesPath": "C:\\Users\\Mohamad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mohamad\\Desktop\\Learning_CSharp_Full\\obj\\",
+      "outputPath": "C:\\Users\\Mohamad\\Desktop\\Learning-Cpp-Full\\Learning_CSharp_Full\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

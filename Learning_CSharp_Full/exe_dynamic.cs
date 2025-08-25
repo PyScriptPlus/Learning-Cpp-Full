@@ -9,7 +9,7 @@ namespace Learning_CSharp_Full
 {
     internal class exe_dynamic
     {
-        static void Main(string[] args)
+        static void dynamic(string[] args)
         {
             dynamic file = Process.Start("C:\\Program Files (x86)\\Interface\\interface.exe");
             var exefile = Process.Start("C:\\Program Files (x86)\\Interface\\interface.exe");
