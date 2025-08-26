@@ -210,6 +210,9 @@
     <ClCompile Include="Linkage.cpp">
       <Filter>Source Files\Season 6</Filter>
     </ClCompile>
+    <ClCompile Include="Global_Variable.cpp">
+      <Filter>Source Files\Season 6</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h">
