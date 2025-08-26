@@ -371,6 +371,7 @@ int main() {
 // Ya'ni dar yek namespace yek namespace dige mishe nevesht
 
 // Mesal:
+/*
 #include <iostream>
 
 namespace foo{
@@ -412,7 +413,222 @@ int main() {
 
     return 0;
 }
+*/
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Local Variable
+
+// Dar Season haye ghabl dar mored Local Variable sohbat karde budim
+// Local Variabe chi bod?
+// Be Parameter haye yek Function va hamchenin Variable hayi ke daron yek Function
+// Ta'rif mishan migan Local Variable
+
+// Dar zaban C++ intori nist ke yek Vizhegi moshakhasi vojud dashte bashe ke begim 
+// In tafavot Local Variable ha ba Variable haye gheyr mahali ya'ni
+// Tafavot beyn Local Variable ha ba Global Variable hast bayad begam yek vizhegi haye
+// Mokhtalefi vojud dare ke Local Variable ha ro az Gheyr Local Variable ha 
+// Motamayez mikone
+
+// Jolo tar ha Property haro migam daghighan che vizhegi darand
+// Property = ویژگی
+
+// Dar season haye ghabli dar mored Scope ha ham sohbat kardim
+// Scope yek Identifier ro moshakhas mikone ke on Identifier dar koja mitune
+// Dar dast ras bashe va ghabel estefade bashe
+// Agar on Identifier dast ras bod migoftim: In-Scope
+// Age az dast ras kharej bashe va gheyr ghabel estefade bashe migoftim: Out of Scope
+// Nokte: Age be Identifier ke Out Of Scope bashe say konim dast rasi peyda konim behesh
+// Va Error Compiler movajeh mishim
+
+// Nokte: Local Variable ha az manzar vizhegi Scope Block-Scope hastand
+// Hala in daghighan ya'ni chi? Ya'ni inke Variable ha az noghteyi ke ta'rif shodan
+// Ta payan on Block ke darunesh ta'rif shode dar dast ras hast ya'ni In-Scope
+
+// Mesal:
+/*
+int main() {
+
+
+    int x = 5; // x enters scope here 
+    double y = 4.0; // y enters scope here
+
+
+    return 0;
+} // x and y go Out Of Scope here
+*/
+
+// Va goftim Parameter ham Local Variable mahsob mishe mesal:
+/*
+int max(int x, int y) { // x and y enters scope here
+    int max = ((x > y) ? x : y); // max enters scope here
+    return max;
+} // max, x and y leave scope here
+*/
+// Nokte: Shayad begi x, y ke ghabl az Block ta'rif shodan
+// Bale be nazar yek Ensan doruste vali ghavaedesh mige dakhel Block be hesab miad
+
+// Nokte: Asami Variable ha ke dar yek Block ta'rif mishan bayad (Unik) bashe
+// Dar gheyr in sorat Error 
+// Mesal:
+/*
+void someFunction(int x) {
+    int x;
+    return;
+}
+// In code be ma error mide chon 2 ta Identifier yeksan dar yek Block ta'rif shode
+// Doruste yeki Parameter hast yeki Variable ma'moli vali ba har 2 ta 
+// Yeksan raftar mishe!!!
+*/
+
+
+// Mored ba'adi:
+// Yek mafhumi vojud dare be esm: Variable Storage Duration
+// Khob in Duration chiye?
+// Ghavaedi hast ke ta'yin mikone ke yek Variable che zamani va chetor ijad mishe
+// Va az beyn mire
+// Dar bishtar hala Duration yek Variable be sorat mostaghim Life-Time sho ta'yin mikone
+// Life-Time yek bar goftim: Yek Variable che noghteyi ijad mishe va koja az donya mire
+
+// Local Variable ha az manzar Duration daraye Automatic Duration hastand 
+// Ya'ni chi? Be in ma'ni ke dar noghteyi ke ta'rif mishan sakhte mishan
+// Va dar payan Block az beyn mirand
+// Mesal:
+/*
+int main() {
+
+    int x = 5; // Variable x dar inja be vojud miyad va meghdar dahi mishe
+    double y = 4.0; // Variable y dar inja be vojud miyad va meghdar dahi mishe
+
+    return 0;
+} // Variable haye x va y har 2 ta inja az beyn mirand
+*/
+// So'al: Shayad begi shabih Scope nist?
+// Na bebin Scope dar dast ras budan va dar dast ras nabudan moshakhas mikone
+// In Duration be vojud omadan va az beyn raftan mige
+
+// Yekja goftam Automatic Duration:
+// Ya'ni khodeshon khodkar be donya miyan va khodkar ham az beyn mirand
+
+// Local Variable ha mitunan toye Block haye to dar to ham ta'rif beshan
+// Vali ghavaed hamune ham baraye Scope ham Duration
+// Mesal:
+/*
+int main() {
+
+    int x = 5; // x enters scope and is created Or (Duration) here
+    { // Nested Block
+    int y = 7; // y enters scope and is created Or (Duration) here
+    } // y goes out of scope and is destroyed here
+
+    // y can not be used here because it is out of scope in this block
+    // Mesal:
+    //y = 5; // Error
+
+
+    return 0;
+} // x goes out of scope and is destroyed here
+*/
+
+
+// Mored ba'adi:
+// Ma ta inja 2 ta Property goftim: Scope va Variable Storage Duration
+// Yeki am hast
+// Be esm Linkage
+// In Linkage chiye hala?
+// Aya sayer Identifier hayi ke ba hamon esm ta'rif shodan be hamon Identifier ke 
+// Ghablan ta'rif shodan eshare darand ya kheyr?
+// Mesal: Yek Identifier x darim va dar jaye dige am yek Identifier x darim
+// Hala in 2 ta daran be yek Object moshakhasi dar hafeze RAM eshare mikonand?
+// x , x --> Object
+// Vali yek mogheyi hast in 2 ta x har chand esmeshon yeki hast
+// Vali be Object haye mokhtalefi dar hafeze RAM eshare daran
+// x --> Object
+// x --> Object
+
+// Khob Local Variable ha az manzar Linkage: Aslan Linkage nadarand xD
+// Ya'ni har Declaration (Ham define va ham declare be hesab miad)
+// Tanha marbot be yek Object mishe baraye Local Variable 
+// Joda joda Object darand
+// Mesal:
+/*
+int main() {
+
+    int x = 5;
+    {
+        int x = 3;
+    }
+
+    return 0;
+}
+*/
+// Dar code balayi 2 ta x darim
+// Har 2 tashonam Local Variable hastand
+// Vali Linkage nadarand
+// Ya'ni x ke dar Outer Block hast
+// Ba x ke daron Nested Block hast
+// Hich rabti be ham dige nadarand
+// 2 ta shon object haye mokhtalefi dar hafeze RAM darand
+
+// Bazam shayad begi in Linkage moshabeh Scope ya Duration hast?
+// Vali kheyrrrrr
+// In 3 ta Property har kodum yek tafavot khasi darand
+// 1-Scope: Dast ras bodan Local Variable In-Scope va
+// Dast ras nabodan Local Variable Out Of Scope be ma mige
+// 2-Duration: Be vojud omadan va az beyn raftan Local Variable ro be ma mige
+// 3-Linkage: Aya 2 ta ya chand ta Variable ke ba Identifier yeksan mesal x
+// Daran be yek Object moshkhasi dar hafeze RAM eshare mikonanad
+// Ya joda joda hastand
+
+// Mored ba'adi:
+// Nokte: Deghat kon Variable hato koja ta'rif kardi
+// Ya'ni jayi ke niyaz dari ta'rif kon
+
+// Mesal:
+/*
+#include <iostream>
+
+int main() {
+
+    int x = 0;
+    // x dar inja dast ras hast
+    {
+        // x dar inja dast ras hast
+        // Mesal age y faghat dakhel yek Block niyaz dari
+        // Haminja ta'rif kon nayad birun ta'rif kon
+        int y = 5;
+        // y dar inja dast ras hast
+        std::cout << y << '\n';
+    } // Inja y az beyn mire
+    // x dar inja dast ras hast
+
+    return 0;
+} // Inja x az beyn mire
+*/
+// Harja lazem dari biyaresh ta'rif kon!!!!
+
+// Ye mesali bezanim ke mikhaym
+// Yek variable har dar Scope khodesh ham dar yek Block dige estefade konim
+// Faghat ye mesale negah kon:
+/*
+#include <iostream>
+
+int main() {
+
+    int x = 5;
+    {
+        int y;
+        std::cin >> y;
+        if (y == 4)
+        x = 0;
+    }
+    std::cout << x << '\n';
+
+    return 0;
+}
+*/
+// Mesl in kar haro bar hasb niyazet ta'rif kon!!!
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Global Variable
