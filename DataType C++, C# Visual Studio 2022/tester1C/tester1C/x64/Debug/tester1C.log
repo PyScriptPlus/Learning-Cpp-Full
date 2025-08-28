@@ -1,3 +1,3 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (tester1C.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Global_Variable2.cpp
-C:\Users\Mohamad\Desktop\Learning-Cpp-Full\DataType C++, C# Visual Studio 2022\tester1C\tester1C\Global_Variable2.cpp(13,11): error C2734: 'g_y': 'const' object must be initialized if not 'extern'
+  Variable_Shadowing.cpp
+  tester1C.vcxproj -> C:\Users\Mohamad\Desktop\Learning-Cpp-Full\DataType C++, C# Visual Studio 2022\tester1C\x64\Debug\DataType.exe
