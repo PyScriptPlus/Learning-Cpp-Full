@@ -632,3 +632,113 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Global Variable
+
+// Khob dar jalase ghabl Local Variable haro yad gereftim 
+// Hala mikhaym Global Variable haro yad begirim
+
+// Dar zaban C++ Variable ha mitunan kharej az Function ta'rif beshan
+// Be Variable hayi ke kharej az Function ta'rif mishan migan Global Variable
+// Mesal:
+/*
+#include <iostream>
+
+int g_x{}; // Global Variable
+
+int main() {
+
+    std::cout << g_x << '\n';
+
+    return 0;
+}
+*/
+// Aksar C++ kar ha Global Variable ha ro ba'ad az #include ha gharar midan
+// Va in behtare be nazar man!!!
+
+// C++ haye ghadimi kar vaghti Global Variable ta'rif mikonan dar
+// Identifier ghabl esm asli yek g_ mizaran
+// Mesal: g_number, g_x, g_age, g_subtraction, g_division
+// Vaghti har jaye code didim yek Identifier estefade shode ke
+// Avvalesh ba g_ shoru mishe mifahmim Global Variable hast!!!
+
+// Nokte: Dar har Functioni mitunim be in Global Variable ha dast rasi peyda konim
+// Mesal:
+/*
+#include <iostream>
+
+int g_x = 50;
+int g_y = 0;
+void doSomething() {
+    std::cout << g_x << '\n';
+    return;
+}
+
+int main(){
+
+    doSomething();
+    std::cout << ++g_y << '\n';
+
+    return 0;
+}
+*/
+
+// Dar jalase ghabli 2 ta mafhum yad gerftim 
+// Hamon Property haye Variable
+// 1- Scope
+// 2- Duration
+// Ke goftim in Local Variable daraye Block Scope va Automatic duration hast
+
+// Khob taklif Global Variable ha chi?
+// Global Variable az manzar vizhegi Scope daraye ( Global namespace scope )
+// ya ( Global Scope ) va ye seria am migan ( File Scope ) hast
+// Va az manzar Vizhegi Duration daraye ( Static Duration ) hastand
+
+// Khob hala in ya'ni chi ke daraye ( Global Scope ) hast?
+// Ya'ni az noghteyi ke ta'rif shodan ta payan on file ke tosh ta'rif shodan 
+// Dar dast ras hast !!!
+
+// Va ( Static Duration ) chiye?
+// Zamani ke barname shoru mishe be vojud miyad zamani ke barname be payan berese
+// Az beyn mirand !!!
+// Pas vaghti barname ro ejra mikonim be vojud miyan va baghi mimanand ta payan
+// Barname be hamin dalil migan Static Duration
+
+// Mored ba'adi: Global Variable ha bar khalaf Local Variable ha be sorat Automatic
+// Ya default daraye Zero-Initialized hastand
+// Ya'ni age meghdar dahi avvalie nakonim be sorat default 
+// 0 hastand
+// Mesal:
+/*
+#include <iostream>
+
+int g_x; // Zero-Initialized
+
+int main() {
+
+    std::cout << g_x << '\n';
+    return 0;
+}
+*/
+
+// Variable hayi ke daraye Static Duration hastand defaulteshon 0 hast !!!
+
+
+// Mored ba'adi: Global Variable ha ham mitunan Constant bashan
+// Ya'ni sabet vali meghdar dahi avvalie mikhad vagarne error
+// Mesal:
+/*
+// const int g_x; // Error
+// constexpr int g_y; // Error
+const int g_x{}; // Out --> 0
+constexpr int g_y{}; // Out --> 0
+const int g_xz = 5; // Out --> 5
+constexpr int g_yz = 10; // Out --> 10
+*/
+// Nokte: Global Variable dar fili ke ta'rif mishe hame jash dar dast ras ast
+// Va niyaz nist az yek function be function dige pass bedim
+// Vali in kar eshtebahe
+// Baraye rahati naya az Global estefade kon ke hame ja dar dast ras bashe
+// Rahat bashe in eshtebahe dar jaye khodesh dar ayande az in Global estefade mikonim.
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Variable Shadowing
