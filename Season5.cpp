@@ -742,3 +742,131 @@ constexpr int g_yz = 10; // Out --> 10
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Variable Shadowing
+
+// Dar in jalase gharare dar mored mafhum Shadowing sohbat konim
+// Ma ino midunim ke har Block Scope marbut khodesh ro dare
+// Mesal:
+/*
+Alan in Block 1 va 2 Scope marbut khodeshon ro darand 
+// Age dar har 2 ta in int x; bashe Collision Name sorat nemigire
+// Kamelan az ham jodan!!!
+{
+    {
+        1
+    }
+
+    {
+        2
+    }
+
+}
+*/
+
+// Age hala in Block ha to dar to bashe chi?
+// Mesal:
+/*
+Agar dar har 2 ta Block int x; ta'rif konim
+Che etefaghi miofte? Dar in halat Shadowing pish miyad
+On x ke dar Block 1 ta'rif shode az did Block 2 makhfi mishe
+Be in makhfi shodan migan Shadowing
+{
+    1
+    {
+        2
+    }
+}
+*/
+
+// Mesal:
+/*
+#include <iostream>
+
+int main() {
+
+    int apples = 9;
+    {// Nested Block
+        std::cout << ++apples << '\n';
+
+        int apples;
+        apples = 6;
+        std::cout << --apples << '\n';
+    }
+    std::cout << apples << '\n';
+
+    return 0;
+}
+*/
+// Tozihat code balayi: Man omadam toye Block 1 ya Block biruni 
+// Ye Variable apples ta'rif kardam in Variable Block biruni
+// Ham dar Block khodesh ya'ni biruni dar dast ras hast ham dar
+// Nested Block
+// Hala dar Nested Block ba hamon esm apples ye Variable ta'rif kardam
+// Dar Nested Block Variable ke ta'rif kardam ta payan Block daruni
+// Har vaght begim apples be hamon Variable eshare darim ke dar Nested Block
+// Ta'rif kardim
+// Hanoz on Block biruni ro darim vali ba'ad az tamum shodan Block daruni
+// Mishe estefade kard mesal code balayi bebini motavajeh mishi
+// Inayi ke goftam faghat baraye Local Variable ha bod
+
+
+// Berim soragh Global Variable ha bebinim ona chejuri an
+// Dar mesal ghabli yek Local Variable omad yek Local Variable dige ro 
+// Shadow kard
+// Hala yek Local Variable mitune yek Global Variable az ghabl ta'rif shode
+// Ro Shadow bekone
+// Mesal:
+/*
+#include <iostream>
+
+int value = 5;
+void foo() {
+    std::cout << value << '\n';
+    return;
+}
+
+int main() {
+
+    int value = 21;
+    value = 11;
+    std::cout << value << '\n';
+
+    foo();
+
+    return 0;
+}
+*/
+// Tozihat code balayi: 
+// Daron function main ebteda yek Local Variable be esm Value ta'rif kardim
+// Va on Local Variable omad on Global Variable ke kharej function main
+// Ta'rif shode ro Shadow kard
+// Dar mesal codi bala: Local Variable omad Global Variable ro Shadow kard
+
+// Mesal codi dige:
+/*
+#include <iostream>
+
+int value = 5;
+
+int main() {
+
+    std::cout << --value << '\n';
+    int value = 9;
+    ++value;
+    std::cout << value << '\n';
+    
+    // Baraye dast rasi be Global Variable mitunim az
+    // Scope Resolution Operator estefade konim:
+    ++(::value);
+    std::cout << ::value << '\n';
+
+
+    return 0;
+}
+*/
+// Nokte akhar: Ta jaye momken az Shadowing parhiz kon
+// Khanayi code ro miyare payin va dar project haye bozorg 
+// Ehtemal be vojud omadan Bug hast !!!
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Internal Linkage
