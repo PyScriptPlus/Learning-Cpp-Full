@@ -28,6 +28,12 @@
     <Filter Include="Source Files\Season 6\Collision_Name_Namespace3">
       <UniqueIdentifier>{4e4f58db-8406-4706-8633-fbbc8d9bf382}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Season 6\Internal_Linkage">
+      <UniqueIdentifier>{41119b41-1700-4eb1-8520-146e78e83f9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Season 6\External_Linkage">
+      <UniqueIdentifier>{be4a14e4-464e-4c67-bd73-99ba857c01e3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="signed.cpp">
@@ -218,6 +224,18 @@
     </ClCompile>
     <ClCompile Include="Variable_Shadowing.cpp">
       <Filter>Source Files\Season 6</Filter>
+    </ClCompile>
+    <ClCompile Include="main_internal.cpp">
+      <Filter>Source Files\Season 6\Internal_Linkage</Filter>
+    </ClCompile>
+    <ClCompile Include="a.cpp">
+      <Filter>Source Files\Season 6\Internal_Linkage</Filter>
+    </ClCompile>
+    <ClCompile Include="main_external.cpp">
+      <Filter>Source Files\Season 6\External_Linkage</Filter>
+    </ClCompile>
+    <ClCompile Include="external.cpp">
+      <Filter>Source Files\Season 6\External_Linkage</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
