@@ -1,0 +1,15 @@
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\Learning_CSharp_Full\Tamrin\S3\Checking_S3\bin\Debug\net9.0\Checking_S3.exe
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\Learning_CSharp_Full\Tamrin\S3\Checking_S3\bin\Debug\net9.0\Checking_S3.deps.json
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\Learning_CSharp_Full\Tamrin\S3\Checking_S3\bin\Debug\net9.0\Checking_S3.runtimeconfig.json
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\Learning_CSharp_Full\Tamrin\S3\Checking_S3\bin\Debug\net9.0\Checking_S3.dll
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\Learning_CSharp_Full\Tamrin\S3\Checking_S3\bin\Debug\net9.0\Checking_S3.pdb
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\Learning_CSharp_Full\Tamrin\S3\Checking_S3\obj\Debug\net9.0\Checking_S3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\Learning_CSharp_Full\Tamrin\S3\Checking_S3\obj\Debug\net9.0\Checking_S3.AssemblyInfoInputs.cache
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\Learning_CSharp_Full\Tamrin\S3\Checking_S3\obj\Debug\net9.0\Checking_S3.AssemblyInfo.cs
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\Learning_CSharp_Full\Tamrin\S3\Checking_S3\obj\Debug\net9.0\Checking_S3.csproj.CoreCompileInputs.cache
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\Learning_CSharp_Full\Tamrin\S3\Checking_S3\obj\Debug\net9.0\Checking_S3.sourcelink.json
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\Learning_CSharp_Full\Tamrin\S3\Checking_S3\obj\Debug\net9.0\Checking_S3.dll
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\Learning_CSharp_Full\Tamrin\S3\Checking_S3\obj\Debug\net9.0\refint\Checking_S3.dll
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\Learning_CSharp_Full\Tamrin\S3\Checking_S3\obj\Debug\net9.0\Checking_S3.pdb
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\Learning_CSharp_Full\Tamrin\S3\Checking_S3\obj\Debug\net9.0\Checking_S3.genruntimeconfig.cache
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\Learning_CSharp_Full\Tamrin\S3\Checking_S3\obj\Debug\net9.0\ref\Checking_S3.dll

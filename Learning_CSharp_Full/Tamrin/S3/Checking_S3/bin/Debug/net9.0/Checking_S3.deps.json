@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Checking_S3/1.0.0": {
+        "runtime": {
+          "Checking_S3.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Checking_S3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
