@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void felaniwse(string[] args)
         {
             #region Animal Array
             var animals = new Animal?[]

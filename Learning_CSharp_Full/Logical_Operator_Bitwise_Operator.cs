@@ -8,7 +8,7 @@ namespace Learning_CSharp_Full
 {
     internal class Logical_Operator_Bitwise_Operator
     {
-        static void Main()
+        static void Operator_Logical()
         {
 
             // AND &&

@@ -19,7 +19,7 @@ namespace tamrinS2{
             Console.WriteLine(msg);
         }
         #endregion
-        static void Main(string[] args)
+        static void tamrinS2(string[] args)
         {
 
             print("Hello");
