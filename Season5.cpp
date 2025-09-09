@@ -977,3 +977,70 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: External Linkage
+
+// Jalase ghabl Internal yad gereftim ke estefade az yek Identifier tanha
+// Be yek file mahdud mikone
+
+// Hala External Linkage: Identifier ke daraye External bashe ham mitune
+// Dar file ke ta'rif shode mored estefade gharar begire
+// Va ham kharej az on file mored estefade gharar migirad:
+// (Ama be shart gharar dadan Forward Declaration)
+// Dar avayel in dore yad gerftim ke chejuri yek Function dar file dige estefade konim
+// Chon Functioni ke ta'rif mishe be sorat Default External hast
+
+// Mored ba'adi: Dar jalase ghabl goftim Global Variable ke daraye 
+// Internal Linkage bashan beheshon migan ( Internal Variable )
+// Hala be Global Variable ke daraye External Linkage bashe
+// Behesh migan ( External Variable )
+
+// Hala age bekhaym yek Global Variable daraye External konim bayad az 
+// Keyword ( extern ) estefade konim
+// Goftim dar Global Variable haye gheyr Constant daraye External ast
+// Be sorat Default
+// Mesal:
+// extern int g_x; // External Linkage
+// int g_y; // External Linkage
+// 2 ta shon yekie farghi nadarand
+
+// Hala constant ha be sorat Default daraye Internal hastand 
+// Baraye External kardan az keyword extern bayad gharar bedim:
+
+// const int g_y; // Internal Linkage
+// extern const int g_x; // External Linkage
+
+// Mored mohem: Baraye estefade az External Variable dar file dige 
+// Mesl function bayad Forward Declaration gharar bedim !!!
+// Hala Variable haro chejuri Foward Declaration konim?
+// Bazam ba estefade az keyword ( extern )
+// Pas in extern 2 ta karbord dare:
+// 1- Baraye External kardan
+// 2- Baraye Declare kardan
+
+// Mesal:
+/*
+    a.cpp:
+    extern int g_x = 2;
+    extern const int g_y = 3;
+*/
+/*
+    main.cpp:
+    #include <iostream>
+
+    extern int g_x;
+    extern const int g_y;
+
+    int main()
+    {
+        std::cout << g_x << '\n'; // Output: 2
+        std::cout << g_y << '\n'; // Output: 3 
+        return 0;
+    }
+*/
+
+// Mored akhar:
+// Constexpr nemishe External kard 
+// Dar ayande migam kamel ghazie chejurie !!!
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Az Global Variable haye gheyr Constant estefade nakonid
