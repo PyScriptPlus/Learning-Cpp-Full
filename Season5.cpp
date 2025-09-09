@@ -870,3 +870,110 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Internal Linkage
+
+// Dar jalase ghabl dar mored Linkage sohbat kardim ke goftim
+// Linkage yek Identifier moshakhas mikone ke aya sayer
+// Declaration hayi ke hamnam on Identifier hastand on ha ham be yek Object 
+// Yeksani eshare mikonand ya na
+// Va goftim Local Variable ha faghed Linkage hastand ya'ni Linkage nadarand
+// Identifier hayi ke daraye Linkage hastand mitunan
+// Yeki az in 2 noe Linkage bashan:
+// 1- Internal Linkage
+// 2- External Linkage
+
+// Dar in jalase be Internal mipardazim jalase ba'ad be External !
+
+// Internal Linkage chist? Yek Identifier ke Internal Linkage bashe 
+// Tanha dakhel hamon file ke ta'rif shode dar dast ras va ghabel estefade hast
+// Ya'ni dige nemishe dar file haye dige behesh dast rasi peyda kard
+
+// Mesal: Agar dar 2 file motafavet 2 ta Identifier ba esm yeksan dar har file
+// Dashte bashim va daraye Internal Linkage bashan az hamdigar mostagham
+// Va joda hastand hich rabti be ham nadarand
+
+// Hala berim soragh Global Variable ha ke daraye Linkage hastand ham:
+// Internal Linkage ham External Linkage
+
+// Agar yek Global Variable daraye Internal Linkage bashe behesh
+// Internal Variable ham migan
+// Mohem: Yek Global Variable gheyr Constant bekhaym Internal konim kafiye
+// Az keyword ( static ) ghablesh estefade konim 
+// Chera goftam gheyr Constant? chon age age Global Variable Constant bashe
+// Be sorat Default Internal hastand
+// Che static estefade koni barash che nakoni farghi nemikone
+
+// Mesal:
+// Internal Linkage
+// static int g_x;
+// External Linkage
+// int g_y;
+
+// Age na Constant na Static bashe Global Variable daraye External mishe
+// Ke jalase ba'adi kamel dar moredesh migam
+
+// Mesal Constant:
+// Internal Linkage:
+// const int g_x;
+// Internal Linkage:
+// constexpr int g_y;
+
+// Mesal codi:
+/*
+    Main.cpp:
+    static int g_x;
+*/
+/*
+    a.cpp:
+    constexpr int g_x;
+*/
+// In 2 ta kamelan az ham mostaghel hastand g_x ke dar file main.cpp hast
+// Faghat dar on file main ghabel estefade va dar dast ras hast
+// g_x dar a.cpp ham hamintor faghat dar file khodesh dar dast ras hast
+
+// Nokte: Dar Season haye ghabl yek gha'ede goftim dar zaban C++ vojud dare
+// Be esm ODR : One Definition Rule
+// Ke migoft yek Object ya yek function va ....
+// Nemitune bish az yek bar Definition dashte bashe
+// Che dar kol barname che dar file
+// Bala yek code neveshtam main.cpp va a.cpp
+// Shayad begi in ghavanin man zir pa daram migozaram
+// Vali na Object hayi ke Internal hastand hich rabti be ham nadarand
+// Kamelan az ham mostaghel hastand
+
+// Mored ba'adi:
+// Vizheghi Linkage tanha marbut be Variable ha nemishe 
+// Balke marbot be Identifier ha mishe ya'ni Function ha ham in Vizheghi
+// Linkage ro darand
+
+// Function ke ma ta'rif mikonim be sorat Default External hastand
+// Function have external Linkage by default
+// Hala age khastin function daraye Internal bashe
+// Az keyword Static estefade mikonim
+// Mesal:
+/*
+    add.cpp:
+    static int add(int x, int y)
+    {
+        return x + y;
+    }
+*/
+/*
+    main.cpp:
+    #include <iostream>
+
+    int add(int x, int y); // Forward Declaration
+    
+    int main()
+    {
+        std::cout << add(2, 5) << '\n';
+        return 0;
+    }
+*/
+// Code safhe bala ba khataye Linker movajeh mishe
+// Chon Functioni ke estefade kardim toye add.cpp 
+// Faghat ghabel estefade hast
+// Chon ma ba Static on ro Internal kardim
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: External Linkage
