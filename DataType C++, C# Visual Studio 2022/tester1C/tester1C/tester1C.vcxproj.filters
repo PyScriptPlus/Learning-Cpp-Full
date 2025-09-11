@@ -46,6 +46,9 @@
     <Filter Include="Source Files\Season 6\Use values in several file %28Method 2%29">
       <UniqueIdentifier>{ef8184e0-6488-4a91-93d8-9463bc59811f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Season 6\Use values in several file %28Method 3%29">
+      <UniqueIdentifier>{8e04c8e0-69fc-4214-83d5-1488a5fb2958}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="signed.cpp">
@@ -270,6 +273,12 @@
     <ClCompile Include="mainSource2.cpp">
       <Filter>Source Files\Season 6\Use values in several file %28Method 2%29</Filter>
     </ClCompile>
+    <ClCompile Include="mainSource3.cpp">
+      <Filter>Source Files\Season 6\Use values in several file %28Method 3%29</Filter>
+    </ClCompile>
+    <ClCompile Include="ab.cpp">
+      <Filter>Source Files\Season 6\inline</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h">
@@ -289,6 +298,15 @@
     </ClInclude>
     <ClInclude Include="Constants2.hpp">
       <Filter>Source Files\Season 6\Use values in several file %28Method 2%29</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants3.hpp">
+      <Filter>Source Files\Season 6\Use values in several file %28Method 3%29</Filter>
+    </ClInclude>
+    <ClInclude Include="a.hpp">
+      <Filter>Source Files\Season 6\inline</Filter>
+    </ClInclude>
+    <ClInclude Include="b.hpp">
+      <Filter>Source Files\Season 6\inline</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
