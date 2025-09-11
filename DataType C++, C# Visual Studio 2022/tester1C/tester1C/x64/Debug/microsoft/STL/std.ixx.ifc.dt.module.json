@@ -12,7 +12,7 @@
             "provides": [
                 {
                     "logical-name": "std",
-                    "source-path": "c:\\program files\\microsoft visual studio\\2022\\enterprise\\vc\\tools\\msvc\\14.43.34808\\modules\\std.ixx",
+                    "source-path": "c:\\program files\\microsoft visual studio\\2022\\enterprise\\vc\\tools\\msvc\\14.44.35207\\modules\\std.ixx",
                     "is-interface": true
                 }
             ],

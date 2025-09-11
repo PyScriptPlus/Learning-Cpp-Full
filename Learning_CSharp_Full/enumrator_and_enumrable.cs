@@ -9,7 +9,7 @@ namespace Learning_CSharp_Full
 {
     internal class enumrator_and_enumrable
     {
-        static void Main()
+        static void Enums()
         {
             string[] names = { "Ali", "Hassan", "Danial" };
             IEnumerator enumerator = names.GetEnumerator();

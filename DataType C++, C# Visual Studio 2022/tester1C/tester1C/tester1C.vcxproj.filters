@@ -34,6 +34,12 @@
     <Filter Include="Source Files\Season 6\External_Linkage">
       <UniqueIdentifier>{be4a14e4-464e-4c67-bd73-99ba857c01e3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Season 6\Module">
+      <UniqueIdentifier>{e283f226-412c-4bef-a31a-0348da5bb812}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Season 6\inline">
+      <UniqueIdentifier>{e8d862e2-8d57-472b-bdd8-493363ad50aa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="signed.cpp">
@@ -236,6 +242,18 @@
     </ClCompile>
     <ClCompile Include="external.cpp">
       <Filter>Source Files\Season 6\External_Linkage</Filter>
+    </ClCompile>
+    <ClCompile Include="Don%27t_use_non_Constant_Global_Variable.cpp">
+      <Filter>Source Files\Season 6</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceFile.cpp">
+      <Filter>Source Files\Season 6\Module</Filter>
+    </ClCompile>
+    <ClCompile Include="Module.ixx">
+      <Filter>Source Files\Season 6\Module</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceFile2.cpp">
+      <Filter>Source Files\Season 6\Module</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
