@@ -1,13 +1,2 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (tester1C.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Scanning sources for module dependencies...
-  Module.ixx
-  Compiling...
-  Module.ixx
-C:\Users\Mohamad\Desktop\Learning-Cpp-Full\DataType C++, C# Visual Studio 2022\tester1C\tester1C\Module.ixx(3,10): warning C5244: '#include <iostream>' in the purview of module 'mamad' appears erroneous.  Consider moving that directive before the module declaration, or replace the textual inclusion with 'import <iostream>;'.
-      C:\Users\Mohamad\Desktop\Learning-Cpp-Full\DataType C++, C(1,8):
-      see module 'mamad' declaration
-  
-  SourceFile.cpp
-  SourceFile2.cpp
-  Generating Code...
   tester1C.vcxproj -> C:\Users\Mohamad\Desktop\Learning-Cpp-Full\DataType C++, C# Visual Studio 2022\tester1C\x64\Debug\DataType.exe
