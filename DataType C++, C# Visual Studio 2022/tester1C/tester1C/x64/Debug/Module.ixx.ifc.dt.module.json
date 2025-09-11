@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "x64\\Debug\\Module.obj",
+            "outputs": [
+                "x64\\Debug\\Module.ixx.ifc.dt.module.json",
+                "x64\\Debug\\Module.ixx.ifc.dt.d.json",
+                "x64\\Debug\\mamad.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "mamad",
+                    "source-path": "c:\\users\\mohamad\\desktop\\learning-cpp-full\\datatype c++, c# visual studio 2022\\tester1c\\tester1c\\module.ixx",
+                    "is-interface": true
+                }
+            ],
+            "requires": []
+        }
+    ]
+}
