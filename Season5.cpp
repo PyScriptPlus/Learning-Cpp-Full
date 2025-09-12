@@ -1280,3 +1280,102 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Estefade maghadir dar chandin file (Method 2)
+
+// Khob dar in ravesh jadidi ke mikham begam az 2 ravesh ghabli kheyli behtare
+// Vali bayad hadaghal standard C++17 be ba'ad bashim
+
+// Dar C++17 omadan yek mafhum jadidi be name inline moarefi kardan 
+// Khob in inline Variable chiye?
+// Variabli hast ke ejaze dare dar chandin file define beshe bedon inke
+// Ghaede One Definition Rule ro naghz kone
+// Inam begam inline Global Variable ha be sorat Default daraye
+// External Linkage hastand
+
+// Hala posht parde inline ha ham begam chi be chiye:
+// Chi baes mishe ghavanin ODR naghz nashe?
+// Dalilesh ine ke Linker miyad hameye inline definition haye marbot be yek Variable
+// Ro tanha daron yek Variable jam' mikone 
+// Ya'ni vaghti yek Variable ro inline mikonim be Compiler migim
+// Momkene in Variable ke ta'rif kardam momkene dar chand file dige tekrar beshe
+// Vali hamashon ro yek Variable vahed hesab kon 
+// Pas Linker onaro joda nemibine 
+// Balke hamaro Merge mikone mesal mige az x faghat yeki darim pas 
+// Dar vaghe chandin Variable nadarim ke on ghaede ODR naghz she!!!
+
+// In inline ha ghavanin darand: Vaghti inline ta'rif mikonim
+// Bayad Translation Unit (TU) ta'rif on inline Variable haro bebine
+// In TU goftim yek bar ebteda donbal Preprocessor ha migarde age inline ro 
+// Dar HeaderFile ta'rif karde bashim mibine chon #include yek Preprocessor hast
+// Age peyda nashod Compiler roye TU kar mikone toye SourceFile asli migarde
+// Bayad Definition sho peyda kone ta inja okeye
+// Vali age inline dar yek Source file ta'rif shode bashe va dar SourceFile asli
+// Faghat e'lam konim ya extern konim kafi nist !!!
+// Chon TU bayad ta'rif on inline Variable ro bebine dar gheyr in sorat
+// Error: odr-used inline variable 'Identifier' is not defined
+
+// Tosiye: inline haro hatman dar HeaderFile ta'rif kon
+// Ta betuni jaye dige estefade koni !!!!
+
+// Nokte: Variable haye inline khasiyat Constexpr ham darand
+// Pas mitunim behine ham konim
+
+// 2 Ta mahdudiyat baraye inline Variable ha vojud darad:
+// 1- Hameye definition haye marbot be yek inline Variable bayesti
+// Yeksan bashan vagarne ba UB movajeh mishim
+// 2- Definition on inline Variable bayad dar har fili ke mikhaym estefade konim
+// Mojud bashe (Hamon ghaziye TU bayad bebine inas bala goftam)
+
+// Nokte mohem:
+// Mesal: Dar yek HeaderFile a.hpp omadim inline variable ta'rif kardim hala age 
+// Khastim in inline variable ke dakhel a.hpp hast az yek HeaderFile dige 
+// Ya SourceFile dige dast kari konim nemishe manzuram toye fazaye Global hast
+
+// Chon: Dar fazaye Global ebarat ejrayi nemitunanad azad bashand faghat mishe
+// Ta'rif ya Declaration gharar dad mesl: Ta'rif Variable, Class, Function va ....
+
+// Rah hal? On inline ro dar SourceFile dige berizim toye yek Variable dige
+// Dast kari konim ya dar Function chizi mitunim dast kari konim
+// Mesal in bakhsh dar Folder: DataType C++, C# Visual Studio 2022/tester1C/Season6/inline
+// Toye on folder yek seri SourceFile hast mituni bebini mesal zadam
+
+
+// Hala berim bahs asli yek mesal ba inline bezanim
+// Hamon mesal ghabli ke baraye be dast ovardan mohit Circle:
+
+/*
+    Constants.hpp:
+
+    #ifndef CONSTANTS_HPP
+    #define CONSTANTS_HPP
+
+    namespace constants
+    {
+        inline constexpr double pi = 3.14;
+        inline constexpr double avogadro = 6.022;
+        inline constexpr double myGravity = 9.2;
+    }
+
+    #endif
+*/
+/*
+    Main.cpp:
+
+    #include <iostream>
+    #include "Constants.hpp"
+
+    int main() {
+    
+        std::cout << "Enter a radius: ";
+        double radius;
+        std::cin >> radius;
+
+        std::cout << "The circumference is: " <<
+                2.0 * radius * constants::pi << '\n';
+    
+        return 0;
+    }
+*/
+
+// Be hamin rahati hamishe baraye injur mavared az inline estefade kon !!!
+
+/*--------------------------------------------------------------------------------------------------------------------*/
