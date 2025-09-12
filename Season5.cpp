@@ -1044,3 +1044,85 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Az Global Variable haye gheyr Constant estefade nakonid
+
+// Tosiye mishe az Global Variable haye gheyr Constant estefade nakonim
+// Dar project haye kochik moshkeli nemiyare vali dar project haye vagheyi
+// Ba moshkel movajeh mishim
+// Kheyliya in eshtebah ro mikonan ziyad az in Global Variable estefade mikonanad
+// Chon dar har Block mishe estefade kard dar hame ja dar dast ras hast
+// Hala tosiye i ke kardam az Global Variable gheyr Constant estefade nakon
+// non-constant Global Variable
+// Vali mitunim az Global Variable sabet ya hamon Constant estefade konim
+// Dalil asli ke chera az Global Variable gheyr Constant estefade nakonim?
+// Mohem tarin dalil az onja ke Global Variable ha tavasot har Function ghabel dast yabi
+// Va dast kari hastand in Variable haro gheyr ghabel pish bini mikone
+// Mesal:
+/*
+#include <iostream>
+
+int g_mode; // non-constant Global Variable
+
+void doSomething() {
+    g_mode = 2;
+    return;
+}
+int main() {
+
+    g_mode = 1;
+    doSomething();
+    if(g_mode == 1)
+    {
+        std::cout << "No thread detected.\n";
+    }
+    else
+    {
+        std::cout << "Launching nuclear missiles...";
+    }
+    // Migim age g_mode 1 bod bego hich khatari tahdid nemikone
+    // Vali gheyr az in bod
+    // Moshak haye hasteyi ro partab kon
+    // Ye mesal bamaze hast in
+    // Vali noktash ine ke ma goftim g_mode = 1;
+    // Vali chera moshak haye hasteyi partab mishan
+    // Hamine moshkel omade dar yek Function dige in 
+    // Global Variable dast kari shode!!!
+
+    return 0;
+}
+*/
+// In Global Variable ha hameja mitunan taghir konanad dar va peykar nadarand
+// Moshkel be vojud miyare
+
+// Amn tarin Variable ha Local Variable ha hastand kheyli behtare be nazar man
+
+// Mesal dige:
+/*
+    if(g_mode == 4)
+    {
+        //Statement//
+        //Statement//
+        //Statement//
+    }
+        // Ma yekja g_mode ro 4 kardim ta in Statement haye daron in if ejra shan
+        // Vali nemishe 
+        // Hala bayad begardi bebini koja in g_mode taghir karde 
+        // Dard sar darad pas in Global Variable gheyr Constant
+*/
+
+// Dar Season haye ghabli dar mored yek ghabeliyat harf zadam
+// Be esm Modularity
+// Hamon sazmandehi code ha 
+// Miomadim code hamon ro be chand bakhsh Modularity mikardim
+// Ya'ni mesal input gerftan az User miomadam dar yek 
+// Function joda mineveshtim ta ba'adan khastin taghir bedim 
+// Faghat hamon Function ro taghir bedim 
+// Vali age az Global Variable estefade konim in Ghabeliyat Modularity ham az dast midim
+// Farz kon yek Global Variable gheyr constant darim
+// Omadim dar hamon function yek dast kari kardim barash
+// Hala on Global Variable dar kheyli az ja ha ham estefade shode
+// Age khastim in Global Variable taghir bedim har jayi ke in Global Variable
+// Estefade shode taghir mikone kolan barname be ham mirize !!!!
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Estefade maghadir dar chandin file (Methor 1)
