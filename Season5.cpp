@@ -1125,4 +1125,158 @@ int main() {
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
-// Mabhas: Estefade maghadir dar chandin file (Methor 1)
+// Mabhas: Estefade maghadir dar chandin file (Method 1)
+
+// Yek seri maghadir hastand ke taghir nemikonanad 
+// Adad Avogadro, Pi, Gravity
+// Baraye injur maghadir az constant estefade mishe barashon
+
+// Hala bahs asli ke hast roykard khubi nist biaym adad Pi ro mesal dar har file
+// Ta'rif konim
+// Mesal ma dar 3 ta file be meghdar adad Pi niyaz dazim dar har 3 file 
+// Roykard khubi nist biaym dar har 3 file in adad Pi ro ta'rif konim
+// Dar barname nevisi kolan Tekrar baraye ma oft dare khob nist
+// Rah hal chiye?
+// Biaym in meghdar Pi ro dar yekjaye sabet ta'rif konim ba'ad har file 
+// Ke khast biyad az in maghadir estefade kone
+
+// Har zaban baraye in kar ke bala goftam yek seri emkanati gozashte
+// Ma dar zaban C++ 3 ta rah hal hast ke 3 tasham migam
+// 2 ta sho hamin mabhas 1 ki ro mabhas ba'adi migam
+
+// Yek khubi ke dare in age khastim taghirati bedim
+// Faghat dar file ke ta'rif shode taghir midim baraye hame emal mishe
+
+// Rah kar hayi ke C++ gozashte baraye in kar 
+// Ghabl az C++17 yek HeaderFile misakhtim maghadir mesl Pi ke sabet hast
+// Mizashtim darun namespace va behtare Constant hamon ba constexpr bashe ba'ad dar 
+// SourceFile ke niyaz be in maghadir bod on HeaderFile ro #include mikardim
+
+// Mesal:
+
+/*
+   Constants.hpp:
+#ifndef CONSTANTS_HPP
+#define CONSTANTS_HPP
+
+namespace constants
+{
+    constexpr double pi = 3.14;
+    constexpr double avogadro = 6.022;
+    constexpr double myGravity = 9.2;
+}
+
+#endif
+*/
+// Mikham yek barname benevisam ke mohit circle ro be dast biyarim 
+// Formul kamel in va kolan chi be chiye toye daftar hast
+/*
+   Main.cpp:
+#include <iostream>
+#include "Constants.hpp"
+
+int main() {
+
+    std::cout << "Enter a radius: ";
+    double radius;
+    std::cin >> radius;
+
+    std::cout << "The circumference is: " << 
+            2.0 * radius * constants::pi << '\n';
+
+    return 0;
+}
+*/
+
+// In ravesh sadeyi bod omadim dar source asli Constants.hpp ro include kardim
+// Miyad maghadir on ro dar source file gharar mide
+// Engar dar source file on maghadir ro ta'rif kardim toye Global dar nazar migire
+// Baraye hamin be rahati dast rasi peyda mikone be maghadir
+
+// In ravesh yek seri eyb dare:
+// Age biaym in HeaderFile constants.hpp dar SourceFile haye dige ham include konim
+// Baz hamin etefgh miofte ke bala goftam 
+// Ya'ni miyad tak tak on Variable hayi ke ta'rif kardim Copy mikone dar SourceFile
+// Ke include kardim 
+// Farz kon 20 ta SourceFile darim baraye hamashon niyaz darim in maghadir
+// Miyad 20 bar Copy mishe ta'rif haye in Variable ha dar on SourceFile ha
+
+// Deghat kon: Header Guard rabti be in dastan nadare 
+// On faghat miyad az in jologiri mikone ke HeaderFile dar felan SourceFile 2 bar 
+// Estefade nashe ke biyad error duplicate bede hamon tadakhol asami
+
+// Yek eyb dige age dar HeaderFile yek chizi taghir bedim
+// Va on SourceFile hayi ke in HeaderFile ro include kardim barash
+// Bayad har tak takeshon ro ReCompile konim
+
+// Ravesh ba'adi chiye?
+// Bayad on maghadir hamon sabet haro ke dar HeaderFile ta'rif karde budim
+// External konim va onaro dar SourceFile gharar bedim na HeaderFile
+// Chera?
+// Baraye in ke motmaen shim definition in maghadir faghat dar yekja vojud darad
+// Ba'adesh biaym Forward Declaration ha ro dar HeaderFile gharar bedim
+
+// Yek nokte: dige nemishe az Constexpr estefade kard chon
+// Constexpr ghabeliyat Forward Declaration nadard
+// Majburim az const sade estefade konim
+
+// Mesal:
+/*
+   Constants.cpp:
+
+    #include "Constants.hpp"
+
+    namespace constants
+    {
+        extern const double pi = 3.14;
+        extern const double avogadro = 6.022;
+        extern const double myGravity = 9.2;
+    }
+*/
+
+/*
+    Constants.hpp:
+
+    #ifndef CONSTANTS_HPP
+    #define CONSTANTS_HPP
+    namespace constants
+    {
+        extern const double pi;
+        extern const double avogadro;
+        extern const double myGravity;
+    }
+    #endif
+*/
+
+/*
+    Main.cpp:
+
+    #include <iostream>
+    #include "Constants.hpp"
+
+    int main() {
+
+        std::cout << "Enter a radius: ";
+        double radius;
+        std::cin >> radius;
+
+        std::cout << "The circumference is: " <<
+                2.0 * radius * constants::pi << '\n';
+    
+        return 0;
+    }
+
+*/
+
+// Hala in ravesh balayi am yek seri eyb hayi darad:
+// On sabet hayi ke ta'rif kardam dar Constants.cpp faghat dar file khodesh
+// Compile-Time hast dar ja haye dige az ona vaghti estefade mikonim Run-Time hastand
+// Chon const hast goftam dige dar in ravesh Constexpr nemishe in ghabeliyat
+// Forward Declaration ro nadare
+// Va chon Run-Time hast ghabeliyat behine bodan ro az dast midim
+
+// Vali jalase ba'adi yek rah kheyli khubi migam !!!
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Estefade maghadir dar chandin file (Method 2)
