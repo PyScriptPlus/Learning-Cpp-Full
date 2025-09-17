@@ -279,6 +279,18 @@
     <ClCompile Include="ab.cpp">
       <Filter>Source Files\Season 6\inline</Filter>
     </ClCompile>
+    <ClCompile Include="Static_Local_Variable.cpp">
+      <Filter>Source Files\Season 6</Filter>
+    </ClCompile>
+    <ClCompile Include="Static_Local_Variable2.cpp">
+      <Filter>Source Files\Season 6</Filter>
+    </ClCompile>
+    <ClCompile Include="generateID.cpp">
+      <Filter>Source Files\Season 6</Filter>
+    </ClCompile>
+    <ClCompile Include="Static_Local_Variable3.cpp">
+      <Filter>Source Files\Season 6</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h">
