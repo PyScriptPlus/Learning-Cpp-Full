@@ -1379,3 +1379,210 @@ int main() {
 // Be hamin rahati hamishe baraye injur mavared az inline estefade kon !!!
 
 /*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Static Local Variable
+
+// واژه Static kami gij konanade hast chera?
+// Chon baste be jayi ke mishine mitune معانی mokhtalefi dashte bashe
+
+// Baraye mesal dar jalase haye ghabl goftim Global Variable ha daraye Static Duration
+// Hastand dar inja ma'ni static in hast ke dar zaman shoru barname Variable haye global
+// Ijad mishan va dar etmam barname az beyn miravand
+
+// Yek vizheghi dige ham dasht in Static
+// Ba gharar dadan Keyword static mitunestim yek Global Variable ro daraye Internal Linkage
+// Konim va Function ham mitunestim ba in Keyword Static Internal Linkage konim
+
+// Hala alan mikhaym yeki dige az karbord haye Static ham bebinim 
+// Va yad begirim :)
+// Estefade az Keyword Static roye Local Variable ha
+// Ma midunim Local Variable ha az manzar Vizheghi Duration
+// Automatic Duration ast
+// Ya'ni az noghteyi ke ta'rif mishe be vojud miyad
+// Ta payan Block ke tosh ta'rif shode az beyn mire
+
+// Khob hala age baraye Local Variable ha az Keyword Static estefade konim
+// Mesl Global ha mishe Static Duration ya'ni az zaman ejraye barname ta payan barname
+// On Variable zende ast ya mojud ast
+
+// Mesal:
+/*
+#include <iostream>
+
+void incrementAndPrint() {
+    int s_value = 1;
+    s_value++;
+    std::cout << "This Value: " << s_value << '\n';
+    return;
+}
+
+int main() {
+
+    incrementAndPrint(); // Output --> 2
+    incrementAndPrint(); // Output --> 2
+    incrementAndPrint(); // Output --> 2
+
+    return 0;
+}
+*/
+
+// Har bar ke on Function incrementAndPrint() ro call mikonam
+// Variable Value sakhte mishe ba meghdar avvalie 1 ba'ad
+// Increment mishe 1 vahed ezafe mishe adad nahayi mishe 2
+// Ba'ad chap mikone
+// Ba'ad tamum shodan Function Local Variable az beyn mire
+// Dobare Call konim hamon Function ro baz hamin etefagh miofte
+// Meghdar ghabli hefz nemishe chon dar har ejra ba'ad tamum shodan Function
+// On Local Variable dar akhar Block az beyn mire 
+
+// Hala on bala goftam ba estefade az Keyword Static mitunim
+// Static duration konim
+// Ta akhar ejraye barname on Local Variable az beyn nare 
+
+// Mesal codi:
+/*
+#include <iostream>
+
+void incrementAndPrint() {
+    static int s_value = 1;
+    s_value++;
+    std::cout << "This Value: " << s_value << '\n';
+    return;
+}
+
+int main() {
+
+    incrementAndPrint(); // Output --> 2
+    incrementAndPrint(); // Output --> 3
+    incrementAndPrint(); // Output --> 4
+
+    return 0;
+}
+*/
+// Dige ba har Call va tamum shodan function Value on Local Variable az beyn nemire
+// Ta payan barname meghdar on hefz mishe!!!
+
+
+// Ma dar jalase haye ghabl goftim Variable hayi ke daraye Static Duration hastand
+// Meghdar defaulteshon adad 0 hast
+
+// Mesal:
+/*
+#include <iostream>
+
+int main() {
+    
+    static int s_x;
+    std::cout << x << '\n'; // Output --> 0
+
+    return 0;
+}
+*/
+
+// Mored ba'adi: Chera Identifier haye Variable Static avvalesh  s_  gharar dadam?
+// Chon dige harkasi ya khodam dige harja in Identifier didam befahmam 
+// Local Variable ma'moli nist balke yek Static Local Variable hast
+
+// Hala che estefade haye mohemi mishe az in ke yad gerftim kard?
+// Mesal: Dar sakhtan ID be dard mikhore
+// ID chiye? Farz kon 1000 ta Object dari shabih ham
+// Hoviyat har kodum ro ba ID moshakhas mikonim ba'ad mitunim 
+// Be rahati Object mored nazar ro ba ID peyda konim
+// Mesl CodeMeli 
+
+// Mesal codi:
+/*
+#include <iostream>
+
+int generateID() {
+    static int s_itemId = 0;
+    return s_itemId++;
+}
+
+int main() {
+
+    for(int i = 0; i <= 852; i++)
+    {
+        std::cout << "ID: " << generateID() << '\n';
+    }
+
+    return 0;
+}
+*/
+
+// In maghadir mitunim be onvan ID estefade konim
+// Chon khiyalemun rahate ke in adad ha Unique hastand
+// Unique Number: Ya'ni adade gheyr tekrari
+
+
+// In Static Local Variable mesl Global amal mikone vali khubi ke dare faghat 
+// Dar Scope khodesh ghabel dast rasi va dast kari hast
+// Dige mesl Global nist hameja beshe dast kari kard !!!
+
+// Hala ye ghabeliyat khob:
+// Farz kon mikhaym yek meghdar Const ro dar yek Function negah darim:
+/*
+double pi() {
+    const double pi = 3.14;
+    return pi;
+}
+
+int main() {
+
+    // Har bar ke in Function call mishe on Variable pi
+    // Az avval sakhte mishe ba'ad tamum shodan function az beyn mire
+    // Haminjuri edame dare dar har Call kardan
+    // Va in khob nist behine nist va barname ma kond mishe
+    pi();
+    pi();
+    pi();
+
+    return 0;
+}
+*/
+
+// Rah hal:
+// Local Variable haye Static mitunan const va constexpr bashand
+// Dige in tahe behinegie :D
+// Har bar Function call beshe dige meghdar jadid sakhte nemishe
+// Hamon meghdar baghi mimune ta etmam barname
+
+// Hala yek Mesal kami pichide mizanam
+// Faghat code negah kon ta dark kameli az in bahs dashte bashim
+// Dar avval az karbar meghdar mikhad Enter your Number: 
+// Bar haye dige mige Enter another Number:
+
+#include <iostream>
+
+int getInteger() {
+
+    static bool s_check = true;
+    if(s_check)
+    {
+        std::cout << "Enter your Number: ";
+        s_check = false;
+    }
+    else
+    {
+        std::cout << "Enter another Number: ";
+    }
+
+    int x;
+    std::cin >> x;
+
+    return x;
+}
+
+int main() {
+
+    int x = getInteger();
+    int y = getInteger();
+
+    std::cout << x << " + " << y << " = " << (x + y) << '\n';
+
+    return 0;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Kholase (Morur)
