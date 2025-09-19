@@ -4,11 +4,11 @@
 
 int getInteger() {
 
-	static bool check = true;
-	if (check)
+	static bool s_check = true;
+	if (s_check)
 	{
 		std::cout << "Enter first Number: ";
-		check = false;
+		s_check = false;
 	}
 	else
 	{

@@ -39,10 +39,10 @@ int main() {
 	while (z <= 2)
 	{
 		z++;
-		static int x = 1;
+		static int s_x = 1;
 		bool check = false;
-		x++;
-		if (x == 2)
+		s_x++;
+		if (s_x == 2)
 		{
 			std::cout << "Checked!\n";
 			check = !check;

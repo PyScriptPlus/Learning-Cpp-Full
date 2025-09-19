@@ -10,17 +10,17 @@
 #include <iostream>
 
 void incrementAndPrint() {
-	int x = 1; // Automatic Duration
-	x++;
-	std::cout << x << '\n';
+	int s_x = 1; // Automatic Duration
+	s_x++;
+	std::cout << s_x << '\n';
 	return;
 } // x is here destroyed
 
 void incrementAndPrint2() {
-	static int x = 1; // Static Duration
+	static int s_x = 1; // Static Duration
 	// Meghdar ghablisho hefz mikone injuri
-	x++;
-	std::cout << x << '\n';
+	s_x++;
+	std::cout << s_x << '\n';
 	return;
 }
 
