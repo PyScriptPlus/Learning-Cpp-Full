@@ -8,8 +8,9 @@ namespace Learning_CSharp_Full.Tamrin.Algorithm
 {
     internal class algorithm
     {
-        static void Main(string[] args)
+        static void algor(string[] args)
         {
+#if false
             /*
               mr-st.blog.ir/1394/03/11/%DA%86%D9%86%D8%AF
               -%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%
@@ -288,6 +289,7 @@ namespace Learning_CSharp_Full.Tamrin.Algorithm
                 }
                 num8++;
             }
+#endif
 
         }
     }
