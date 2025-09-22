@@ -294,6 +294,12 @@
     <ClCompile Include="using.cpp">
       <Filter>Source Files\Season 6</Filter>
     </ClCompile>
+    <ClCompile Include="using2.cpp">
+      <Filter>Source Files\Season 6</Filter>
+    </ClCompile>
+    <ClCompile Include="Rounding_a_decimal_number.cpp">
+      <Filter>Source Files\Season 6</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h">
