@@ -8,7 +8,7 @@ namespace Learning_CSharp_Full.Tamrin.S3
 {
     internal class Tamrin
     {
-        static void Main(string[] args)
+        static void Exercise(string[] args)
         {
             Console.Write("Enter amout: ");
             string amount = Console.ReadLine()!;
