@@ -1551,7 +1551,7 @@ int main() {
 // Faghat code negah kon ta dark kameli az in bahs dashte bashim
 // Dar avval az karbar meghdar mikhad Enter your Number: 
 // Bar haye dige mige Enter another Number:
-
+/*
 #include <iostream>
 
 int getInteger() {
@@ -1582,7 +1582,89 @@ int main() {
 
     return 0;
 }
+*/
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Kholase (Morur)
+
+// Yek seri Property hayi yad gereftim baraye Variable ha
+// Scope, Duration, Linkage
+// Mikham inaro yek morur kamel dashte bashim
+
+
+/*
+Scope: 
+Block Scope OR Block, ke male Local Variable ha bod
+Global Scope OR File Scope ke male Global Variable ha bod
+*/
+/*
+Duration: ya Storage Duration
+automatic storage Duration
+Static storage Duration
+Dynamic Duration
+*/
+/*
+Linkage:
+no-Linkage
+Internal Linkage
+External Linkage
+*/
+
+// Khob avvali bahs Scope hast:
+// Scope yek Identifier moshakhas mikone ke on Identifier mitune koja ghabel dast ras
+// Va dast yabi bashe
+
+// In Identifier ha ham mitunan daraye Block Scope ham Global Scope bashan
+// Hala Variable hayi ke daraye Block Scope bashan tanha dar hamun Block ke ta'rif shode
+// Dar dast ras hast goftam parameter haye yek Function va Variable hayi ke darun
+// Yek Function ta'rif beshan ina Block Scope hastand
+// Va hamchenin user-defined-type ha mesl enum va class daron yek Block ta'rif beshan
+// Daraye Block Scope hastand 
+
+// Global Scope ha: Az noghteyi ke ta'rif mishan ta payan file ke tosh ta'rif shode
+// Ghabel dast ras hast
+// Global Scope Shamel che mavaredi mishe?
+// Variable hayi ke kharej az Function ta'rif shodan va khod Function ha
+// Va user-defined-type hayi ke kharej az Block ta'rif shodan
+
+
+// Hala berim soragh Duration: Duration yek Identifier moshakhas mikone on
+// Identifier che zamani be vojud miyad va che zamani az beyn mire
+
+// Variable hayi ke daraye automatic duration hastand az noghteyi ke ta'rif shodan
+// Be vojud miyan va dar payan Block ke tosh ta'rif shodan az beyn miravand
+// Shamel che mavaredi mishe? Mavaredi ke daraye Local Scope ya Block Scope bashan
+
+// Variable hayi ke daraye Static hastand chi?
+// Ba shoru shodan barname be vojud miyan va payan barname az beyn miravand
+// Shamel che mavaredi mishe? Global Variable ha va Static Local Variable ha
+
+// Yek moredi ham hast dynamic duration ke ba darkhast mostaghim barname nevis
+// Ijad mishe va az beyn mire 
+// Dar mored in sohbat nakardim ta ayande be zoodi inam yad migirim
+
+// Mored ba'adi Linkage: Linkage moshakhas mikone Declaration haye mokhtalef yek
+// Identifier aya daran be yek Object yeksani eshare mikonand ya na
+
+// Hala no-linkage shamel che mavaredi mishe?
+// Local Variable ha va user-defined-type hayi ke dakhel yek Block ta'rif shodan
+
+// Hala dasteye Internal Linkage: Tanha mitune dar file ke ta'rif shode
+// Ghabel estefade va dast ras bashe
+// Dar file dige nemishe dast rasi behesh peyda kard
+// Shamel che mavaredi mishe?
+// Static Global Variable, Static Function, Constant Global Variable
+// Va Function hayi ke darun yek unamed namespace ta'rif shode bashand (Ayande)
+// Va user-defined-type ha ke darun yek unamed namespace ta'rif shode bashand
+
+// Daste ba'adi External: Identifier hayi ke daraye External Linkage bashand
+// Ham dar file ke ta'rif shodan ham dar file haye dige ghabel dast rasi ast
+// Shamel che mavaredi mishe?
+// Function haye ma'moli, non-Constant Global Variable,
+// Extern Constant Global Variable, inline constant Global Variable
+// Va user-defined-type hayi ke darun yek Global Namespace ta'rif shode bashand !!!
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Using
