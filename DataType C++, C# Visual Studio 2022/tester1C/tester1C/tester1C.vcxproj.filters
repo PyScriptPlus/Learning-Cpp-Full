@@ -291,6 +291,9 @@
     <ClCompile Include="Static_Local_Variable3.cpp">
       <Filter>Source Files\Season 6</Filter>
     </ClCompile>
+    <ClCompile Include="using.cpp">
+      <Filter>Source Files\Season 6</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h">
