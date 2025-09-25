@@ -8,7 +8,7 @@ namespace Learning_CSharp_Full.Tamrin.S3
 {
     internal class Arrays
     {
-        static void Main(string[] args)
+        static void Array(string[] args)
         {
 
 
