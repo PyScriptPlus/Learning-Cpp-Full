@@ -13,7 +13,7 @@ namespace Learning_CSharp_Full.Tamrin.S3.Class
         // Benevisim engar ye seri chizaye in class dar in file neveshtim
         // Va yek seri dige ro toye file Program.Funcion.cs neveshtim
 
-        static void Main(string[] args)
+        static void func(string[] args)
         {
 
             printHello();
