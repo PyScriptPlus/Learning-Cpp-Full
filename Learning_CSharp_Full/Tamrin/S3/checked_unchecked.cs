@@ -8,7 +8,7 @@ namespace Learning_CSharp_Full.Tamrin.S3
 {
     internal class checked_unchecked
     {
-        static void Main(string[] args)
+        static void overFlowFunc(string[] args)
         {
             try
             {
