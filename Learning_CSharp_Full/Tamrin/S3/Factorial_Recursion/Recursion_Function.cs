@@ -8,7 +8,7 @@ namespace Learning_CSharp_Full.Tamrin.S3.Factorial_Recursion
 {
     internal class Recursion_Function
     {
-        static void Main(string[] args)
+        static void recursion(string[] args)
         {
             WriteLine(factorial(5));
         }
