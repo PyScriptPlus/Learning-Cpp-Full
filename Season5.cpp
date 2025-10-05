@@ -1668,3 +1668,179 @@ External Linkage
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Using
+
+// Ghabl az in ke vizheghi namespace ha dar zaban C++ biyad
+// Hame chiz va asami ke dar namespace std dar hale hazer hastand dar Global Namespace bod
+// On moghe in ba'es mishod ke Identifier hayi ke darun Standard Library hastand
+// Va asami ke khodemun darm ina baham tadakhol bekonanad!!
+
+// Dar sal 1995 in vizheghi namespace moarefi shod
+// Va harchizi ke darun Standard Library bod be namespace std montaghel kardand
+// Hala ba in taghiri ke e'mal kardand niyaz bod baraye dast rasi be Identifier hayi ke
+// Darun Standard Library hastand az std:: estefade konim
+// In std:: ta be emruz kheyli didim
+
+// 2 Ta estelah mohem: Yek esm mitune Qualified bashe ya Unqualified bashe
+// Qualified name chist? nami hast ke hamrah ba moshakhas kardan Scope ya namespace 
+// Neveshte mishavad ya be tor rasmi ba estefade az Operator Scope Resolution :: 
+// Moshakhas mishavad
+// Mesal: 
+// std::cout or ::foo
+// Hala in identifier cout Qualified shode tavasot namespace std
+// std::cout --> Qualified by namespace std
+// ::foo --> Qualified by Global namespace
+
+// Hala yek esmi mitune Unqualified bashe 
+// Unqualified name: nami hast ke bedon hich Scope moshakhasi estefade mishavad
+// Mesal:
+// Cout, cin, x, y va .... agar ghabl az ina hich Scope Resolution Operator vojud nabashe
+// Migan Unqualified Name
+
+// Yeki az rah haye kahesh tekrar type std:: 
+// Estefade az Using declaration ast:
+// Mesal:
+/*
+#include <iostream>
+
+int main() {
+
+    using std::cout;
+    cout << "Hello World!\n";
+
+    return 0;
+}
+*/
+// Dige cout khali benevisim be in using std::cout; eshare dare
+// Compiler har cout ro bebine dige error nemide chon bala goftim behesh
+// Nokte: Onja ke neveshtim using std::cout; in faghat baraye cout hast 
+// Dige nemishe mesal cin khali estefade konim chon faghat be cout eshare kardim
+// Mitunim chand ta type hayi ke takrar mikonim yekja using konim ba estefade az ( , )
+// Estefade konim mesal:
+/*
+#include <iostream>
+
+int main() {
+
+    using std::cout, std::cin;
+    cout << "Enter your age: ";
+    int age;
+    cin >> age;
+    cout << "Your age is: " << age;
+
+    return 0;
+}
+*/
+// In Using declaration ta hodudi kam khatar hast
+
+// Rah hal dige estefade az Using directive hast
+// Kheyli sade ast yek Using directive miyad tamam Identifier daron yek namespace
+// Ro kharej mikone
+// Mesal:
+/*
+#include <iostream>
+
+using namespace std; // Miyad harchi daron std hast mirize namespace Global (Khatar)!
+
+int main() {
+
+    cout << "Hello World!\n";
+
+    return 0;
+}
+*/
+// In rah hal riskesh balast 
+// Dalil: Collision Name
+// Khob namespace baraye chi avordan? baraye jolo giri az Collision Name
+// Pas in faydeyi nadare
+
+// Yek mesal codi dar mored Collision Name dar namespace ha
+/*
+#include <iostream>
+
+namespace a
+{
+    void apple() 
+    {
+        std::cout << "Hello Apple\n";
+        return;
+    }
+}
+namespace b 
+{
+    void apple()
+    {
+        std::cout << "Apple is useful" << '\n';
+        return;
+    }
+}
+
+int main() {
+
+    using namespace a;
+    using namespace b;
+
+    apple(); // Error
+    apple(); // Error
+
+    // Compiler gij shode nemidune kodum apple() ro daram call mikonam
+    // Male namespace a hast ya b ?
+    return 0;
+}
+*/
+
+// Mesal dige:
+/*
+#include <iostream>
+
+int cout() {
+    return 5;
+}
+
+int main() {
+    using namespace std;
+
+    cout << cout(); // Error !!!
+
+    // 2 Ta cout darim baz compiler gij mishe !!!
+    return 0;
+}
+
+Baraye in code bala 2 ta rah hal hast
+Vali dige nemishe az on Function cout estefade kard bayad meghdaresho pass bedi
+Be yek Function dige az on call begiri
+
+Rah hal 1:
+Estefade az std:: ya'ni std::cout ro kamel benevisim
+
+Rah hal 2:
+Estefade az Using declaration
+using std::cout;
+*/
+
+// Nokte: In nokte ham baraye ravesh Using declaration hast ham baraye ravesh
+// Using directive hast
+// Age in using ro dakhel yek block benevisi mesal block main() {}
+// Ya Nested Block (Inner Block)
+// Faghat dakhel hamon Block ke using ro neveshti mituni cout ya cin
+// Ro bedon Scope Resolution Operator benevisi
+
+// Vali age khasti dar hameja cout benevisi bedon mahdudiyat (Risk bala (Khatar)) !!!
+// Bayad on using ro dar Global benevisi
+
+// Nokte: Vaghti using estefade mikonim dastor digeyi vojud nadare betunim
+// Cancel konim: using namespace foo;
+// In namespace foo nemishe dige cancel kard
+// Vali mitunim mahdud konim be yek Block faghat dakhel block estefade she
+/*
+{
+    using namespace foo;
+}
+*/
+
+// Kholase harfam: Baraye estefade az Using directive parhiz kon !!!
+// Estefade az Using declaration taghriban amne vali tarjihet in bashe
+// Daron block azash estefade koni toye Global namespace ehtemal khatar dare !!!
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Function expansion
