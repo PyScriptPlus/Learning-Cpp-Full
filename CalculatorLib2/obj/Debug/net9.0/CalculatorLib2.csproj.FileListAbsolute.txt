@@ -1,0 +1,12 @@
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\CalculatorLib2\bin\Debug\net9.0\CalculatorLib2.deps.json
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\CalculatorLib2\bin\Debug\net9.0\CalculatorLib2.dll
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\CalculatorLib2\bin\Debug\net9.0\CalculatorLib2.pdb
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\CalculatorLib2\obj\Debug\net9.0\CalculatorLib2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\CalculatorLib2\obj\Debug\net9.0\CalculatorLib2.AssemblyInfoInputs.cache
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\CalculatorLib2\obj\Debug\net9.0\CalculatorLib2.AssemblyInfo.cs
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\CalculatorLib2\obj\Debug\net9.0\CalculatorLib2.csproj.CoreCompileInputs.cache
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\CalculatorLib2\obj\Debug\net9.0\CalculatorLib2.sourcelink.json
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\CalculatorLib2\obj\Debug\net9.0\CalculatorLib2.dll
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\CalculatorLib2\obj\Debug\net9.0\refint\CalculatorLib2.dll
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\CalculatorLib2\obj\Debug\net9.0\CalculatorLib2.pdb
+C:\Users\Mohamad\Desktop\Learning-Cpp-Full\CalculatorLib2\obj\Debug\net9.0\ref\CalculatorLib2.dll
