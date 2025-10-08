@@ -1,0 +1,3 @@
+Tabdil be mabnaye 8: Adad ra be mabnaye 2 mibarim va az samt rast 3 ta 3 ta joda mikonim va be sorat Decimal minevisim
+Mesal:
+Decimal: 11 --> Binary: 1011 --> Joda kardam: 1_011 hala tabdil be mabnaye Decimal ((0001) --> 1) va ((011) --> 3)  mishe --> 13 Octal

@@ -1,0 +1,3 @@
+Tabdil be mabnaye 16: Adad ra be mabnaye 2 mibarim va az samt rast 4 ta 4 ta joda mikonim va be sorat HexaDecimal minevisim
+Mesal:
+Decimal: 17 --> Binary: 10001 --> Joda kardam: 1_0001 hala tabdil be mabnaye HexaDecimal ((0001) --> 1) va ((0001) --> 1)  mishe --> 11 HexaDecimal
