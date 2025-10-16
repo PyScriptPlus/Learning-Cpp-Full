@@ -1844,3 +1844,109 @@ using std::cout;
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Function expansion
+
+// Farz kon darim code hamon ro dakhel function main() minevisim hala 
+// Yeho ba Task moshakhasi bar khord mikonim mesal Task hesab kardan Minimum 2 ta adad
+// Rah hal 1: Biaym code haye marbot be mohasebe kardan Minimum ro dakhel hamon
+// Function main() benevisim
+
+// Rah hal 2: Biaym yek function jadid be esm min() ijad konim va code haye marbot 
+// Be mohasebe kardan Minimum ro dakhelesh gharar bedim.
+
+// Ravesh 2 nesbat be ravesh 1 kheyli behtare va mazayaye khobi dare masalan:
+// Avvalish ineke ba'es mishe hadaf va manzur barname behtar khodesh ro neshon bede
+// Dovvomish ine ke fahm  code ha rahat tar mishe mesal: esm function ro bekhunim
+// Mitunim befahmim che kari mikhad anjam bede
+// Ba'dish ine ke update kardan bakhsh haye barname rahat tar mishe 
+// Mohem tarin ghabeliyat ine ke ma Modularity be dast miyarim va dar harjaye barname
+// Khastim estefade konim
+
+// Ye mesal codi mizanam vali mohem posht sahne on hast:
+/*
+#include <iostream>
+
+int min(int x, int y) {
+    return (x < y) ? x : y;
+}
+
+int main() {
+    std::cout << min(5, 6) << '\n';
+    // Ma omadim code haye dakhel min ro dar yek Function joda neveshtim
+    // Vaghti barname ejra mishe va be in --> min(5, 6) noghte mirese
+    // Avvalin kari ke anjam mishe CPU address instruction fe'li ro zakhire sazi mikone
+    return 0;
+}
+*/
+// Vaghti migoyim CPU bayad address Instruction fe'li ro zakhire konad
+// Manzur in ast ke:
+// CPU bayad bedanad dar hafeze koja istade va kodum Statement ra ejra mikonad.
+// Baad az ejraye Statement CPU miyad (Program Counter) OR (Instruction Pointer)
+// Ra be roz rasani mikonad ta Statement ba'adi ra ejra konad
+
+// Be zaban sade: CPU nemitavanad Statement ba'adi ra hads bezanad
+// Bayad address fe'li Instruction ra zakhire konad ta ba'ad az ejraye 
+// Har Statement be tavanad Statement ba'adi ra peyda va ejra konad !!
+
+//-----------------------------------------------------//
+// Mabhas: Instruction dakhel Function Expansion
+
+// Farz kon dar zaban Assembly yek seri code ha neveshtim CPU avvalin code 
+// Ra ejra mikonad va az koja mifahme ba'ad az in code che codi ra bayad ejra konad?
+// CPU miyad address fe'li Instrcution  ro zakhire sazi mikone 
+// Mesal:
+#include <iostream>
+
+int main() {
+
+    // Ba g++ compile kon error haro velesh
+
+    // Address 100: LOAD A,5
+    // Address 101: ADD A,3
+    // Address 102: move eax -> result
+     int result; 
+        asm(
+        "movl $5, %%eax\n"   // LOAD A,5
+        "addl $3, %%eax\n"   // ADD A,3
+        "movl %%eax, %0\n"   // move eax -> result
+        : "=r" (result)      // output
+    );
+    std::cout << "Result = " << result << "\n";
+
+    return 0;
+}
+
+// On code bala ro didi: va inam address hayi ke mesal zadam barash
+/*
+    Address 100: LOAD A,5
+    Address 101: ADD A,3
+    Address 102: move eax -> result
+*/
+// Hala Trace konim:
+// Start: meghdar avvalie IP/PC tavasot Operating System roye address avvali dastor
+// Gharar migirad:
+
+// IP = 100 // CPU miravad soragh address 100
+// Va dastor ra mikhanad: Ejraye LOAD A,5 --> meghdar 5 dakhel A gharar migirad
+
+// Ba'ad az ejraye dastor avval: CPU IP ro be roz rasani mikonad
+// IP = 101 // CPU dastor address 101 ra mikhanad
+// Ejraye ADD A,3 --> Meghdar A ke 5 bod mishavad 8 (5 ro ba 3 plus mikone)
+
+// Ba'ad az ejraye dastor dovvom: CPU IP ro be roz rasani mikonad
+// IP = 102
+// Meghdar dakhel (Register) hamon (eax) (Ke alan 8 hast, ya'ni 5 + 3)
+// Mire dakhel Variable result dar C++
+
+// IP va PC har 2 tash Address ro negah midaran pas che farghi dare?
+// Farghesh faghat name va Architecture CPU hast:
+// Register (ثبات):           Architecture CPU:
+// IP (Instruction Pointer)    X86/ X86_64
+// PC (Program Counter)        ARM, MIPS va ...
+
+// Baraye CPU haye Inter (X86/ X86_64)
+// Register ke address statement ba'adi ro negah midare IP nam darad
+// Dar halat (16 biti): Namash IP hast --> Instruction Pointer
+// Dar halat (32 biti): Namash EIP hast --> Extended Instruction Pointer
+// Dar halat (64 biti): Namash RIP hast --> Register Instruction Pointer
+
+//-----------------------------------------------------//
