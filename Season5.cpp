@@ -1894,6 +1894,7 @@ int main() {
 // Ra ejra mikonad va az koja mifahme ba'ad az in code che codi ra bayad ejra konad?
 // CPU miyad address fe'li Instrcution  ro zakhire sazi mikone 
 // Mesal:
+/*
 #include <iostream>
 
 int main() {
@@ -1914,7 +1915,7 @@ int main() {
 
     return 0;
 }
-
+*/
 // On code bala ro didi: va inam address hayi ke mesal zadam barash
 /*
     Address 100: LOAD A,5
@@ -1950,3 +1951,85 @@ int main() {
 // Dar halat (64 biti): Namash RIP hast --> Register Instruction Pointer
 
 //-----------------------------------------------------//
+
+// Edame bahs: Function expansion
+
+// Pas fahmidim chejuri code haro khat be khat ejra mikone in CPU
+// Va ham chenin dar injaye code: int min(int x, int y)
+// Bayad parameter haye x, y ro Instantion(تخصیص حافظه) va hamchenin
+// Initialize(مقدار دهی اولیه) bekone
+// Ya'ni dar hafeze RAM beheshon makan takhsis bede va Argument hayi ke be in Parameter
+// Pass dade mishe ro dar in makan benshone 
+// Ba'desh code haye dakhel Function min() ejra mishe ba'ad tamum shodan
+// Function bar migarde be jayi ke in Function ro Call kardim 
+
+// Khob hameye inaro goftam ta be inja beresim:
+// Farz kon yek Function darim code haye darunesh kheyli ziyad hast
+// Yek Task pichideyi anjam mide
+// Hala vaghti on Function ro Call mikonim yek sar bari injad mikone
+// Ya'ni yek seri kar haye ezafi anjam mide 
+// Be in kar haye ezafi Overhead migan hamon kar hayi ke bala goftam 
+// Zakhire sazi address fe'li Instruction, Takhsis hafeze va
+// Pass dadan Argument ha be Parameter ha 
+// Farz konim in kar haye ezafi ya hamon Overhead 5 nanoSeconds tul mikeshad
+// Va masalan code haye darun on Function ke Task pichideyi anjam mide 10 MiliSecond ast
+// Pas Overhead nesbat be code haye darun Function ke 10 MiliSecond tul mikeshad
+// Nachiz ast.
+
+// Vali masalan hamon Function min() ke bala neveshte budim kheyli function sadeyi hast
+// Code darun on masalan dar 1 nanoSeconds ejra mishe vali sar bari ke Function Call
+// Ijad mikone hamon Overhead ke goftim masalan 5 nanoSecond nesbat be ejraye Code haye
+// Dakhel Function min() kheyli ziyad hast va injuri Performance makhsusan
+// Dar Function haye sade ke ziyad call mikonim payin miyad agar jam'
+// Overhead ziyad shavad ba'es kahesh Sor'at barname mishe !!!
+
+// Khob alan dar hamchin senario az kheyr Function begzarim? Javab kheyr !!!
+
+// Khoshbakhtane Compiler zaban C++ yek Trick(ترفند) dare ke be komakesh
+// Mitune az hamchin bahsi geser dar bere 
+// Va in Trick chizi nist be joz ( inline expansion )
+// Hala in inline expansion chiye? code dakhel on Function dar jayi ke on Function call shode
+// Montaghel mishe (Posht sahne) mesal:
+/*
+#include <iostream>
+
+int min(int x, int y) {
+    return ((x < y) ? x : y);
+}
+
+int main() {
+
+    // std::cout << min(5, 6) << '\n';
+    // Posht sahne code balayi payin:
+    std::cout << ((5 < 6) ? 5 : 6) << '\n';
+
+    // Nokte mosbat: Ba inke meghdarash dar zaman Compile moshakhas shode
+    // Compiler hoshmandane amal mikone dar posht sahne 5 ro gharar mide
+    // Mesl: 
+    std::cout << 5 << '\n';
+
+    return 0;
+}
+*/
+
+// Vaghti dar inline expansion mostaghim code haye masalan min() jaygozin mishan 
+// Dar jayi ke on Function Call shode dar inja dige hich Overhead ii nadarim !!!
+
+// Nokte: inline expansion hamishe mojeb afzayesh Performance nemishe
+// Balke inam hazine dare
+// Mitune ba'es afzayesh Performance bashe mitune nashe 
+// Mitune ba'es kahesh Performance ham bashe
+
+// Baraye har Function momkene 3 halat pish biyad:
+// 1- On Function bayad expansion beshe
+// 2- Momkene ya mitune beshe
+// 3- Ya expansion nemishe
+// Aksar Function ha dar hamin dasteye 2 hastand
+
+// Hala in tasmim giri bar ohdeye Compiler ast
+// Va Barname-Nevis haye Compiler say mikonanad kari konanad 
+// In etefagh inline expansion vaghti etefagh bi ofte ke be naf' ma bashe !!!
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: inline keyword
