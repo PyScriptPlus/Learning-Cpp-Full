@@ -19,7 +19,7 @@ namespace Learning_CSharp_Full.Tamrin.S3
             }
             return;
         }
-        static void Main()
+        static void prmss()
         {
             // In moshakhas nist chegard tul dare in Parameter
             // params baraye hamin estefade mishe
