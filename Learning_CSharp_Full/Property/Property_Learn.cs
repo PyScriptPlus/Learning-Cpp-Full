@@ -8,7 +8,7 @@ namespace Learning_CSharp_Full.Property
 {
     internal class Property_Learn
     {
-        static void Main()
+        static void Prop()
         {
             Power p = new();
             p.MyProperty = 1; // Setter
