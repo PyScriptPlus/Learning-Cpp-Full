@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Learning_CSharp_Full.Tamrin.Algorithm
 {
-    internal class algorithm
+    internal class Algorithm
     {
         static void algor(string[] args)
         {
