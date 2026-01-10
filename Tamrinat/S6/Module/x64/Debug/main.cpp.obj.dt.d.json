@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\mohamad\\desktop\\learning-cpp-full\\tamrinat\\s6\\module\\main.cpp",
+        "ProvidedModule": "",
+        "Includes": [],
+        "ImportedModules": [
+            {
+                "Name": "newModule",
+                "BMI": "C:\\Users\\Mohamad\\Desktop\\Learning-Cpp-Full\\Tamrinat\\S6\\Module\\x64\\Debug\\Module.ixx.ifc.dt"
+            }
+        ],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "x64\\Debug\\Module.obj",
+            "outputs": [
+                "x64\\Debug\\Module.ixx.ifc.dt.module.json",
+                "x64\\Debug\\Module.ixx.ifc.dt.d.json",
+                "x64\\Debug\\newModule.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "newModule",
+                    "source-path": "c:\\users\\mohamad\\desktop\\learning-cpp-full\\tamrinat\\s6\\module\\module.ixx",
+                    "is-interface": true
+                }
+            ],
+            "requires": [
+                {
+                    "logical-name": "std"
+                }
+            ]
+        }
+    ]
+}
