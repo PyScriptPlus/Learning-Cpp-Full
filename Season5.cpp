@@ -2033,3 +2033,47 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: inline keyword
+
+// Dar jalase ghabl dar mored Function Expansion
+// Sohbat kardim
+// Compiler haye avvalie in ghabeliyat ro nadashtan tashkhis bedan
+// Aya Expansion dar felan ja Performance ro bala mibare ya payin miyare
+// Baraye hamin zaban C++ omad Keyword inline ro era'e kard ke
+// Barname nevis in keyword ro gharar bede be Compiler yek darkhast
+// Bede bege behtare Function Expansion inja anjam beshe ya na.
+// Compiler mitunest ghabol kone ya nakone
+// In chizi ke goftam male Standarad haye ghadimiye chon emruze
+// Hata bedun inline ham kheyli az Compiler ha Automatic inline mikonan
+// Age Behine Sazi rushan bashe !!!
+
+// Khob chejuri mishe rushan kard:
+// Baraye Compiler haye Clang++ va g++:
+// Bayad ba Flag haye -O2 OR -O3 --> O bayad Capital bashe bozorg ya'ni
+// Fargheshun az Internet mituni bebini
+// Mesal: g++ -O2 main.cpp -o MyApp.exe
+
+// Baraye Compiler MSVC chejurie?
+// Roye Project right click kon Properties 
+// Toye ghesmat Configuration Properties ghesmat C/C++ ghesmat 
+// Optimization --> Maximum Optimaztion (/O2)
+
+// Khob in Keyword inline dar Standard haye jadid karbord dige darad
+// On Inline Expansion male ghadimast 
+
+// Dar gozashte goftim Function ha ro dar (Header File)
+// Piyade sazi nakonid chon age dar chandin Source file on (Header File)
+// #include beshe definition on Function dar chandin Source code 
+// Gharar migire va on moghe khataye Linker mide mige
+// Felan Function bish az 1 bar Define shode
+// Hamon ke Ghavanin ODR naghz mishe!!!
+
+// Hala dar zaban C++ Standarad haye jadid in Keyword inline 
+// Mafhum jadid darad in mafhum be ma ejaze mide chand definition 
+// Dar barname dashte bashim
+// Ya'ni vaghti dar yek (Header File) yek Function ro inline konim
+// Dar har chand Source code ham #include konim error nemide
+// Hamon bahs Linkage.
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Consteval
