@@ -1,5 +1,5 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (tester1C.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  ab.cpp
+  Constevaluation.cpp
   tester1C.vcxproj -> C:\Users\Mohamad\Desktop\Learning-Cpp-Full\DataType C++, C# Visual Studio 2022\tester1C\x64\Debug\DataType.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

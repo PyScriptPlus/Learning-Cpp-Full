@@ -303,6 +303,9 @@
     <ClCompile Include="Function_expansion.cpp">
       <Filter>Source Files\Season 6</Filter>
     </ClCompile>
+    <ClCompile Include="Constevaluation.cpp">
+      <Filter>Source Files\Season 6</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h">
