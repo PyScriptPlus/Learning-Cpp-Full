@@ -306,6 +306,12 @@
     <ClCompile Include="Constevaluation.cpp">
       <Filter>Source Files\Season 6</Filter>
     </ClCompile>
+    <ClCompile Include="Anonymous_Namespace.cpp">
+      <Filter>Source Files\Season 6</Filter>
+    </ClCompile>
+    <ClCompile Include="inline_Namespace.cpp">
+      <Filter>Source Files\Season 6</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h">
