@@ -2077,3 +2077,236 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Consteval
+
+// Dar jalase haye ghabl ma darbareye mafhum Sabet ha sohbat kardim
+// Be 2 sorat mitunestim sabet ta'rif konim ba estefade az 
+// Keyword const va constexpr hala in constexpr alave bar sabet Compile-Time 
+// Ham bod inaro goftim faghat janbeye morur darad in constexpr ha
+// Dar Compile-Time arzyabi mishan na Run-Time
+// Mesal:
+/*
+#include <iostream>
+
+int main() {
+
+    constexpr int x = 50;
+    constexpr int y = 34;
+    std::cout << ((x > y) ? x : y) << '\n';
+
+    return 0;
+}
+*/
+// Toye code bala omadim x, y ro constexpr dar nazar gereftim 
+// Compiler miad in expression ((x > y) ? x : y) be jaye inke dar 
+// Run-Time arz yabi kone miyad dar Compile-Time arz yabi mikone
+// Va dar in halat miad mostaghim javab nahayi ro mizare 
+// Mesl in: std::cout << 50 << '\n;
+// In 50 dar zaman Compile-Time tolid shode na Run-Time
+// Va in chiz kheyli khubeh chera?
+// Chon in bar ro az Run-Time bardashtim andakhtim roye Compile-Time
+// Dar in sorat barname age ejra konim sor'at balayi dare sari ejra mishe.
+
+// So'al: Che farghi dare Run-Time tulani she ya Compile-Time?
+// Ghat'an Run-Time kotah bashe khubeh chon ma faghat 
+// 1 Bar codemun ro Compile mikonim vali momkene 1000 bar ejra konim
+// Pas Run-Time sari bashe khubeh
+
+// Behtare code ke bala neveshtim ro dakhel Function benevisim
+// Mesal:
+/*
+#include <iostream>
+
+int max(int x, int y) {
+    return ((x > y) ? x : y);
+}
+
+int main() {
+
+    constexpr int x = 5;
+    constexpr int y = 3;
+    std::cout << max(x, y) << '\n';
+    return 0;
+}
+*/
+// Khob Performance code ghabli behtare ya in jadide?
+// Az lahaz khanayi in code balayi khubeh
+// Vali az lahaz Performance ghabliye behtare chon ghabliye
+// Arz yabi on dar Compile-Time bod vali function call ke kardim
+// Dar in code jadid Run-Time hast
+
+// Pas ba estefade az Function shoma khanayi va Modularity ro bala mibarim
+// Vali az on samt (Compile-Time Evaluation) ro az dast mirim
+
+// Baraye inam yek rah hal darim :)
+// Yek chizi vojud dare be esm (const expression function)
+// Yek Functioni hast ke meghdari ke return mide in ghabeliyat ro dare
+// Ke Compile-Time mohasebe beshe baraye define chenin Functioni
+// Bayad ghablesh constexpr ro gharar bedim
+
+// Mesal:
+/*
+#include <iostream>
+
+constexpr int max(int x, int y,int z) {
+    // Nested Ternary
+    return ((x > y) ? ((x > z) ? x : z) : ((y > z) ? y : z));
+}
+
+int main() {
+
+    constexpr int x = 5;
+    constexpr int y = 3;
+    constexpr int z = 35;
+
+    // Jolo tar tozih midam chera rikhtam toye Variable result
+    constexpr int result = max(x,y,z);
+
+    std::cout << result << '\n';
+
+
+    return 0;
+}
+*/
+// Hala in Function max() dar Compile-Time arz yabi mishe
+// Vaghti Function ro call mikonim Result adad 35 ro dare
+
+// Deghat kon moheme: Yek Function baraye inke vajed sharayet 
+// Arz yabi Compile-Time bashe alave bar inke bayad
+// Ghablesh constexpr ro gharar bedim 
+// Argument hayi ke behesh pass midim hatman bayad 
+// Variable Constexpr ya Literal bashe
+
+// Dar code bala hich kodum az in ghavanin ha naghz nashode bod
+
+// Nokte: Agar keyword constexpr ro gharar bedim va 
+// Vajed sharayet bashe on Function goftim hatman dar in halat
+// Compile-Time hast vali bayad begam :) Ghati nist 
+// In tebgh Standard C++ yek (const expression Function)
+// Hata agar vajed sharayet bashe dar sorati 
+// Bayesti dar Compile-Time mored arz yabi gharar begire 
+// Meghdar return Function dar jayi ke mishine 
+// Onja bayad yek (const expression) bashe
+// Hamon result ke code bala neveshtam
+// Alan mitunim begim ghati Compile-Time hast
+
+// Chand halat ro mesal bezanim:
+/*
+#include <iostream>
+
+constexpr int max(int x, int y) {
+    return ((x > y) ? x : y);
+}
+
+int main() {
+
+    // Literal: vajed sharayet hast !
+    constexpr int res = max(2,92);
+
+    // Vajed sharayet nist yeki az variable ha non const expression hast
+    int num = 3;
+    std::cout << max(num, 4) << '\n';
+
+    // In halat ghati nist shayad Compile-Time bashe ya Run-Time
+    // Compiler tasmim migire !!!
+    std::cout << max(5, 6) << '\n';
+    return 0;
+}
+*/
+
+// Nokte mohem: Vaghti yek Function constexpr ta'rif mikoni
+// Jaye dige ya payin tar az function main bashe
+// Biyay Declare koni error mide !!!
+// Chon Compiler bayad ta'rif va Body Function ro bebine !!!
+
+// Mored ba'adi:
+// Ta ghabl az (Standard 2020 --> C++20)
+// Hich rahi vojud nadasht ta dar codemun motavajeh beshim ke
+// Felan Function Call arz yabi Run-Time hast ya Compile-Time
+// Hala az C++20 be ba'ad yek Function mo'arefi shod be esm
+// is_constant_evaluated() ke meghdar return in Function Boolean hast
+
+// Baraye estefade az in Function bayad 
+// Library type_traits ro inclue konim
+// Mesal codi:
+// Compile karadan in code: g++ -std=c++20 main.cpp -o a.exe
+/*
+#include <iostream>
+#include <type_traits>
+
+constexpr int max(int x, int y) {
+
+    // Agar True(1) bashe ya'ni Compile-Time 
+    // Vali False(0) bashe ya'ni Run-Time
+    if(std::is_constant_evaluated())
+    {
+        return ((x > y) ? x : y);
+    }
+    else 
+    {
+        return 0;
+    }
+}
+
+int main() {
+
+    // Run-Time
+    std::cout << max(5 , 6) << '\n'; // Output --> 0
+
+    // Compile-Time 
+    constexpr int res = max(5 , 6);
+    std::cout << res << '\n'; // Output --> 6
+
+    return 0;
+}
+*/
+
+// Mored ba'adi: Dar Standard C++20 yek Keyword jadid mo'arefi shod
+// Be esm (consteval) baraye inke neshun bede yek Function bayad
+// Dar Compile-Time arz yabi beshe va agar in etefagh nayofte Error mide !!!
+// Be hamchin Function migan: Immediate Function
+
+// Mesal codi:
+// Compile karadan in code: g++ -std=c++20 main.cpp -o a.exe
+/*
+#include <iostream>
+#include <type_traits>
+
+consteval int max(int x, int y) {
+    if(std::is_constant_evaluated()) 
+    {
+        return ((x > y) ? x : y);
+    }
+    else
+    {
+        // in else hich vaght ejra nemishe !!!
+        // Null Character '\0'
+        return '\0';
+    }
+}
+
+int main() {
+
+    // Error nemide chon vajed sharayet hast
+    int res = max(5, 33);
+    std::cout << res << '\n'; // Output --> 33
+
+    
+    // Hala biaym yeki az ghavanin ro naghz konim
+    int a = 32;
+    std::cout << max(a, 2) << '\n'; // Error mide
+    // Hatman bayad arz yabi Compile-Time bashe
+    // Dar gheyr in sorat Error
+
+    return 0;
+}
+*/
+
+// In consteval yek khubi ke dare vaghti ye jayi Compiler tasmim migire
+// Compile-Time bashe ya Run-Time 
+// Dar consteval hatmi ast ke Compile-Time bashe 100%
+// Che meghdar bazghasti Function dar constexpr bashe che int khali
+// Mesl: int y = max(3, 2); // In hatman Compile-Time hast
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: unamed namespace OR anonymous namespace
