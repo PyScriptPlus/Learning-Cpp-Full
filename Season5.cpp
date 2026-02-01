@@ -2310,3 +2310,121 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: unamed namespace OR anonymous namespace
+
+// Zaban C++ az 2 noe namespace diger ham poshtibani mikone
+// Yekish unamed OR Anonymous namespace hast
+// Yeki dige am inline namespace hast
+// Mesal:
+/*
+#include <iostream>
+
+// Anonymous namespace
+namespace 
+{
+    void foo() {
+        std::cout << "V1\n";
+        return;
+    }
+}
+int main() {
+
+    foo();
+
+    return 0;
+}
+*/
+// Hame ebarati ke dar anonymous namespace ta'rif shodan
+// Bahashun tori raftar mishe engar dar Global namespace hastand
+
+// Khasiyat asli in anonymouse namespace ine ke hame
+// Identifier hayi ke darunesh ta'rif shodan 
+// Tori bahashun raftar mishe engar daraye Internal Linkage hastand
+// Ya'ni mohtavaye unamed namespace dar kharej az fili ke darunesh
+// In namespace ta'rif shode dar dast ras nist !!!
+// Mesal payin bebin:
+/*
+static void foo(){return;};
+static void bar(){return;};
+static void qux(){return;};
+*/
+// Code hayi balayi moadel in payini hast
+/*
+namespace 
+{
+    void foo(){return;};
+    void bar(){return;};
+    void qux(){return;};
+}
+*/
+
+// Mored ba'adi inline namespace ha hastand
+// Farz kon yek Functioni darim mikhaym dast karish konim
+// Bedun inke dast be Function asli bezanim
+// Miaym az Function Copy migirim ta ono taghir bedim
+// Engar mikhaym Version bandi konim
+// Mesal:
+/*
+void doSomething() 
+{
+    std::cout << "V1\n";
+    return;
+}
+void doSomething_v2() 
+{
+    return;
+}
+void doSomething_v3() 
+{
+    return;
+}
+*/
+
+// In kar Copy roykard khubi baraye Version bandi barname nist !!!
+
+// Rah hal: Estefade az inline namespace 
+// In namespace bishtar baraye senario haye Version bandi be kar mibaran
+// Vali dige daraye Internal Linkage nist !!!
+
+// Mesal:
+/*
+#include <iostream>
+
+inline namespace V1
+{
+    void doSomething() {
+        return;
+    }
+}
+namespace V2
+{
+    void doSomething() {
+        return;
+    }
+}
+
+int main() {
+
+    V1::doSomething();
+    V2::doSomething();
+
+    // Ini ke Unqualified Name hast 
+    // Miyad namespace ke ghablesh inline gharar dadim
+    // Dar nazar gerfte mishe
+    doSomething();
+
+
+    return 0;
+}
+*/
+
+// Mored akhar:
+namespace {} // Pedar in namespace (Global Namespace) hast
+
+namespace B {} // Pedar in namespace B (Global Namespace) hast
+
+namespace A // Pedar in namespace A (Global Namespace) hast
+{
+    namespace B {} // Pedar in namespace B (Namespace A) hast
+}
+
+// End Project Season 6 .........................
