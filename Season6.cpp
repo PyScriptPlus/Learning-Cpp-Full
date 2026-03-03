@@ -194,4 +194,105 @@ int main() {
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
-// Mabhas: Eshtebahat rayej dar esrtebat
+// Mabhas: Eshtebahat rayej dar ertebat ba if
+
+// Moshkelati ke ehtemal dare har Programmer ke ba if kar mikone barkhord kone
+
+// Avvalin moshkel: ( Dangling else ) hast
+
+// Dangling ham az nazar لغوی be ma'naye معلق hast
+// و کنایه به بلاتکلیف بودن داره
+
+// In moshek chiye?
+// Ma mitunim if haye nested benevisim? hamon if haye to dar to
+// Engar ba g++ warning ro nemide
+// Faghat dar clang++ mide
+// Compile kon: clang++ Season6.cpp -o myApp
+/*
+Season6.cpp:217:5: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+217 |     else
+    |     ^
+1 warning generated.
+*/
+/*
+int main() {
+
+    if (true)
+        if(true)
+        ;
+    else
+        ;
+
+    return 0;
+}
+*/
+
+// Code bala mobham hast on else belataklif hast
+// Ma'lom nist male kodum if hast
+// Jolo ya aghab bordan code ta'siri nadarad.
+
+// Rah: estefade az Brace hamun Block --> { }
+
+
+// Mored ba'adi: Null Statement
+// Chiye? Yek Expression hast ke tanha shamel ( ; ) ast
+// Null Statament --> ;
+// void foo(){ if(true) ; }
+// Karesh chiye? Hichi xD
+
+// Jayi ke Programmer nemikhad Statement khasi bezare ya Syntax gir mide bayad ye chizi
+// Bezari mitunim Null Statement ro bezanim ta ba'adan taghir bedim
+
+
+// Be sorat sahvi mitune estefade she va mojeb Bug shavad
+// Mesal:
+/*
+    if(nuclearCodesActivated());
+        blowUptheWord();
+*/
+// In blowUptheWord(); hich rabti be if nadare 
+// Dar har sorat ejra mishe
+
+
+// Mored akhar: Estefade az Assignment Operator be jaye Equality Operator dar Condition
+// Mesal:
+// Bazam bayad ba clang++ compile koni ta warning ro bebini
+/*
+User> clang++ Season6.cpp                                                                                         
+Season6.cpp:266:10: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  266 |     if(x = 0)
+      |        ~~^~~
+Season6.cpp:266:10: note: place parentheses around the assignment to silence this warning
+  266 |     if(x = 0)
+      |          ^
+      |        (    )
+Season6.cpp:266:10: note: use '==' to turn this assignment into an equality comparison
+  266 |     if(x = 0)
+      |          ^
+      |          ==
+1 warning generated.
+*/
+/*
+#include <iostream>
+
+int main() {
+
+    // Har adadi vared koni False mide
+    // Chon vaghti karbar adad vared mikone mesal --> 5
+    // darun on parantez if Condition
+    // Adad 0 miyad rikhte mishe be x
+    // Assign mishe xD
+    // Va adad 0 ham dar Boolean False hast
+    int x{};
+    std::cin >> x;
+    if(x = 0)
+        std::cout << "True\n";
+    else
+        std::cout << "False\n";
+
+
+    return 0;
+}
+*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
