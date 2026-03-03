@@ -120,3 +120,78 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Dastorat if va Block ha
+
+// Avvalin daste az Control Flow dastorat sharti if, else hast
+// Ke ziad manovr nemidam roye in if ha chon kamel baladim
+// Faghat yek seri nokat ro migam:
+
+// Conditional Statement chiye? Statementi ke moshakhas mikone aya felan Statement 
+// Bayesti ejra beshe ya na
+
+// Dar zaban C++ 2 noe az in dastorat darim:
+
+// 1- if statement
+// 2- switch statement
+
+// Ebteda if ro migam: (Syntax)
+
+/*
+    if(condition)
+        ;
+    
+    ##########################
+
+    if(condition)
+        ;
+    else
+        ;
+
+    ##########################
+    // Bish az 1 Statement Block zaruri hast
+    if(condition)
+    {
+        ;
+        ;
+    }
+    else
+    {
+        ;
+        ;
+    }
+
+    ##########################
+*/
+
+// Nokte: Vaghti dastor ro dakhel Block gharar nemidim
+// Compiler khodesh in karo mikone 
+// Programmer:
+/*
+    if(true)
+        ;
+*/
+
+// Compiler:
+/*
+    if(true)
+    {
+        ;
+    }
+*/
+
+// Chera nokte bala ro goftam? Chon age naduni Compiler che balayi sare codet miare 
+// Momkene chenin eshtebahi koni:
+/*
+int main() {
+
+    if(true)
+        int x = 5;
+
+
+    x = 4; // Error --> (Out of Scope) hast
+    return 0;
+}
+*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Eshtebahat rayej dar esrtebat
