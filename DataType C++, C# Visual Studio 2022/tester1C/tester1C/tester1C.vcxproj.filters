@@ -49,6 +49,9 @@
     <Filter Include="Source Files\Season 6\Use values in several file %28Method 3%29">
       <UniqueIdentifier>{8e04c8e0-69fc-4214-83d5-1488a5fb2958}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Season7">
+      <UniqueIdentifier>{8aa187e8-2b80-4c64-9b24-d77df0f61db7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="signed.cpp">
@@ -311,6 +314,42 @@
     </ClCompile>
     <ClCompile Include="inline_Namespace.cpp">
       <Filter>Source Files\Season 6</Filter>
+    </ClCompile>
+    <ClCompile Include="Introduction%28S7%29.cpp">
+      <Filter>Source Files\Season7</Filter>
+    </ClCompile>
+    <ClCompile Include="if_Statement&amp;Blocks.cpp">
+      <Filter>Source Files\Season7</Filter>
+    </ClCompile>
+    <ClCompile Include="Moshkelat_Rayej_if.cpp">
+      <Filter>Source Files\Season7</Filter>
+    </ClCompile>
+    <ClCompile Include="Switch.cpp">
+      <Filter>Source Files\Season7</Filter>
+    </ClCompile>
+    <ClCompile Include="goto_statement.cc">
+      <Filter>Source Files\Season7</Filter>
+    </ClCompile>
+    <ClCompile Include="clock.cpp">
+      <Filter>Source Files\Season7</Filter>
+    </ClCompile>
+    <ClCompile Include="random_with_C.c">
+      <Filter>Source Files\Season7</Filter>
+    </ClCompile>
+    <ClCompile Include="while.cpp">
+      <Filter>Source Files\Season7</Filter>
+    </ClCompile>
+    <ClCompile Include="for.cpp">
+      <Filter>Source Files\Season7</Filter>
+    </ClCompile>
+    <ClCompile Include="Continue&amp;Break.cpp">
+      <Filter>Source Files\Season7</Filter>
+    </ClCompile>
+    <ClCompile Include="Halt.cpp">
+      <Filter>Source Files\Season7</Filter>
+    </ClCompile>
+    <ClCompile Include="Terminate.cpp">
+      <Filter>Source Files\Season7</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

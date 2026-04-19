@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mohamad\\Desktop\\halghe\\Loop\\Loop.csproj": {}
+    "C:\\Users\\Mohamad\\Desktop\\Learning-Cpp-Full\\Learning_CSharp_Full\\Tamrin\\S3\\Loops\\Loop\\Loop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mohamad\\Desktop\\halghe\\Loop\\Loop.csproj": {
+    "C:\\Users\\Mohamad\\Desktop\\Learning-Cpp-Full\\Learning_CSharp_Full\\Tamrin\\S3\\Loops\\Loop\\Loop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mohamad\\Desktop\\halghe\\Loop\\Loop.csproj",
+        "projectUniqueName": "C:\\Users\\Mohamad\\Desktop\\Learning-Cpp-Full\\Learning_CSharp_Full\\Tamrin\\S3\\Loops\\Loop\\Loop.csproj",
         "projectName": "Loop",
-        "projectPath": "C:\\Users\\Mohamad\\Desktop\\halghe\\Loop\\Loop.csproj",
+        "projectPath": "C:\\Users\\Mohamad\\Desktop\\Learning-Cpp-Full\\Learning_CSharp_Full\\Tamrin\\S3\\Loops\\Loop\\Loop.csproj",
         "packagesPath": "C:\\Users\\Mohamad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mohamad\\Desktop\\halghe\\Loop\\obj\\",
+        "outputPath": "C:\\Users\\Mohamad\\Desktop\\Learning-Cpp-Full\\Learning_CSharp_Full\\Tamrin\\S3\\Loops\\Loop\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
