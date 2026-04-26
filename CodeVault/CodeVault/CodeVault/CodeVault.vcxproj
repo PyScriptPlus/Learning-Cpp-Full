@@ -108,10 +108,12 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(SolutionDir)Lib_google_test;C:\Users\Mohamad\Desktop\Learning-Cpp-Full\Lib_google_test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>gtest.lib;gtest_main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -125,12 +127,14 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(SolutionDir)Lib_google_test;C:\Users\Mohamad\Desktop\Learning-Cpp-Full\Lib_google_test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>gtest.lib;gtest_main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -268,6 +272,7 @@
     <ClCompile Include="goo.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Google_Test.cpp" />
     <ClCompile Include="goto_statement.cc">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
@@ -391,6 +396,10 @@
     <ClCompile Include="signed.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="SoftwareTesting.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="SourceFile.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -419,7 +428,10 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Terminate.cpp" />
+    <ClCompile Include="Terminate.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Ternary_Operator.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -453,6 +465,29 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest-assertion-result.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest-death-test.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest-matchers.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest-message.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest-param-test.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest-printers.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest-spi.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest-test-part.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest-typed-test.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest_pred_impl.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest_prod.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\custom\gtest-port.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\custom\gtest-printers.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\custom\gtest.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\gtest-death-test-internal.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\gtest-filepath.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\gtest-internal.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\gtest-param-util.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\gtest-port-arch.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\gtest-port.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\gtest-string.h" />
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\gtest-type-util.h" />
     <ClInclude Include="a.hpp" />
     <ClInclude Include="add.hpp" />
     <ClInclude Include="b.hpp" />
@@ -462,6 +497,9 @@
     <ClInclude Include="Constants2.hpp" />
     <ClInclude Include="Constants3.hpp" />
     <ClInclude Include="growth.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Lib google_test\gtest\internal\custom\README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

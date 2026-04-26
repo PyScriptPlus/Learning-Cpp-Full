@@ -52,6 +52,15 @@
     <Filter Include="Source Files\Season7">
       <UniqueIdentifier>{8aa187e8-2b80-4c64-9b24-d77df0f61db7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Season7\gtest">
+      <UniqueIdentifier>{e210277d-66b0-462f-aeb1-1d7c36efe3e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Season7\gtest\internal">
+      <UniqueIdentifier>{6a928e27-7d64-4874-8b6d-2776f15aae9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Season7\gtest\internal\custom">
+      <UniqueIdentifier>{039a464d-e023-4511-a54b-f6d24805041d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="signed.cpp">
@@ -351,6 +360,12 @@
     <ClCompile Include="Terminate.cpp">
       <Filter>Source Files\Season7</Filter>
     </ClCompile>
+    <ClCompile Include="SoftwareTesting.cpp">
+      <Filter>Source Files\Season7</Filter>
+    </ClCompile>
+    <ClCompile Include="Google_Test.cpp">
+      <Filter>Source Files\Season7</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h">
@@ -380,5 +395,79 @@
     <ClInclude Include="b.hpp">
       <Filter>Source Files\Season 6\inline</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest.h">
+      <Filter>Source Files\Season7\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest_pred_impl.h">
+      <Filter>Source Files\Season7\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest_prod.h">
+      <Filter>Source Files\Season7\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest-assertion-result.h">
+      <Filter>Source Files\Season7\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest-death-test.h">
+      <Filter>Source Files\Season7\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest-matchers.h">
+      <Filter>Source Files\Season7\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest-message.h">
+      <Filter>Source Files\Season7\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest-param-test.h">
+      <Filter>Source Files\Season7\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest-printers.h">
+      <Filter>Source Files\Season7\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest-spi.h">
+      <Filter>Source Files\Season7\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest-test-part.h">
+      <Filter>Source Files\Season7\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\gtest-typed-test.h">
+      <Filter>Source Files\Season7\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\gtest-death-test-internal.h">
+      <Filter>Source Files\Season7\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\gtest-filepath.h">
+      <Filter>Source Files\Season7\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\gtest-internal.h">
+      <Filter>Source Files\Season7\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\gtest-param-util.h">
+      <Filter>Source Files\Season7\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\gtest-port.h">
+      <Filter>Source Files\Season7\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\gtest-port-arch.h">
+      <Filter>Source Files\Season7\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\gtest-string.h">
+      <Filter>Source Files\Season7\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\gtest-type-util.h">
+      <Filter>Source Files\Season7\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\custom\gtest.h">
+      <Filter>Source Files\Season7\gtest\internal\custom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\custom\gtest-port.h">
+      <Filter>Source Files\Season7\gtest\internal\custom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib google_test\gtest\internal\custom\gtest-printers.h">
+      <Filter>Source Files\Season7\gtest\internal\custom</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Lib google_test\gtest\internal\custom\README.md">
+      <Filter>Source Files\Season7\gtest\internal\custom</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -1,5 +1,2 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (DataType.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Terminate.cpp
-  CodeVault.vcxproj -> C:\Users\Mohamad\Desktop\Learning-Cpp-Full\CodeVault\CodeVault\x64\Debug\CodeVault.exe
-  'pwsh.exe' is not recognized as an internal or external command,
-  operable program or batch file.
+LINK : fatal error LNK1104: cannot open file 'gtest.lib'
