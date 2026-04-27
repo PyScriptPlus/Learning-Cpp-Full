@@ -35,7 +35,7 @@ make Season2
 OR
 ......
 ```
--Make clean:
+- Make clean:
 ```Makefile
 
 make cleanLinux
