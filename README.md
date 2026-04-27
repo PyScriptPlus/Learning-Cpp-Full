@@ -20,5 +20,27 @@ This project demonstrates the usage of C, C++, and C# languages in a single proj
 ![C#](https://img.shields.io/badge/Language-C%23-purple.svg)
 
 
+## Make
+- Make all seasons
+```Makefile
+
+make all
+
+```
+- Make one by one Example:
+```Makefile
+make Season1
+OR
+make Season2
+OR
+......
+```
+- Make clean:
+```Makefile
+
+make cleanLinux
+
+```
+
 ## LICENSE
 This project is licensed under the MIT License - see the LICENSE file for details.
