@@ -366,6 +366,24 @@
     <ClCompile Include="Google_Test.cpp">
       <Filter>Source Files\Season7</Filter>
     </ClCompile>
+    <ClCompile Include="Semantic_Error.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Generate_Random_Number.cpp">
+      <Filter>Source Files\Season7</Filter>
+    </ClCompile>
+    <ClCompile Include="Generate_Random_Number.c">
+      <Filter>Source Files\Season7</Filter>
+    </ClCompile>
+    <ClCompile Include="Random_Number_Algorithms.cpp">
+      <Filter>Source Files\Season7</Filter>
+    </ClCompile>
+    <ClCompile Include="distribution.cpp">
+      <Filter>Source Files\Season7</Filter>
+    </ClCompile>
+    <ClCompile Include="random_device.cpp">
+      <Filter>Source Files\Season7</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boolean_2.h">
