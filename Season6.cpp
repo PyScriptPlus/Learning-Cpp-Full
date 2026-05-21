@@ -296,3 +296,259 @@ int main() {
 */
 
 /*--------------------------------------------------------------------------------------------------------------------*/
+// Mabhas: Dastor Switch
+// Dar donyaye barname nevisi dastor switch kheyli kamtar az if estefade mishavad.
+// Koja estefade mishavad? Vaghti miaym az tedadi if | else if estefade mikonim
+// Khanayi codemun ro miyare payin 
+// Mesal:
+/*
+void foo(int x) {
+	
+	if(x == 1)
+		;
+	else if(x == 2)
+		;
+	else if(x == 3)
+		;
+	else
+		;
+	
+	return;
+}
+*/
+// Dar mesal bala: mas'ale avval ineke Variable X bayad 3 martabe Evaluate beshe ke aslan
+// Behine nist.
+// Manzur az Evaluate ya'ni in x bayad 3 bar barresi beshe x == 1, x == 2, x == 3
+// Mas'ale dovvom ine ke khanayi code kheyli eftezah mishe
+// Dar project haye bozorg ehtemal in hast ke 10 ta if-else benevisim.
+
+// Mesal bala ro biaym ba Switch Refactor konim
+// Mesal:
+/*
+void foo(int x) {
+
+	switch(x)
+	{
+		case 1:
+			std::cout << "Hello\n";
+			return;
+		case 2:
+			std::cout << "Bye\n";
+			return;
+		case 3:
+			std::cout << "World!\n";
+			return;
+		default:
+			std::cout << "else\n";
+			return;
+	}
+}
+*/
+
+// Khobi Switch bala nesbat be if ineke ke 1 bar Evaluate mishe ke behine hast
+// Va khanayi bala tari darad
+// Baraye sakhtan Switch Statement Keyword switch ro minevisim
+// Ba'ad yek parantez () gharar midim darunesh Expression mored nazar ro gharar midim
+// 90% mavaghe Expression ma yedune Variable hast mesl x balayi
+
+// Faghat bar khalaf zaban haye dige barname nevisi yek tafavoti dar inja vojud darad in chizi ke ma beyn
+// in 2 ta parantez () gharar midim dar nahat vaghti Evaluate mishe bayesti yek Integer ya Enumerated Type baraye ma bargarune.
+// Hala on x bala dar Switch gharar dadim age yek type Float, double, string bod behemun Error midad.
+
+// Inam begam mitunim type char ham estefade konim !!!
+
+// Chera C++ hamchin kari karde? Zaban C++ yek zabani hast ke dar hame ja mikhad be behine tarin nahv momken
+// Amal kone Kolan hadafesh behinegi bod.
+
+// Az on zamani ke Compiler haye C kar khodeshun ro shoru kardan marsum tarin shiveyi ke baraye Switch 
+// Dar nazar migerftan estafed az (Jump Table) bod.
+
+// Jump Table: Yek teknik behine sazi sath Compiler ast ke baraye ejraye kar amad dastorat Switch dar zaban haye C/C++
+// Estefade mishavad.
+// Dar in ravesh be jaye inke Compiler code Switch ra be zanjire az dastorat if, if-else (Ke barresi tartibi darand) tabdil konad.
+// Yek arraye az address haye hafeze (Function Pointer) dar zaman Compile ijad mikonad.
+
+// Mekanizm amalkard: 
+// 1- Sakht jadval: Compiler yek arraye dar bakhsh dade (Data Section) barname misazad ke Index haye on maghadir 
+// case (mesal 0,1,2,...) hastand va mohtavaye marbot be on case bayad az onja shoru shavad.
+// 2- Direct Jump: Dar zaman ejraye barname CPU ba estefade az meghdar Variable Switch mostaghiman be Index 
+// Marbot dar jadval dast rasi peyda karde va Address zakhire shode dar on ra mikhanad va bela fasele be on Address paresh mikonad. 
+
+// Mesal algorithmi:
+// Bedon Jump Table: Pichidegi zamani O(n) ast ya'ni agar 100 mored dashte bashim momken ast
+// 100 bar shart barresi shavad.
+// Ba Jump Table: Pichidegi zamani O(1) sabet ast ya'ni zaman residan be code marbote, sarf nazar az tedad kol case ha,
+// Hamishe yek bar khandan az Arraye ast.
+
+// Mored akhar darmored Jump Table: Tanha ba maghadir Integral kar mikonanad.
+
+
+// Bargardim be Switch bad az neveshtan Expression bayad yek Block | Brace baz baste gharar bedim va darunesh 
+// Label hamun ro gharar bedim 
+// Mesal 2 no' Label darim:
+// Case Label
+// Default Label
+
+// Baraye ta'rif case label: ebteda Keyword case ro gharar midim va ba'desh ya moghabelesh
+// Constant Expression gharar midim ya'ni hamun meghdari ke mikhaym bara bari sho check konim.
+
+// Khob age on Conditional Expression ke gharar dadim ba meghdari ke joloye case gharar dadim bara bar bashad
+// Statement haye case marbote ejra mishavad.
+
+// Mahdudiyati baraye tedad Case Label ha nadarim.
+// Vali age Case Label tekrari dashte bashi Error mide.
+// Mesal: Error mide !!!
+/*
+	case3:
+		;
+		return;
+	case3:
+		;
+		return;
+*/
+
+// Noe ba'adi Label: default label hast
+// Keyword default minevisi moghabelesh hichi nemizari be joz : 
+// Age adad mored nazar ya hamun Expression mored nazar bara bar ba hich kodum az case ha nabod default ejra mishe.
+// Default ekhtiyari ast mitunim gharar bedim mitunim gharar nadim.
+// Bishtar az 1 bar ham nemituni ghararesh bedi, be surat gharar dadi ham akharin label gharar midanesh in default ro
+
+// Mesal: Yek switch minevisam return nemizaram bebin
+/*
+void foo(int x) {
+	switch(x)
+	{
+		case 1:
+			std::cout << "Hello World!\n";
+		case 2:
+			std::cout << "Hello World!\n";
+		case 3:
+			std::cout << "Hello World!\n";
+		case 4:
+			std::cout << "Hello World!\n";
+		case 5:
+			std::cout << "Hello World!\n";
+		default:
+			std::cout << "Bye bye\n";
+	}
+
+}
+*/
+// Farz kon Argument x ro dadim 2 miyad case 2, case 3, case 4, case 5. default ro baram ejra mikone chera?
+// Case 1 ejra nashode chon bar gharar nabod x ma 2 bod case 2 bar gharar bod dastorat darunesh ejra mishe
+// Dastorat case haye ba'adi ham ejra mishe vaghti return ro gharar nadim.
+
+// So'al: Hala man mikham faghat az Switch biam birun va code haye birun switch ke darun Function hast ejra beshe
+// Bayad be jaye return az Keyword break; estefade konim.
+
+// Tosiye nahayi: hamishe dar entehaye Label haton baste be niyazetun return | break gharar bedin !!!
+
+// Yek mesal senario tor:
+// Senario: Vaghti character ma horuf seda dar bod True return kone 
+// Horuf seda dar mesl: A - E - I - O - U - a - e - i - o - u
+// Ba 2 ravesh piyade sazi mikonam ino
+// Avval ba conditional statement ba'ad ba Switch
+/*
+bool isVowel(char y) {
+	return (y == A || y == E || y == I || y == O || y == U || y == a || y == e || y == i || y == o || y == u);
+}
+*/
+// In mesal bala code khobi nist:
+// 1- Khanayi payin
+// 2- In variable y bayad 10 martabe barresi beshe ke behine nist!
+
+// Mesal ba switch: 
+/*
+bool isVowel(char y) {
+	switch(y)
+	{
+		case 'A':
+		case 'E':
+		case 'I':
+		case 'O':
+		case 'U':
+		case 'a':
+		case 'e':
+		case 'i':
+		case 'o':
+		case 'u':
+			return true;
+		default:
+			return false;
+	}
+}
+*/
+
+// Mored ba'adi: Mitunim ghabl va ba'ad az Case Label hamun Variable define ya declare konim 
+// Vali mojaz be Initialization nistim nemitunim meghdar dahi avvali konim error mide
+// Mesal:
+/*
+#include <iostream>
+
+int main() {
+	
+	int x;
+	std::cin >> x;
+	switch(x)
+	{
+		int a;
+		//int b = 5; // Error
+		case 1:
+			int y;
+			y = 5;
+			break;
+		case 2:
+			y = 10;
+			break;
+	}
+
+	return 0;
+}
+*/
+// Code kamelan mo'tabare: y ro meghdar dadam vali error nemide
+// Chon Assignment mojaz ast pas kamelan doruste
+// Omadam y ro dar case 2 meghdaresho bara bar ba 10 kardam ke kamelan mo'tabare
+// Chon y mota'legh be case 1 nist ke
+// Mota'legh be Scope khodesh hast
+// Scope in case 1 va case 2 yekie pas moshkeli nadare !!!i
+
+// Mesal dige:
+/*
+#include <iostream>
+
+void foo(int x) {
+
+	switch(x)
+	{
+		int y{};
+		int x{};
+		y = 7;
+		case 1:
+			int j;
+			j = 11;
+			std::cout << y << x << j << '\n'; // Output --> 0011
+		break;
+	}
+	std::cout << x << '\n'; // Output --> 1
+	return;
+}
+int main() {
+
+	foo(1);
+
+	return 0;
+}
+*/
+// Chera y 0 shod mage Assignment mojaz nabod bayad 7 mishod?
+// Chon kharej az case 1 meghdar dahi kardim faghat code haye case marbote ejra mishavad.
+// Case marbot ma ham 1 hast
+// Pas chera y va x ta'rif shode mage code haye case 1 faghat ejra nemishe? Define variable ba ejraye code fargh dare
+// Switch (Runtime Jump) darad
+// Vali define Variable yek mafhum jodas male (Compile Time / Scope) ast.
+// y az nazar Scope define shode vali az nazar ejra meghdar dahi nashode !!!
+// Tosiye: Define Variable dakhel Switch pishnahad nemishe !!!
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Goto statement
