@@ -552,3 +552,96 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Goto statement
+// No'e digar dastorat Control Flow ke mikhaym yad begirim: Unconditional Jump
+// Karesh ine ke noghte ejra az yek noghte az barname ra be yek noghte dige miparune Jump mizane !!!
+
+// Chera behesh migan Unconditional? Chon mesl if | switch nist ke dar surat bargharar budan shart
+// Be felan dastor Jump bezanim sharti vojud nadarad !!!
+
+// Baraye estefade az in bayad az dastor ( goto ) estefade konim.
+
+// Noghteyi ke mikhaym behesh beparim ba estefade az Statement Label ta'rif mikonim.
+// Mesal:
+/*
+#include <iostream>
+#include <cmath>
+
+int main() {
+
+	double x{};
+	tryAgain: // Label 
+	std::cout << "Enter a non-negative number: ";
+	std::cin >> x;
+	if(x < 0.0)
+		goto tryAgain;
+	std::cout << "The square root of " << x << " is: " << std::sqrt(x) << '\n';
+
+	return 0;
+}
+*/
+
+// Baraye mohasebe jazr az function std::sqrt() dar Library <cmath> estefade mikonam.
+// Dar S5 dar mored Scope ha sohbat kardim ke 2 no'e Scope dashtim:
+// Global Scope | File Scope
+// Local Scope | Block Scope
+
+// Yek no'e digar ham hast: Function Scope
+// In Label code bala ke neveshtam az in Function Scope estefade mikone
+// Be che ma'ni hast? In Label dar sarasar Function ke ta'rif shode dar dast rast ast hata
+// Ghabl az noghtei ke ta'rif shode
+// Mesal:
+/*
+void foo() {
+	
+	goto Label;	
+
+	Label: // Label
+
+	return;
+}
+*/
+
+// Deghat kon har 2 ta dar yek Function bashand !!!
+
+// Mesali digar:
+/*
+#include <iostream>
+
+void printCats(bool skip) {
+
+	if(skip)
+	{
+		goto end;
+	}
+	std::cout << "Cats\n";
+
+	end:
+	// return;
+}
+*/
+// Age akhar end chizi nabashe bebin return comment kardam
+// Warning mide:
+/*
+Season6.cpp: In function ‘void printCats(bool)’:
+Season6.cpp:620:1: warning: label at end of compound statement only available with ‘-std=c++23’ or ‘-std=gnu++23’ [-Wc++23-extensions]
+  620 | }
+	| ^
+*/
+// Mituni ba yek Null statement ham saket koni in Warning ro
+/*
+int main() {
+	
+	printCats(1);
+
+	return 0;
+}
+*/
+
+// Nokte: Aslan az in ( goto ) estefade nakon chon kamelan mansokh shode ast !!!
+
+// Dar dars PL(Programming Languages): Eyb haye digar goto ham migan khasti boro bekhunesh.
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: (Loop) While
