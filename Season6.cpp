@@ -645,3 +645,148 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: (Loop) While
+
+// Halghe yeki az por karbord tarin emkanati hast ke dar har zaban barname nevisi vojud darad.
+
+// In emkan mide majmo'ei az Statement ro ta zamani ke yek Shart bargharar bashad tekrar bekone.
+// Mesal dar zendegi Real:
+// Mesal bedon loop:
+// Man be yek nafar dige migam zang dar khone ro bezan 10 martabe hey migam zang khone ro bezan
+// Mesal ba loop:
+// Hamin senario bala man be yek nafar dige 1 bar migam 10 martabe zand bezan (Dige hey nemigam zang bezan)
+
+
+// Halat dige: Migam behesh ta zamani ke dar ro baz kone zang bezan !!!
+
+// Mesal codi bedon loop: Senario az 1 ta 10 chap kon
+/*
+#include <iostream>
+
+int main() {
+
+	std::cout << 1 << '\n';
+	std::cout << 2 << '\n';
+	std::cout << 3 << '\n';
+	std::cout << 4 << '\n';
+	std::cout << 5 << '\n';
+	std::cout << 6 << '\n';
+	std::cout << 7 << '\n';
+	std::cout << 8 << '\n';
+	std::cout << 9 << '\n';
+	std::cout << 10 << '\n';
+
+	return 0;
+}
+*/
+// Hala mikham loop while ro yad bedam in Senario ro ba while piyade konim
+// Syntax loop while:
+/*
+	while(condition)
+		statement;
+	
+	Bishtar az 1 statement Block mizarim:
+	
+	while(condition)
+	{
+		statement;
+		statement;
+	}
+
+	Age condition ma True bashe code haye darun Block ejra mishe
+	Shart khoruj az Loop False budan Condition hast
+
+	Ba break; ham mituni kharej beshi ke dar Switch ham goftam
+	Vali break; shart khoruj az Loop nist	
+*/
+// Mesal: 1 ta 10 print kon
+/*
+#include <iostream>
+
+int main() {
+
+	// Hala ma bayad loop while ro control konim ba ravesh Increment OR Decrement
+	int i = 0;
+	while(++i <= 10)
+		std::cout << i << '\n';
+
+	// Halat dige ba while hamin senario:
+	int y = 0;
+	while(y <= 9)
+	{
+		++y;
+		std::cout << y << '\n';
+	}
+
+	// Halat haye dige baste be Programmer dare chejuri codesho benevise
+	// Shayad yeki injuri benevise mesal:
+	int z = 0;
+	while(z <= 9) std::cout << ++z << '\n';
+
+	return 0;
+}
+*/
+
+// Ma mikhaym Loop be daf'at moshakhasi ejra beshe ke toye code bala goftam
+// Vali inja kamel tar tozih midam
+// Baraye inke niyaze be tedad daf'ati ke Loop ejra shode rahgiri dashte bashim 
+// Be no'ei yek Variable ijad mikonim mas'ol rahgiri hamin kar bashe be hamchin Variable migan
+// (Counter) ya (Gam halghe) ke dar besiyari az mavaghe type esh Integer hast
+// Variable Counter hatman Signed bashe
+
+// Loop i minevisam ke infinity bashe (Bi nahayat bashe):
+// Tanha rah birun omadan az in Loop estefade az:
+#if 0
+while(true)
+{
+	// return;
+	// break;
+	// exit;
+	// goto;
+	// exception
+	// Ya inke khodemun barname ro bebandim
+}
+#endif
+
+// Mesal:
+/*
+#include <iostream>
+
+int main() {
+
+	char c;
+
+	while(true)
+	{
+		std::cout << "Loop again: (Y/N)? ";
+		std::cin >> c;
+		if(c == 'N' || c == 'n')
+			return 0;
+	}
+	return 0;
+}
+*/
+
+// Loop haye to dar to dar for migam chon behtare dar for estefade beshe
+
+// Yek no'e digar az Loop mesl while hast be name: do-while
+// Injurie ke vaghti shart Loop ham False bashe Statement haye darunesh 1 martabe ejra mishan
+// Deghat kon: Ebteda Statement haye Loop ejra mishe ba'ad condition barresi mishe
+// Mesal:
+
+#include <iostream>
+#include <string>
+
+int main() {
+
+	std::string pssw = "MamaD";
+	std::string gpssw;
+	do
+	{
+		std::cout << "Enter your password: ";
+		std::cin >> gpssw;
+	}while(gpssw != pssw);
+
+	std::cout << "Success password !\n";
+
+	return 0;
+}
