@@ -772,7 +772,7 @@ int main() {
 // Injurie ke vaghti shart Loop ham False bashe Statement haye darunesh 1 martabe ejra mishan
 // Deghat kon: Ebteda Statement haye Loop ejra mishe ba'ad condition barresi mishe
 // Mesal:
-
+/*
 #include <iostream>
 #include <string>
 
@@ -790,3 +790,148 @@ int main() {
 
 	return 0;
 }
+*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: (Loop) for
+
+// Halghe for nesbat be halghe while por karbord tar ast
+
+// Dar zaban C++ dar hale hazer 2 no' halghe for vojud dare yekish ke az avval bude va yek no' jadid tari ham dar C++11 mo'arefi shod
+// Ebteda be no' avval mipardazim: Syntax for ke az 4 bakhsh tashkil shode
+/*
+	for(1 , 2 , 4)
+		3;
+
+	1: Shomarandamun hast
+	2: Shart halghe hast
+	3: Badane halghe Body
+	4: Gam ya hamun Counter 
+	
+	Bazam migam shart khoruj az halghe False budan ast
+*/
+
+// Be che tartibi halghe for ejra mishe?
+// Ebteda Variable halghe ijad mishe ya'ni shomare 1
+// Dar shomare 2 shart check mishe age True bod vared dastorat Halghe mishe hamun Body shomare 3
+// Ba'ad mire be baksh Shomare 4 ke Variable halghe dast kari mishe 
+// Dobare bar migarde be shomare 2 ba'ad 3 ba'ad 4
+// Ta zamani in kar tekrar mishe ke shomare 2 hamun Shart halghe False bashe
+// Mesal:
+/*
+#include <iostream>
+
+int main() {
+
+	for(int i{1}; i <= 10 ; ++i)
+	{
+		std::cout << i << '\n';
+	}
+	// Esm variable ( i ) yek jur gharar dad ast age yek for daruni ham bashe migan ( J ) darun inam bashe migan ( K )
+
+	return 0;
+}
+*/
+
+// Nokte: In 4 ta shomare age yekishun mesal: Ghesmat 2 ro hamun shart ro nazari error nemide chon hichkodum ejbari nist
+// Mesal:
+// for( ; ; ); // Loop infinity mishe !!!
+
+// Mesal baraye Loop haye to dar to:
+/*
+#include <iostream>
+
+int main() {
+
+	// Yek jadval zarb hast mesal
+	for(int i = 1; i <= 10; ++i)
+	{
+		for(int j = 1; j <= 10; ++j)
+			std::cout << i * j << "\t";
+		std::cout << '\n';
+	}
+
+	return 0;
+}
+*/
+
+// Kalame Iteration: ya'ni tekrar yek seri dastor chand bar ta vaghti yek shart bargharar bashad.
+// Dar halghe to dar to halgheye daruni kamel ejra mishe ya'ni int j = 1 ham ejra mishe har bari ke shart i bar gharar bod
+
+// Khob vaghti keyword for ro minevisi va Tab mizani kamel kone yani barat miyare:
+/*
+for(size_t i = 0; i < counter; i++)
+{
+
+}
+*/
+
+// In size_t chejur DataType hast?
+// size_t yek no' dade adadi bedun alamat (unsigned) dar C/C++ ast ke baraye namayesh Lengh ha va Index ha estefade mishe.
+// size_t no'i adad sahih gheyr manfi ast ke baraye negahdari: Andaze hafeze, andaze Arraye ha, natayej function sizeof()
+// Mesal: size_t s = sizeof(int);
+
+// Chera dar halghe for estefade mishe in size_t? 
+// Vaghti roye Arraye ya Container ha mesl (vector, string) halghe mizanid function size() onha meghdar size_t bar migardune
+// Mesal:
+/*
+#include <iostream>
+#include <vector>
+
+int main() {
+	
+	std::vector<int> v = {1,2,3};
+	for(size_t i = 0; i < v.size(); ++i)
+	{
+		std::cout << v[i] << '\n';
+	}
+
+	return 0;
+}
+*/
+// Chon v.size() az no' size_t ast behtar ast i ham size_t bashad ta Warning Compiler darbare moghayese ( signed ) va ( unsigned ) ijad nashavad.
+// Size khod DataType size_t be me'mari system bastegi darad:
+// System 32 biti: 4Byte
+// System 64 biti: 8Byte
+
+// Nokte: Index haye Vector Vector az 0 ast.
+/*
+	// Ina doruste:
+	i < v.size()
+	i <= v.size() - 1
+
+	// In ba'es UB mishe:
+	i <= v.size()
+*/
+
+// No'e ba'adi for: Renge-based for
+// In no' dar C++11 mo'arefi shod tamiz tar ham hast
+/*
+	for(type Variable : container)
+	{
+		Body
+	}
+*/
+// Manzur az Container on sakhtar hayi ast ke chand dade ra dar khodeshun negah midarand
+// Container = Zarfi baraye chand meghdar
+// Mesal: string ham Container ast chon majmuyi az char hast
+// Mesal codi:
+
+#include <iostream>
+#include <string>
+
+int main() {
+
+	std::string s = "Hello";
+	for(char c : s)
+	{
+		std::cout << c << '\n'; // H \n e \n l \n l \n o \n
+		// Yeki yeki char haro chap mikone 
+	}
+
+	return 0;
+}
+
+// Harf akhar for no' dovvom ba size_t dar ayande kamel barresi mikonim ba Arraye ha ba vector ina kamel barresi mishe
+// In faghat ashnayi kochik bod dar bareye Arraye va peymayesh arraye ba for ha
