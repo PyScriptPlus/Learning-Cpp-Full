@@ -917,7 +917,7 @@ int main() {
 // Container = Zarfi baraye chand meghdar
 // Mesal: string ham Container ast chon majmuyi az char hast
 // Mesal codi:
-
+/*
 #include <iostream>
 #include <string>
 
@@ -932,6 +932,46 @@ int main() {
 
 	return 0;
 }
-
+*/
 // Harf akhar for no' dovvom ba size_t dar ayande kamel barresi mikonim ba Arraye ha ba vector ina kamel barresi mishe
 // In faghat ashnayi kochik bod dar bareye Arraye va peymayesh arraye ba for ha
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Keyword break & continue
+
+// Ba break ke ashnayi darim dar Switch goftam che kari mikone?
+// Zamani ke Keyword break dar Switch estefade mikonim ba'es mishod noghte ejraye barname az Switch
+// Birun biyad va baghiye dastorat ejra she hamin kalame ro mitunim dar for & while & do-while estefade konim
+// Ke daghighan hamun kar ro mikone ham baraye for & while & do-while
+
+// Mesal ba while:
+/*
+	int x{};
+	while(x > 1)
+	{
+		--x;
+		break;
+		++x; // In dige ejra nemishe !!!
+	}
+*/
+
+// Khob Continue chiye? continue ba'es nemishe az kol loop birun biaym vali ba'es mishe
+// Az Iteration fe'li birun biaym
+// Mesal mizanam farz kon 10 bar tekrar darim in 10 ta Iteration ma ast 
+// Toye 4 omi continue gharar midim ono ejra nemikone mire baghiye ro ejra mikone
+
+// Mesal codi ba for:
+/*
+	for(int i = 1; i <= 10; ++i)
+	{
+		if(i == 4)
+		{
+			continue;
+		}
+		std::cout << i;
+	}
+*/
+
+// Vaghti mirese be 4 on if ejra mishe va continue ba'es mishe bepare be (gam loop | counter)
+// Dar while ham mipare be (shart loop | condition)
