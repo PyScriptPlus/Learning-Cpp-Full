@@ -975,3 +975,170 @@ int main() {
 
 // Vaghti mirese be 4 on if ejra mishe va continue ba'es mishe bepare be (gam loop | counter)
 // Dar while ham mipare be (shart loop | condition)
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Dastorat Halt
+
+// Khob in Halt chiye? yek dastori ke ba'es mishe barname payan peyda bekone.
+
+// Dar zaban C++ Halt yek keyword nist balke be vasile Function ha piyade sazi mishe.
+
+// Yek moruri konim vaghti ke yek barname be surat Normal payan peyda mikone
+// Zamani ke function main karesh tamum mishe az tarigh return 
+// Ba'ad az tamum shodan chand etefagh miofte:
+// Avvalish: Hame Local Variable ha va Function parameters ha az beyn miravand
+// Mored ba'di inke yek function makhsus be esm std::exit() call mishe !!!
+
+// Nokte: pas Global Variable ha chi mishe? Ta payan kol barname dar hafeze
+// Baghi mimanand vaghti main() tamum shod va barname dar hale terminate
+// Shodan ast
+// Agr Global Variable az no' Class/Object bashad destructor on ejra mishe
+// Sepas hafeze azad mishavad (Destructor ro dar season haye ayande mikhunim)
+// Nokte mohem:
+// Hafeze Global Variable ha ma'molan dar 
+// BSS Segment / Data Segment gharar darad na dar Stack
+// Agar Global Variable meghdar dahi shode bashad dar
+// Data Segment gharar migirad vali agar meghdar dahi nashode bashad
+// Dar BSS Segment gharar migirad
+// Inayi ke baraye Global Variable ha goftam shamel 
+// Static Variable ha ham mishe !!!! 
+// static int s_x = 5;
+
+// BSS mokhafaf chist? Block Started by Symbol
+// In estelah az Assembler haye ghadimi (Mesl IBM) amade ast.
+
+// Hala be in std::exit() yek Status Code pas dade mishe hala in Status Code chiye?
+// Hamun status codi ke function main() return mikone mesal zamani ke migim
+// return 0; in 0 pas dade mishe be onvan Argument be --> std::exit(0);
+
+// In Function std::exit() aslan chiye? Ba'es mishe barname ma be surat Normal
+// Khateme peyda kone hamun Normal Terminate anjam beshe
+
+// Key barname ma Normal Terminate mishe? Zamani ke status code 0 return beshe
+// Agar gheyr 0 bashe neshun dahande adam movafaghiyat barname ast
+// Vali in barname hamchenan Normal Terminate ro dashte
+// Normal Terminate ya'ni hamintor ke azash entezar mirafte payan yafte 
+// Kar ba'adi ke anjam mide std::exit() miyad be tor koli yek seri 
+// Paksazi haye ba'ad barname ham anjam mide va dar marhale sevvom
+// Kar mide be dast OS
+
+// In function std::exit() be surat implicit hamun gheyr mostaghim seda zade mishe
+// Vali ma ham mitunim be surat Explicit (Mostaghim) call konim
+
+// Baraye call kardan in function bayad HeaderFile <cstdlib> ro include konim
+// Mesal:
+/*
+#include <iostream>
+#include <cstdlib>
+
+void cleanUp() { // Jolo tar migam chera in function define kardam
+	std::cout << "CleanUp\n";
+	return;
+}
+
+int main() {
+
+	std::cout << 1 << '\n';
+	std::exit(0);
+	std::cout << 2 << '\n';
+
+	return 0;
+}
+*/
+// In Function exit() be joz function main() function haye dige ham mishe call
+// Kard.
+// Argument 0 ham dadam ke Normal Terminate beshe age mesal 1 midadam
+// Alamat ghermez dar terminal khod vscode neshun midad ke neshun dahande
+// abnormal ast.
+// Nokte: Zamani ke in function exit ro be surat mostaghim seda mizanim dige
+// On Paksazi Local varibale, Function Parameters anjam nemishe
+// Baraye hamin behtare be surat mostaghim seda nazanim magar dar sharayet 
+// Kheyli khas
+// Hala ghabl az call kardan exit() behtare yek seri paksazi ha ro khodemun
+// Anjam bedim (Be surat dasti) mesal:
+// Disconnect ba database, diconnect internet, Deallocate kardan hafeze
+// Neveshtan yek chizayi dar Log file
+// Dar code bala function cleanUp ke goftam tozih midam mesal hadafesh paksazi
+// Bod baraye inke ma nayaym in fcuntion cleanUp ro call konim
+// Ya shayad yademun bere zaban C++ omade automatic in karo mikone 
+// Ba function std::atexit();
+// Be ma in emkan mide in cleanUp behesh bedim va har vaght std::exit();
+// Call beshe in fcuntion cleanUp be tur automatic khodesh call mishe
+// Mesal:
+/*
+#include <iostream>
+#include <cstdlib>
+
+void cleanUp() {
+	std::cout << "CleanUp\n";
+	return;
+}
+
+int main() {
+
+	std::atexit(cleanUp); // Deghat kon parantez() nemizarim
+
+	std::cout << 1 << '\n';
+	std::exit(0);
+	std::cout << 2 << '\n';
+
+	return 0;
+}
+*/
+
+// Zaban C++ 2 ta function dige ham baraye in Halt dare:
+// abort() ke ba'es mishe barname ne surat gheyr normal khateme peyda kone
+// abnormal terminate
+
+// abnormal termination: ya'ni barname daraye no'i khataye runtime bode
+// Va barname natuneste be ejraye khodesh edame peyda bekone
+// Niyaz bode barname edame peyda bekone vali khatayi anjam shode
+// In barname khateme peyda karde
+// Nokte: abort hichgone paksazi anjam nemide
+// Mesal:
+/*
+#include <iostream>
+#include <cstdlib>
+
+int main() {
+
+	std::cout << 1 << '\n';
+	std::abort();
+	std::cout << 2 << '\n';
+
+	return 0;
+}
+*/
+
+// Mored akhar terminate hast ke bishtar hamrah Exception ha mored estefade 
+// Gharar migire (Dar Season haye ayande kamel yad migirim in Exception ro)
+// Vali ma mitunim in function ro mostaghim estefade konim
+// Vaghti terminate() call she be surat default function abort() ham call mishe
+
+// Aghlab be surat implicit (gheyr mostaghim) dar zamani ke yek Exception
+// Modiriyat nashode dashte bashim call mishe
+
+// Inayi ke goftam hamasho dar Exception ha yad migirim
+
+// So'al che zamani az Halts estefade konim? Never
+
+// Mesal baraye terminate:
+/*
+#include <iostream>
+#include <exception>
+
+int main() {
+
+	std::cout << 1 << '\n';
+	// In function goto definition koni mituni function abort ro bebini
+	std::terminate(); 
+	std::cout << 2 << '\n';
+
+	return 0;
+}
+*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Software testing
