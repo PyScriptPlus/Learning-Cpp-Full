@@ -1142,3 +1142,46 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Software testing
+
+// Ma vaghti yek barname minevisim compile mikonim va ejrash mikonim be nazaretun kar tamum
+// Shode ast ya na?
+// Bastegi dare agar ma barname ro neveshtim faghat 1 martabe ejra beshe ba'ad
+// Kenar begzarim tamam bale kar tamum shode ast
+// Agar barname benevisim ke kamelan khati (Linear) manzur az Linear ineke
+// Na if, while, for va barname aslan hich input nemigire dar in surat ham kar tamume
+
+// Hala agar barname dashte bashim ke loop dare dastorat sharti dare kar tamum shode
+// Nist chera? chon inke barname yekbar dorust amal karde taht 1 halat bode
+// Va in hich tazmini be ma nemide ke dar sayer halat ha ham be dorusti kar kone
+
+// Bahs software-testing ham baraye in mas'ale shekl gerft karesh ineke tayin kone
+// Aya yek barname dar sayer halat be dorusti kar mikone ya na
+// Hich testi vojud nadarad va aslan ham hadaf test in nist tamam kamal halat
+// Barname ro test bekone
+
+// Farz kon 2 ta Variable darim x, y beheshun meghdar midim
+// x = 5, y = 4
+// Dar if barresi mikonim kodam bozorg tare age x ovard ya'ni barname dar 1 halat doruste
+// Hala kochek tarin va equal ro test mikonim age in halat ha ham javab dad barname
+// Ma doruste baraye chenin chizi test minevisim ke in 3 halat be dorusti kar mikone ya na
+
+// Test miad chenin halat ha ro test mikone dige nemiyad hame maghadir x va y ro test kone
+
+// Estelah haye unit-test, integration-test
+// unit test: Yek bakhsh kochiki az code ro be surat isolated (joda, mojaza) az 
+// Barname test mikone
+
+// Integration test: zamani ke ma unit test hamun ro be surat joda gone test kardim
+// unit haro dar kenar ham gharar midim va baham test mikonimeshun
+
+// In test ha ro ba yekseri abzar haye makhsus khod zaman mishe test kard
+
+// Mesal:
+// Baraye zaban C++ abzar (Google Test) ast.
+// Baraye C abzar (Google Test, cunit, check) ast.
+// Baraye C# abzar (Xunit) ast.
+// Baraye Java abzar (Junit) ast.
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Semantic Errors
