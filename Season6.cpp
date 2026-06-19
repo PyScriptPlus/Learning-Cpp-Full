@@ -1185,3 +1185,29 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Semantic Errors
+
+// Dar gozashte man dar mored Syntax Errors sohbat kardam goftim ke in no' error ha zamani 
+// Be vojud miyad ke grammer zaban ro ro'ayat nakonim va khod compiler ham mige error koja surat gerfte
+
+// Dar noghte moghabel ma Semantic Error haro darim ke bar taraf kardanesh sakhte chon ma codi khalaf
+// Ghava'ed zaban naneveshtim vali barname kari ke azash entezar dashtim bekone ro nemikone 
+// Khata haye ma'nayi momken monjar be UB beshe
+// Undefined Behavior monjar be che natayeji mishod?
+// Barname natayej ghalati tolid bekone, monjar mishod yekseri oghat natije ghalat bashe,
+// Ba'es crash shodan barname mishe va ...
+
+// Ta akhar omr ba Semantic Error ha kar darim 
+// Mesal: barname neveshtam adad 10 ro ba 5 zarb mikone be jaye adad 50 dar khoruji
+// Adad 2 ro be onvan output neshun mide bejaye ( * zarb ) gozashtim ( / tasghim )
+
+// Dar project haye bozorg peyda kardan chenin khata hayi ehtemalan 2 3 ruz tul bekeshe
+
+// Semantic Error Feature:
+// 1- Compiler ma'molan on ro tashkhis nemide
+// 2- Barname ejra mishe
+// 3- Output ya raftar barname eshtebah ast
+// 4- Marbot be Logic (Mantegh) barname ast
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Generate Random Number (Mohem!)
