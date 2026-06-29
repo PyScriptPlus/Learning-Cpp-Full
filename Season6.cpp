@@ -1211,3 +1211,123 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Generate Random Number (Mohem!)
+
+// Mikham dar mored Random Number bahs konam be che dardi mikhore?
+// Dar game ha, Ai, Blockchain, Encryption va ... be dard mikhore.
+// Mesal dar game ha: dar game Mortab Combat har bari ke ba harif mobareze mikoni 
+// (Manzuram harif computeri hast) Ye jur dige mosht mizane har bar be yek shekl ke hamle nemikone !!!
+
+// Dar donyaye real partab coin (shir, khat) yek chiz random ast
+// Albate zat in kar ha random nist ya'ni masalan dar partab coin yek factor hayi mesl
+// Gravity, Estehkak, hava va energy ke be coin vared shode
+// Yek seri amel dige ta'sir gozare agar ma hameye in factor haro bedunim va daf'e ba'ad mitunim
+// Be hamun surat tekraresh konim natije ghali ro migirim (Pas zaatan random nist in kar)
+
+// In factor haro ma ensan ha age bekhaym andaze begirim gheyr ghabel momken hast
+// Pas hamun Random dar nazar migirim.
+
+// Khob Computer ha coin ya dice nadare ke partab kone
+// Donyaye Computer 0 , 1 hast
+// Zaatan turi tarahi shode ke natayej ghabel pishbini ast
+// Pas zaat Computer ha ghader be Tolid adad tasadofi nist !!!
+
+// Hich systemi dar donya vojud nadare ke adad tasadofi tolid kone.
+
+// Va hameye barname hayi ke baraye tolid adad tasadofi neveshte shode be no'i (Pseudo Random) ast
+
+// Hala yek negahi be mafhum Algorithm va State bendazim 
+// Algorithm chiye? Yek tavali mahdud az Instructions hast 
+// Ke be tartib az avval ta be akhar donbal mishe ta yek mas'ale ro hal bekone
+// Va yek natije tolid beshe
+// Mesal:
+// Daryaft List na moratab yek tavali moshakhas az kar haro anjam dadam va yek output
+// Moratab az list hasel shod.
+
+// Yek Algorithm minevisam ke har daf'e on adad nesbat be adad ghabli yek vahed bishtar beshe
+/*
+#include <iostream>
+
+int plusOne() {
+	static int s_state{0};
+	return s_state++;
+}
+
+int main() {
+	
+	for(int i = 0; i <= 10; ++i)
+		std::cout << plusOne() << '\n';
+
+	return 0;
+}
+*/
+// Be hamchin Algorithmi migim Stateful ya state dar
+// Chera migim stateful? chon yek ete'lat dar darun khodesh dare va in 
+// Ete'lat ro hefz mikone 
+// Stateful = chizi ke hafeze az gozashte dare
+
+// Stateful ro be surat bar'aks ham darim algorithm stateless ya bedun state
+// Ya'ni meghdari baraye ejra haye ba'adi dar darun khodesh hefz nemikone
+
+// Algorithm bala ke neveshtim deterministic (Ghati) ham hast ya'ni chi?
+// Agar input yeksan bedahim ke 0 dadam output hamishe yeksan ast taghiri nemikone
+
+// Baraye tolid adad tasadofi az 
+// Pseudo Random Number Generator estefade mikonim
+// Yek Algorithm Classic tolid adad random minevisam
+// Yeki az ma'rof tarin Algorithm ha 
+// Linear Congruential Generator (LCG)
+// Mesal:
+/*
+#include <iostream>
+
+unsigned int LCG() {
+
+	static unsigned int s_state{5323};
+	s_state = 8253729 * s_state + 2396403;
+	return s_state % 32768;
+}
+
+int main() {
+	
+	for(int i = 1; i <= 100; ++i)
+	{
+		std::cout << LCG() << '\t';
+		if(i % 10 == 0) std::cout << '\n';
+	}
+
+	return 0;
+}
+*/
+// In if dakhel loop gozashtam vaghti 10 adad ro chap kard beravad be 
+// Line ba'adi
+// In mesal bala paye tolid random ha ast
+// Meghdar s_state avvalie ro ba chrono bezar steady_clock ta adad tekrari chap nashe ba har ejra
+// Jalase ba'adi yad midam chejuri behesh Seed bedim
+
+// Mesali ba chrono (Yad giri in code jalase haye ba'adi)
+
+#include <iostream>
+#include <chrono>
+
+unsigned int LCG() {
+
+	static unsigned int s_state
+	{static_cast<unsigned int>(std::chrono::steady_clock::now().time_since_epoch().count())};
+	s_state = 8253729 * s_state + 2396403;
+	return s_state % 32768;
+}
+
+int main() {
+	
+	for(int i = 1; i <= 100; ++i)
+	{
+		std::cout << LCG() << '\t';
+		if(i % 10 == 0) std::cout << '\n';
+	}
+
+	return 0;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Generate Random Number with C Language (Old Method)
