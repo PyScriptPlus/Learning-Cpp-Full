@@ -1305,7 +1305,7 @@ int main() {
 // Jalase ba'adi yad midam chejuri behesh Seed bedim
 
 // Mesali ba chrono (Yad giri in code jalase haye ba'adi)
-
+/*
 #include <iostream>
 #include <chrono>
 
@@ -1327,7 +1327,37 @@ int main() {
 
 	return 0;
 }
-
+*/
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Generate Random Number with C Language (Old Method)
+
+// Ravesh ghadimi ke az zaban C omade 2 ta function baraye Generate Random:
+// rand() , srand() (srand mokhafaf SeedRandom)
+// In rand() hamishe az yek seed avvalie sabet estefade mikonad
+// Baraye inke har bar ejraye barname adad motafavet bashad az 
+// srand() estefade mikonim ke be rand() seed mide
+// Ma'molan seed ra az time system migirim (In ravesh ghadimie !!!) (Ravesh jadid migam jalase ba'ad)
+// Formul: rand() % (max - min + 1) + min
+// Mesal:
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+
+	srand(time(NULL));
+
+	for (int i = 1; i <= 50; i++)
+	{
+		printf("%d\t",(rand() % (10 - 0 + 1) - 0));
+		if(i % 10 == 0)
+			printf("\n");
+	}
+	
+	return 0;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Algorithms Random Number in C++
