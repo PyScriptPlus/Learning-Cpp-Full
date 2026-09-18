@@ -1340,6 +1340,7 @@ int main() {
 // Ma'molan seed ra az time system migirim (In ravesh ghadimie !!!) (Ravesh jadid migam jalase ba'ad)
 // Formul: rand() % (max - min + 1) + min
 // Mesal:
+/*
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -1362,8 +1363,127 @@ int main() {
 	
 	return 0;
 }
+*/
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Algorithms Random Number in C++
 
+// Baraye estefade az ghabeliyat hayi ke zaban C++ baraye tolid random number era'e karde avval
+// Az hame chiz bayad HeaderFile random ro include konim va ba'adesh niyaz be yek 
+// Algorithm darim be name ( Mersenne Twister )
+// Mashhur tarin Algorithm Generate Random Number dar beyn hame zaban haye Barname nevisi ast
+// Performance khubi ham dare Library random az 2 no'e Mersenne Twister poshtibani mikone
+// Version 32bit & 64bit
+
+// mt19937 --> 32bit
+// mt19937_64 --> 64bit
+
+// Mesal:
+/*
+#include <iostream>
+#include <random>
+
+int main() {
+
+	// Bayad Mersenne Twister ro Instantiation bekonim tozih midam jolo tar
+	std::mt19937 mt;
+	// std::cout << mt.operator()();
+	for(int i = 1; i <= 20; ++i)
+	{
+		std::cout << mt() << '\t';
+		if(i % 5 == 0)
+			std::cout << '\n';
+	}
+
+	return 0;
+}
+*/
+// Nokte: Az onja ke mt ro be surat yek Variable define kardim chetori omadim
+// Az form yek Function call kardim? mesal: mt()
+
+// In mt() yek Syntax kholase hastesh ya'ni be jaye inke begi
+// mt.operator()() migi mt() dar tul dore inaro yad migirim.
+// Code bala yek seri argham random bozorg tolid mikone vali man
+// Mikham mesal: Dice(Tas) ro shabih sazi konim argham beyn 1-6 niyaz daram
+// Library random omade ba estefade az distribution hayi ke era'e dade ba ma komak
+// Mikone be in hadaf beresim yek distribution miyad output in Algorithm ro be yek range
+// Mad nazar mahdud mikone.
+
+// Distribution haye ziadi vojud dare vali bishtareshun be karemun nemiyad
+// Yekish ke kheyli por estefade ast esmesh ham uniform distribution hastesh
+// uniform distribution yek output beyn x, y ba ehtemal yeksan baraye ma generate mikone
+// Mesal: dice
+/*
+#include <iostream>
+#include <random>
+
+int main() {
+
+	std::mt19937 mt;
+	std::uniform_int_distribution dice(1,6); // or {1,6}
+
+	for(int i = 1; i <= 20; ++i)
+	{
+		std::cout << dice(mt) << '\t';
+		if(i % 5 == 0)
+			std::cout << '\n';
+	}
+
+	return 0;
+}
+*/
+
+// Output code bala adad beyn 1 ta 6 hastesh 
+
+// Vali yek nokte dare: Har bar ke barname ro ejra konim output ghabli ro mide
+// Aslan farghi nemikone dalilesh chiye?
+// Chon har bari ke barname ro ejra mikonim hamun seed ghabli dare be in Algorithm
+// Dade mishe 
+// Bayad chikar konim?
+// Bayad har bar yek Seed jadid bedim behesh
+// Ma goftim Computer be tor tabiei random number generate kone
+// Pas az yek Algorithm be name Pseudo-Random Number Generate estefade mikone
+
+// Seed chiye? in Algorithm bala (PRNG) baraye shoru kar niyaz be yek meghdar avvalie darad
+// In meghdar avvalie haman Seed ast
+// Seed = Noghteye shoru Algorithm Pseudo Random Number Generate 
+
+// Vaghti be tolid konanade adad tasadofi yek Seed bedi:
+// 1- Algorithm az on meghdar shoru mikone
+// 2- Va az roye on, donbalei az adad shebh tasadofi tolid mikonad
+// 3- Agar dobare yek Seed yeksan bedahi, Hamun donbaleye adad tolid mishavad.
+
+// So'al mohem: Seed motafavet az koja biyarim? 
+// Behtarin chiz sa'at Computer hast !!!
+// Baraye dastrasi be sa'at bayad HeaderFile chrono ro include konim
+// Mesal:
+
+#include <iostream>
+#include <random>
+#include <chrono>
+
+void randomGenerate();
+
+int main() {
+
+	randomGenerate();
+
+	return 0;
+}
+
+void randomGenerate() {
+
+	std::mt19937 mt{static_cast<unsigned int>
+		(std::chrono::steady_clock::now().time_since_epoch().count())};
+	std::uniform_int_distribution dice{1,6};
+	for (int i = 1; i <= 20; i++)
+	{
+		std::cout << dice(mt) << '\t';
+		if(i % 5 == 0)
+			std::cout << '\n';
+	}
+	return;
+}
+
+// End Project Season 7 .........................
