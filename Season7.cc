@@ -36,3 +36,66 @@
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Tabdil type zemni (Implicit)
+
+// Mikham dar mored (implicit type conversion) ke behesh (Automatic type conversion) ham migan sohbat konim.
+
+// Goftim in tabdil tavasot Compiler anjam mishe jalase ghabl ham mesal zadam barash !!!
+// Chand mesal bazam mizanam:
+
+// double x{3}; // Compiler miyad 3 sahih ro be 3.0double tabdil mikone
+/*
+	Mesal dige ba function ha:
+	inja ham Compiler 3 a'shar double ro be float tabdil mikone
+
+	float doSome() {
+		return 3.0;
+	}
+
+*/
+
+// Mesal dige: in 3 tabdil mishe be double output sham a'shari mishe
+// double x {4.0 / 3};
+
+// Mesal dige: 
+/*
+	Dar condition if bayad meghdar Boolean bashe in 5 ham tabdil mishe Boolean
+	if(5) { ; }
+*/
+
+// Mesal dige:
+/*
+	void doSome(long x) {
+		;
+	}
+	doSome(3); Call kardim va in 3 int tabdil mishe be long
+*/
+
+// Che mogheyi dar tabdil Implicit error mide? Mogheyi ke Compiler nadune chetor bayad 
+// Type mabda' ro be type maghsad tabdil kone 
+// Mesal chejuri bedune string hello ro be integer tabdil kone error mide !!!
+
+// Baraye inke adad long ya long long bashe bayad az Suffix estefade konim:
+// 3L | 3l (long)
+// 3LL | 3ll (long long)
+
+// Ba'zi vaghta Statement ke estefade kardim in ejaze ro nemide mesal: int x{5.6};
+// In Syntax Brace Initialization be ma ejaze tabdil ke monjaz be az dast dadan Data beshe ro nemide.
+
+// Nokte: Compiler midune chejuri 3.5 ro be int tabdil kone vali in Syntax Brace Initialization
+// Ke bala neveshtim ejaze nemide !!!
+
+// Compiler az koja mitune tayin bekone aya mitune yek meghdar ro az mabda' be maghsad bebare ya na?
+// Standard C++ tayin mikone chetori Fundamental type ha va Compound Type haye C++ chejuri mitunand be ham
+// Tabdil beshan.
+
+// Be in ghavaed migan: Standard Conversion
+
+// Standard Conversion: be 4 daste taghsim mishe:
+// 1- Numeric Promotion
+// 2- Numeric Conversion
+// 3- Arithmetic Conversion
+// 4- Pointer Conversion (Next Season or Season 10)
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Numeric Promotion
