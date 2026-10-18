@@ -4,11 +4,11 @@ STD = -std=c++20
 FLAG = -static -Wall -Wextra
 
 #IGNORE Error:
-.IGNORE: Season1 Season2 Season3 Season4 Season5 Season6
+.IGNORE: Season1 Season2 Season3 Season4 Season5 Season6 Season7
 # .IGNORE: cleanLinux
 
 #Compile all projects
-all: Season1 Season2 Season3 Season4 Season5 Season6
+all: Season1 Season2 Season3 Season4 Season5 Season6 Season7
 
 # Season1
 Season1: Season1.cpp
@@ -52,9 +52,16 @@ Season6: Season6.cpp
 	./Season6_GNU
 	./Season6_CLG
 
+# Season7
+Season7: Season7.cc
+	$(GNU) $(STD) $(FLAG) Season7.cc -o Season7_GNU
+	$(CLG) $(STD) $(FLAG) Season7.cc -o Season7_CLG
+	./Season7_GNU
+	./Season7_CLG
+
 cleanLinux:
 #Updated Soon
 # 	rm -r ./Season1.exe ./Season2.exe
 # 	rm -r ./Season3.exe ./Season4.exe 
 # 	rm -r ./Season5.exe ./Season6.exe
-
+#   rm -r ./Season7.exe
