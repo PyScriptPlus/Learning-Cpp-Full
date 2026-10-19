@@ -11,15 +11,19 @@ is returned in the parent, no child process is created, and errno is set to indi
 */
 	printf("Hello process Parent\n");
 	
-	pid_t pr = fork();
+	pid_t pr = fork(); // Create process
 
 	if(pr == 0)
 	{
 		printf("Child process\n");
+		printf("My Process ID: %d\n", getpid());
+		printf("My Parent Process ID: %d\n", getppid());
 	}
 	else if(pr > 0)
 	{
 		printf("Parent process\n");
+		printf("My Process ID: %d\n", getpid());
+		printf("My Parent Process ID: %d\n", getppid());
 	}
 	else if(pr == -1)
 	{
