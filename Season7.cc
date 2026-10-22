@@ -317,3 +317,78 @@ int main() {
 // Be dalil vojud bahs Numeric-Promotion
 
 /*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Numeric Conversion
+
+// Dar jalase ghabl dasteye Numeric Promotion ro barresi kardim ke shamel tabdil
+// Anva'e adadi kotah tar be boland tar ya be estelah 
+// Narrower to Wider
+
+// Hala C++ az dasteyi digar az tabdil ha ham poshtibani mikone be esm Numeric Conversion
+// Ke shamel ghavaedi mishe ke tavasot Numeric Promotion poshesh dade nemishe !!!
+// In Promotion yek seri poshtibani haro anjam nemide ke in Numeric Conversion miyad
+// In poshtibani ro anjam mide 
+// Kholase: Yekseri tabdil hayi ke ba Promotion nemishe anjam dad ba in
+// Numeric Conversion mishe anjamesh dad va hich rabti be ham nadarand.
+
+// Dasteye Numeric Conversion shamel 5 mored ast:
+/* 
+	1- integral to integral
+	Mesal:
+	short s = 3; int to short
+	long l = 3; int to long
+	char c = s; short to char
+	Momkene begi dar jalase ghabli yad gereftim ke type short darun int rikhte beshe
+	Onam integral to integral bod, bale doruste vali inja bozorg tar rikhte mishe darun kochik tar
+	int convert to short
+
+	Nokte: Hatmi nist ke agha bale hatman Bozorg tar rikhte mishe darun kochik tar
+	Ina bar asas Standard hast !!!!!
+*/
+/*
+	2- floating-point to floating-point
+	Mesal:
+	float f = 3.0; double to float
+	long double ld = 3.0; double to long double
+*/
+/*
+	3- floating-point to integral
+	Mesal:
+	int x = 3.0; double to int
+*/
+/*
+	4- integral to floating-point
+	Mesal:
+	double x = 3; int to double
+*/
+/*
+	5- integral | floating-point to boolean
+	bool b1 = 5; int to bool
+	bool b2 = 5.0; double to bool
+*/
+
+// Ma goftim tabdil Numeric Promotion kamelan amn hast.
+// Vali tabdil Numeric Conversion ba'es az dast dadan Data mishe gahi oghat
+// Bastegi dare age mesal int ro ba meghdar 3 berizim dakhel short moshkeli nist vali
+// int ro ba meghdar MAX ro berizim dakhel short ba'es Overflow mishe
+
+// Mesal dige:
+/*
+	int x = 3.5; in .5 az dast mire 
+	int y = 3.0; vali inja mohem nist 3 okeye
+	Pas bastegi be code dare Data az dast mire ya na
+*/
+
+// Dar C++ yek bahsi hast be name:
+// Narrowing Conversion
+// Har tabdili ke dar dasteye Numeric Conversion dashte bashim
+// Tabdil bozorg tar be kocheck tar bashe behesh migim: Narrowing Conversion
+// Chon ba'es az dast dadan Data mishe
+
+// Tosiye: Ta jaye momken az Narrowing Conversion estefade nakon
+// Magar majbur bashi onam ba explicit mesl static_cast<Type>(Expression)
+// Injuri warning ham nemide.
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Arithmetic Conversion
