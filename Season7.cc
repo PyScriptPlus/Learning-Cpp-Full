@@ -392,3 +392,108 @@ int main() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Arithmetic Conversion
+
+// In Expression ro dar nazar begir:
+// int x{2 + 3};
+// Dar in mesal bala zamani ke operator + call mishe 2 ta Operand migire 2 tasham int hastand
+// Va chon har 2 ta Operand in Operator type yeksani darand 
+// Pas natije inam az hamun type int hast.
+
+// Hala agar miomadim on Expression darun yek type dige i mirikhtim chi mishod? 
+// Age emkan conversion esh bod compiler natije ro be on type tabdil mikard dar gheyr in surat error
+
+// Hala so'al asli age 2 ta operand type shon yeksan nabud chi mishod? natije az che typi mibud?
+// Mesl: {2 + 3.5}
+// Be in mas'ale ke residim bahs: Arithmetic Conversion ast
+// Baraye fahmidan natije in Expression compiler miyad az ghavanini be name:
+// Usual arithmetic conversion rules
+// Estefade mikone
+// Khob in ghavanin chejurie? farz kon compiler yek list dare ke olaviyat az roye on moshakhas mikone
+// Az bala be payin list
+
+/*
+	List:
+	long double (highest)
+	double
+	float
+	unsigned long long
+	long long
+	unsigned long
+	long
+	unsigned int
+	int (lowest)
+*/
+
+// Mesal:	int i {2}; double d{3.5}; i + d
+// Alan in expresion bala i + d natije ash che type i hast?
+// Dar list olaviyat double bala tar az int hast pas int convert mishe be double
+
+// Bia Sabet konam:
+/*
+#include <iostream>
+
+int main() {
+
+	int i {2};
+	double d {3.5};
+	std::cout << typeid(d + i).name() << '\n'; // Output: d or double
+
+	return 0;
+}
+*/
+
+// So'al? agar type yeki az operand ha dar list nabud chi?
+// Mesal:
+/*
+	int y = 50;
+	short x = 70;
+	x + y; ?
+	Miyad on type ke dar list vojud darad ro tabdil mikone be on
+	Ke mishe int
+*/
+
+// Hala agar operand 2 tasham dar liast vojud nadasht mesl:
+/*
+	short s1 = 5;
+	short s2 = 6;
+	s1 + s2; ?
+	Mishe int
+	Chera int? bahs (Numeric Promotion) ke type kochecktar ertegha peyda mikone be type bozorg tar
+
+	Mesal dige?
+	short s = 50;
+	std::int64_t i = 50;
+	s + i; ?
+	int64 mishe bazam Numeric Promotion
+*/
+
+// Mored ba'adi: In list ke neveshtam zamani ke yekseri maghadir signed va unsigned ro tarkib konim bayad
+// Deghat koni vagarne barname ba moshkel movajeh mishe
+// Mesal:
+// std::cout << typeid(5u - 10).name();
+// Inam bar asas on list type esh mishe unsigned int ke toye C++ compiler clang or g++ output mishe j
+// Ke hamun uint hast
+// Natije meghdaresham bebinim:
+// std::cout << (5u - 10); --> Output: 4294967291
+// Ke miyad MAX Uint ro mide in yek
+// Well Defined Behavior (Raftar ta'rif shode)
+// Ast dar Season 3 goftam
+// Chon dar list unsgined int olaviyat balatari dare nesbat be int pas ragham 10 ham tabdil mishe be unsigned int
+
+
+// Mesal dige deghat kon:
+// std::cout << std::boolalpha << (3 < 5u); --> Output: false
+// Dalilesh chiye false?
+// Bazam migam olaviyat unsigned int bala tar az int hast baraye hamin -3 ke az type int hast
+// Miyad tabdil mishe be unsigned int 
+// Va chon manfi hast adadesh mishe MAX UINT
+// Dar posht sahne injurie: (429496729 < 5u);
+// In Arithmetic Conversion roye hameye Operator haye zir e'mal mishe:
+/*
+	+ - * / %
+	< > <= >= == !=
+	& | ^
+	() ? () : ();
+*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
