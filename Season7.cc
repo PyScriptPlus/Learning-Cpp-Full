@@ -497,3 +497,61 @@ int main() {
 */
 
 /*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Tabdil type sarih (Explicit)
+
+// Kheyli az barname nevis haye taze kar chenin codi minevisand ke khalaf entezareshun
+// Hast natijeyi ke bargasht dade mishe ghesmat a'shar az beyn rafte:
+// double d = 10 / 4; --> output: 2
+// Chera injuri mishe?
+// Chon har 2 ta meghdar Literal integer hastand baraye hamin natije mishe 2
+// Rah hal: Yeki az Literal ha ya har 2 tash ro ba a'shar minevisim:
+/*
+	double d1 = 10.0 / 4;
+	double d2 = 10 / 4.0;
+	double d3 = 10.0 / 4.0;
+*/
+
+// Farz kon be jaye Literal ba variable taraf bashim chi mishe rah hal:
+// Mesal:
+/*
+int x {10};
+int y {4};
+double d = x / y; // Inja ke nemishe a'shar gozasht (x.0) nemishe ke eshtebahe
+*/
+// Rah hal? Bayad Convert beshe
+// Zaban C++ chand ta Type Casting Operator dar ekhtiyar gozashte dar chenin senario mishe azashun estefade kard
+// Zaban C++ az 5 no' tabdil type ha poshtibani mikone:
+// 1- C-Style Casts
+// 2- Static Casts
+// 3- Const Casts
+// 4- Dynamic Casts
+// 5- Reinterpret Casts
+
+// Felan 2 taye avval yad migirim baghie dar ayande
+// Va kheyli ham mohem hastand.
+
+// C-Style cast:
+
+/*
+	int x = 10;
+	int y = 4;
+	double d = (double)x / (double)y;
+
+*/
+
+// Vali behtare az Static_cast dar C++ estefade koni
+// C-Style ghadimie va male zaban C ast ehtemal moshkel ast ba in
+
+// Static_cast:
+/*
+	int x = 10;
+	int y = 4;
+	double d = static_cast<double>(x) / static_cast<double>(y);
+*/
+// Baraye estefade amn ast dar ba'azi Compiler ha ke ekhtar tabdil mide in
+// Tabdil jolosho migire
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Type Alias
