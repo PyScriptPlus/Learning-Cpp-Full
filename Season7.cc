@@ -555,3 +555,50 @@ double d = x / y; // Inja ke nemishe a'shar gozasht (x.0) nemishe ke eshtebahe
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 // Mabhas: Type Alias
+
+// Dar zaban C++ keyword using karbord haye mokhtalefi dare
+// Ke goftim yekseri karbord hasho ghablan
+
+// Yek karbord jadid mikham begam ke baraye sakht yek (Alias name) baraye (Data Type) hast
+
+// Mesal:
+/*
+#include <iostream>
+
+int main() {
+	
+	// using Identifier = DataType;
+	using Distance = double;
+
+	const Distance PI = 3.14;
+
+	std::cout << typeid(PI).name() << '\n' << "PI Number: " << PI << '\n';
+
+	return 0;
+}
+*/
+
+// Gha'ede name gozari ine ke harf avval har kalame ro bozorg minevisim
+
+// Scope esh be che surat hast?
+// Hamun ghava'ed Variable ha hast be in ma'ni ke agar yek Type Alias darun yek Block ta'rif konim
+// Daraye Block-Scope mishe 
+
+// Agar darun (Global Namespace) ta'rifesh konim daraye (File Scope) mishe
+
+// Mored ba'adi: Yek chiz dige am vojud dare be esm typedef ke ravesh ghadimie zaban C hast
+// Baraye hamin kar Alias Name estefade mishe
+// Mesal:
+
+#include <stdio.h>
+
+int main() {
+
+	// typedef DataType Identifier;
+	typedef int Number;
+
+	Number num = 9;
+	printf("Your Age is: %d\n", num * 2);
+
+	return 0;
+}
