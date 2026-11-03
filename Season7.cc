@@ -589,7 +589,7 @@ int main() {
 // Mored ba'adi: Yek chiz dige am vojud dare be esm typedef ke ravesh ghadimie zaban C hast
 // Baraye hamin kar Alias Name estefade mishe
 // Mesal:
-
+/*
 #include <stdio.h>
 
 int main() {
@@ -602,3 +602,95 @@ int main() {
 
 	return 0;
 }
+*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Type Deduction
+
+// In code payin ro bebin yek Redundancy dare yek ezafe kardi kardim
+// double d {5.0}; In Redundancy chie?
+// Ma be surat mostaghim goftim DataType double va Literal esham double neveshtam
+// Khob in shod 2 ta kar vali mishe joloye in ezafi kari ro gereft
+// Rah hal?
+// Ba vojud (Type Deduction) ke dar C++ vojud darad behesh (Type inference) ham migan
+// Be che ma'ni ast? Ya'ni Compiler mitune az roye Initialization DataType Variable ro tashkhis bede
+
+// Syntax: Be jaye Type Variable migim auto
+// auto num = 50; // int
+// auto floating = 3.6; // double
+// auto character = 'a'; // char
+// auto num2 = num; // int
+
+// Compiler miyad az tarigh Literal type ro tashkhis mide
+
+// In feature ro mishe dar Function Call ham estefade kard 
+// Mesal:
+/*
+#include <iostream>
+
+int add(int x, int y) {
+	return x + y;
+}
+
+int main() {
+
+	auto sum = add(5, 6); // int
+	std::cout << "DataType: " << typeid(sum).name() << '\n';
+	std::cout << "Number: " << sum << '\n';
+	
+	// Nokte: In TypeDeduction baraye zamani ke object ma Initialization nadashte bashe
+	// Error mide:
+	auto error; // Error
+	
+	return 0;
+}
+*/
+
+// Mesal:
+/*
+#include <iostream>
+
+int main() {
+
+	const int x{5}; // const int
+	auto y{x}; // int
+	y = 30;
+	// Dige const nemishe magar inke khodet mostaghim begi const
+	
+	const auto z = x; // const int
+
+	std::cout << x << '\n' << y << '\n' << z << '\n';
+
+	return 0;
+}
+*/
+
+// Nokte: Type Deduction onjuri ke entezar dari baraye string ha amal nemikone
+// Mesal:
+/*
+#include <iostream>
+#include <string>
+#include <string_view>
+
+int main() {
+
+	auto s1 {"Hello, World"}; // char
+	// Miyad char dar nazar gerfte mishe
+	// Baraye string ya string_view bayad az Suffix estefade koni
+	using namespace std::literals;
+
+	auto s2 {"Hello, World"s}; // string
+	auto s3 {"Hello, World"sv}; // string_view
+
+	std::cout << typeid(s1).name() << '\n';
+	std::cout << typeid(s2).name() << '\n';
+	std::cout << typeid(s3).name() << '\n';
+
+	return 0;
+}
+*/
+
+// Nokte: Eyb Type Deduction baraye ba'zi az afrad na khana ast be no'i khanayi miyad payin
+
+/*--------------------------------------------------------------------------------------------------------------------*/
