@@ -694,3 +694,79 @@ int main() {
 // Nokte: Eyb Type Deduction baraye ba'zi az afrad na khana ast be no'i khanayi miyad payin
 
 /*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Type deduction for functions
+
+// Az standard C++14 be ba'ad in emkan faraham shode ke az keyword auto baraye Function ham estefade koni
+// Mesal:
+/*
+#include <iostream>
+
+auto add (int x, int y) {
+	return x + y;
+}
+
+int main() {
+	
+	auto x = add(5, 6);
+	std::cout << typeid(x).name() << '\n';
+
+	return 0;
+}
+*/
+
+// Chizi ke dare in Function return mikone int hast pas outputesham integer hast deghat kon zamani ke az auto
+// Estefade mikonim tamam return statement haye darun Function bayesti Type moshabehi return konand 
+// Mesal:
+/*
+auto someFunc(bool b) {
+	if(b)
+		return 5;
+	else
+		return 6.7;
+}
+*/
+// Error mide 6.7 
+
+// Nokte mohem: Eyb Function hayi ke az auto estefade mikonand ineke ghabl az estefade bayad
+// Kamel ta'rif beshan ya'ni Compiler bayad Definition sho bebine agar biay faghat
+// Forward Declaration koni error mide
+// Ya mituni dar HeaderFile inline sho benevisi
+
+// Mored ba'adi yek Syntax vojud dare besm
+// Explicit return type
+// Chejurie? Tarkibi az auto va neveshtan mostaghim type
+// Mesal:
+/*
+auto add(int x, int y) -> int
+{
+	return x + y;
+}
+*/
+// Chera bayad chenin kari konim ham auto ham int?
+// In Syntax baraye ba'zi az feature haye pishrafte C++ mesl
+// Lambda ke dar ayande mikhunim zaruri ast bahs mohemie
+
+
+// Bahs Type Deduction baraye Parameters az C++20 omad
+// Mesal:
+
+#include <iostream>
+#include <string_view>
+
+void addAndPrint(auto x, auto y) {
+	std::cout << "Your name is: " << x << "\nYour age is: " << y << '\n';
+	return;
+}
+
+int main() {
+	
+	using namespace std::literals;
+	
+	addAndPrint("Mohammad"sv, 18);
+
+	return 0;
+}
+
+// clang++ -std=c++20 or 23 or 26
+// g++ -std=c++20 or 23 or 26
