@@ -750,7 +750,7 @@ auto add(int x, int y) -> int
 
 // Bahs Type Deduction baraye Parameters az C++20 omad
 // Mesal:
-
+/*
 #include <iostream>
 #include <string_view>
 
@@ -767,6 +767,70 @@ int main() {
 
 	return 0;
 }
-
+*/
 // clang++ -std=c++20 or 23 or 26
 // g++ -std=c++20 or 23 or 26
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+// Mabhas: Overloading
+
+// In function add ro bebin yek function sadeyi ast
+/*
+	int add(int x, int y) {
+		return x + y;
+	}
+*/
+// 2 ta int ro baham plus mikone va return mikone
+// Vali agar niyaz dashte bashim 2 ta floating-point ba ham plus konim chi?
+// Function balayi be karemun nemiyad bayad yek function dige besazim ba Type double mesl:
+/*
+	double addDouble(double x, double y) {
+		return x + y;
+	}
+*/
+// Ehtemalan moshabeh in gaziye ro ba Type haye dige darim ya ba Parameters haye bishtar
+// Mesal 2 ta function mikham 2 ta sham int 
+// Yekish 2 ta meghdar ro plus kone return kone
+// Yeki dige az function ha 3 ta meghdar ro plus kone return kone
+
+// Hameye function hayi ke neveshtim daran kar plus ro anjam midam faghat ba Identifier haye mokhtalef
+// Kheyli khob mishod ma biaym hameye in function ha ro ba Identifier yeksan call konim
+
+// Khabar khob dar C++ in shodaniye yek Feature ghodratmandi dare zaban C++ be esm
+// Function Overloading 
+// Onghadr in Feature ghodratmand bod ke rahesho be zaban haye dige i ham baz kard
+// Ravesh estefade chejurie?
+// Kheyli rahate hamaro ba yek Identifier define mikonim
+// Mesal:
+/*
+#include <iostream>
+
+int add(int x, int y) {
+	return x + y;
+}
+
+double add(double x, double y) {
+	return x + y;
+}
+
+int main() {
+
+	std::cout << typeid(add(3,2)).name() << '\n';
+	std::cout << typeid(add(3.5,2.5)).name() << '\n';
+
+	return 0;
+}
+*/
+
+// So'ali ke pish miyad chejuri asami yeksani ta'rif kardi ke error duplicate nemide?
+// Doruste Identifier ha yeksan hastand vali Signature shon motafavete hamun input parameters ha manzurame
+
+// Az onjayi ke Operator ha dar C++ dar posht sahbe function hastand va mitunim
+// Operator ha ham Overload konim dar ayande mipardazim behesh
+
+// Zamani ke yek Functioni ke Overload shode ro call mikonim mesl function add
+// Compiler miyad migarde kodum yek function ha Signature esh motabegh ba Argument hayi ast ke 
+// Be onvan vorudi dadim be in mas'ale migan: Overload Resolution
+
+/*--------------------------------------------------------------------------------------------------------------------*/
